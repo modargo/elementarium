@@ -38,8 +38,8 @@ public class IcePhoenix extends CustomMonster
     private static final byte WING_SWEEP_ATTACK = 2;
     private static final byte GLACIAL_CALM_BUFF = 3;
     private static final byte FREEZING_TEMPEST_ATTACK = 4;
-    private static final int CLAW_SWIPE_DAMAGE = 5;
-    private static final int A4_CLAW_SWIPE_DAMAGE = 6;
+    private static final int CLAW_SWIPE_DAMAGE = 4;
+    private static final int A4_CLAW_SWIPE_DAMAGE = 5;
     private static final int CLAW_SWIPE_HITS = 2;
     private static final int WING_SWEEP_DAMAGE = 12;
     private static final int A4_WING_SWEEP_DAMAGE = 14;
@@ -50,7 +50,7 @@ public class IcePhoenix extends CustomMonster
     private static final int FREEZING_TEMPEST_DAMAGE = 3;
     private static final int FREEZING_TEMPEST_HITS = 4;
     private static final int FREEZING_TEMPEST_ARTIFACT = 1;
-    private static final int A19_FREEZING_TEMPEST_ARTIFACT = 2;
+    private static final int A19_FREEZING_TEMPEST_ARTIFACT = 1;
     private static final int FREEZING_CONTEMPT_STRENGTH = 1;
     private static final int A19_FREEZING_CONTEMPT_STRENGTH = 2;
     private static final int FREEZING_CLAWS_METALLICIZE = 1;
@@ -159,7 +159,7 @@ public class IcePhoenix extends CustomMonster
         byte move;
         int s = this.moveHistory.size();
         int movesToCheck = s % 3;
-        List<Byte> potentialMoves = new ArrayList<Byte>();
+        List<Byte> potentialMoves = new ArrayList<>();
         potentialMoves.add(CLAW_SWIPE_ATTACK);
         potentialMoves.add(WING_SWEEP_ATTACK);
         potentialMoves.add(GLACIAL_CALM_BUFF);

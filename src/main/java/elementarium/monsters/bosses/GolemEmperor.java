@@ -49,18 +49,18 @@ public class GolemEmperor extends CustomMonster {
     private static final int LOOSE_MATERIALS_DAMAGE = 2;
     private static final int A4_LOOSE_MATERIALS_DAMAGE = 3;
     private static final int LOOSE_MATERIALS_HITS = 2;
-    private static final int HP = 270;
-    private static final int A9_HP = 290;
+    private static final int HP = 260;
+    private static final int A9_HP = 280;
 
     private static final float[] xPositions = new float[]{-170.0F, -450.0F};
     private static final List<List<GolemInfo>> GOLEM_GROUPS = Arrays.asList(
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -5)),
             Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -7)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -12)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10), new GolemInfo(RubyGolem.ID, xPositions[1], -4))
     );
     private static final List<List<GolemInfo>> A19_GOLEM_GROUPS = Arrays.asList(
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(TarGolem.ID, xPositions[1], -2)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -5), new GolemInfo(TarGolem.ID, xPositions[1], -2)),
             Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -7)),
             Arrays.asList(new GolemInfo(MudGolem.ID, xPositions[0], -3), new GolemInfo(WarGolem.ID, xPositions[1], -12)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10), new GolemInfo(RubyGolem.ID, xPositions[1], -4))
@@ -153,7 +153,7 @@ public class GolemEmperor extends CustomMonster {
         if (this.moveHistory.size() % CRUMBLING_AMOUNT == 2) {
             this.setMove(MOVES[0], CALL_GOLEM_MOVE, Intent.UNKNOWN);
         } else {
-            if (this.lastMove(LOOSE_MATERIALS_ATTACK) || (num < 50 || !this.lastMove(GOLEM_SHIELD_ATTACK))) {
+            if (this.lastMove(LOOSE_MATERIALS_ATTACK) || (num < 50 && !this.lastMove(GOLEM_SHIELD_ATTACK))) {
                 this.setMove(MOVES[1], GOLEM_SHIELD_ATTACK, Intent.ATTACK_DEFEND, this.golemShieldDamage);
             } else {
                 this.setMove(MOVES[2], LOOSE_MATERIALS_ATTACK, Intent.ATTACK, this.looseMaterialsDamage, LOOSE_MATERIALS_HITS, true);

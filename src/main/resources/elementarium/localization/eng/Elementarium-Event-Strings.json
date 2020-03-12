@@ -263,7 +263,7 @@
     "OPTIONS": [
       "[Continue]",
       "[Rest] #gHeal #g{0} #gHP.",
-      "[Take] #rGain {0}.",
+      "[Take] #gGain {0}.",
       "[Touch] #rLose #r{0} #rMax #rHP. #gGain {1}.",
       "[Leave]"
     ]

@@ -46,8 +46,8 @@ public class GoldenDragon extends CustomMonster {
     private static final int A19_TURN_TO_GOLD_WRAITH_FORM = 2;
     private static final int TURN_TO_GOLD_BIAS = 0;
     private static final int A19_TURN_TO_GOLD_BIAS = 1;
-    private static final int ARTIFACT = 2;
-    private static final int A19_ARTIFACT = 3;
+    private static final int ARTIFACT = 1;
+    private static final int A19_ARTIFACT = 2;
     private static final int HP = 380;
     private static final int A9_HP = 400;
 

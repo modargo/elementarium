@@ -27,8 +27,8 @@ public class TarGolem extends CustomMonster {
     private static final byte TAR_SHIELD_ATTACK = 1;
     private static final byte TAR_SPRAY_ATTACK = 2;
     private static final byte STICKY_TAR_DEBUFF = 3;
-    private static final int TAR_ATTACK_DAMAGE = 4;
-    private static final int A2_TAR_ATTACK_DAMAGE = 5;
+    private static final int TAR_ATTACK_DAMAGE = 3;
+    private static final int A2_TAR_ATTACK_DAMAGE = 4;
     private static final int TAR_ATTACK_HITS = 2;
     private static final int TAR_SHIELD_BLOCK = 3;
     private static final int A7_TAR_SHIELD_BLOCK = 5;
