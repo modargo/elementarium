@@ -2,6 +2,7 @@ package elementarium;
 
 import actlikeit.dungeons.CustomDungeon;
 import basemod.BaseMod;
+import basemod.ModPanel;
 import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
@@ -73,7 +74,7 @@ public class Elementarium implements
     @Override
     public void receivePostInitialize() {
         Texture badgeTexture = new Texture("elementarium/images/ElementariumBadge.png");
-        BaseMod.registerModBadge(badgeTexture, "Elementarium", "modargo", "An alternate act 2 full of elementals", null);
+        BaseMod.registerModBadge(badgeTexture, "Elementarium", "modargo", "An alternate act 2 full of elementals and golems", new ModPanel());
 
         CustomDungeon.addAct(TheCity.ID, new ElementariumAct());
         addMonsters();
