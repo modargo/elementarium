@@ -1,0 +1,46 @@
+{
+  "Elementarium:Tar": {
+    "NAME": "Tar",
+    "DESCRIPTION": "Gain 1 Weak at end of turn. NL Ethereal. NL Exhaust."
+  },
+  "Elementarium:StickyTar": {
+    "NAME": "Sticky Tar",
+    "DESCRIPTION": "Unplayable. NL Remove one Sticky Tar from deck after winning an elite fight."
+  },
+  "Elementarium:GildedStrike": {
+    "NAME": "Gilded Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "Elementarium:GildedDefend": {
+    "NAME": "Gilded Defend",
+    "DESCRIPTION": "Gain !B! Block. NL Lose !M! Dexterity."
+  },
+  "Elementarium:GildedEssence": {
+    "NAME": "Gilded Essence",
+    "DESCRIPTION": "Gain !M! Plated Armor."
+  },
+  "Elementarium:GildedForm": {
+    "NAME": "Gilded Form",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Plated Armor. NL Gain 20 Gold. NL Lose 1 Dexterity."
+  },
+  "Elementarium:FireblessedBlade": {
+    "NAME": "Fire-blessed Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength, Dexterity, and Focus. NL Exhaust."
+  },
+  "Elementarium:WindblessedBlade": {
+    "NAME": "Wind-blessed Blade",
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Gain !B! Block 2 times. NL Apply !M! Weak. NL Exhaust."
+  },
+  "Elementarium:EarthblessedBlade": {
+    "NAME": "Earth-blessed Blade",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Plated Armor. NL Gain !M! Thorns. NL Exhaust."
+  },
+  "Elementarium:IceblessedBlade": {
+    "NAME": "Ice-blessed Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Artifact. NL Gain !M! Buffer. NL Exhaust."
+  },
+  "Elementarium:VoidblessedBlade": {
+    "NAME": "Void-blessed Blade",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enemy loses !M! Strength. NL Gain 1 Blur. NL Exhaust."
+  }
+}

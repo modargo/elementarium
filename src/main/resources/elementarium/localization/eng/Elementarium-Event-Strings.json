@@ -1,0 +1,285 @@
+{
+  "Elementarium:OnrushingOffering": {
+    "NAME": "Onrushing Offering",
+    "DESCRIPTIONS": [
+      "Turning a corner, you find yourself directly in the path of an #yonrushing #ymass #yof #ygold! NL NL You quickly evaluate your options: NL Strike the gold to divert it. NL Stand your ground and defend yourself. NL Toss in some of your own gold.",
+      "Your strike the #ygold with all your strength! It #rcuts and #rscratches you as it goes by. Some of the #ygold stays stuck to your weaponry.",
+      "You stand your group and defend yourself against the gold! You prevent yourself from being hurt and grab some #ycoins along the way. By the end, you feel a bit more #ygolden.",
+      "You toss in some of your own gold! The #yonrushing #ymass brushes by you #gwithout #gharm, and you feel you #gunderstand it a bit more now."
+    ],
+    "OPTIONS": [
+      "[Strike the gold] #gRemove #gall Strikes. #gGain #g5 Gilded Strikes. #rLose #r{0} #rHP.",
+      "[Defend yourself] #gGain #ga Gilded Defend. #gGain #g{0} Gold.",
+      "[Toss in your own gold] #gGain #ga Gilded Essence. #rLose #r{0} Gold.",
+      "[Locked] Requires: Gold.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:FountainOfGold": {
+    "NAME": "Fountain of Gold",
+    "DESCRIPTIONS": [
+      "In an abandoned fortress, you find a #bfountain spewing a stream of #ygold #ycoins into the air, pooling around it. Nobody is watching. You can dive in and #bswim in it.",
+      "You have a #bgood #bswim. The #ycoins are pleasingly rough against the skin. You surface with #ra #rbit #rless #rskin and #ygold #ycoins stuck to your body, covering your #rwounds.",
+      "Nothing good comes of diving into strange #bfountains."
+    ],
+    "OPTIONS": [
+      "[Dive in] #gGain Gilded Form. #rLose #r{0} #rMax #rHP.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:GreatTreasure": {
+    "NAME": "Great Treasure",
+    "DESCRIPTIONS": [
+      "An mythical tree stands before you, said to contain the #ygreatest #yof #ytreasure. A #bprotective #bbarrier #bof #b~magic~ surrounds it, preventing you from getting close enough to see what it holds. NL NL If you could only get past the outer layer, you could see what's #ginside. Maybe you can just poke your head through?",
+      "With the protective barrier gone, you see the #ytreasure of your #g@wildest@ #g@imaginings.@ ~You~ ~must~ ~have~ ~it.~ But #bmagic protecting the treasure will surely retaliate against whoever takes it. NL NL You consider your #bpossessions and your #boptions....",
+      "By exchanging a #ytreasure of #gsimilar #gvalue, you blunt the worst of the #rretaliation. You cradle your new #ytreasure as you continue further into the spire. All the #ytreasure will be yours.",
+      "Without anything of similar value to exchange, the powerful #rretaliation leaves you feeling #p~drained~. You #rslowly #rand #rpainfully make your way further into the spire."
+    ],
+    "OPTIONS": [
+      "[Poke through] #rTake #r{0} #rdamage. See what's inside.",
+      "[Exchange {0}] #gGain {1}. #rLose #r{2} #rHP.",
+      "[Sacrifice] #gGain {0}. #rLose #r{0} #rMax #rHP.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:TarCoveredCasket": {
+    "NAME": "Tar Covered Casket",
+    "DESCRIPTIONS": [
+      "Wandering through a desolated battlefield, you come across a casket covered in #p~sticky~ #p~tar~ that obscures everything else about it. You think you can see where the lid is, but to open it you'll have to brush away the #ptar.",
+      "You brush away the #ptar, open the casket, and take the #grelic inside. NL NL As much as you try, you can't get the #ptar off.",
+      "You know better than to mess with #pcursed items. There probably wasn't anything good inside it anyway."
+    ],
+    "OPTIONS": [
+      "[Open the casket] #gObtain #ga #gRelic. #rGain #r{0} #rSticky #rTar.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:RadiantAltar": {
+    "NAME": "Radiant Altar",
+    "DESCRIPTIONS": [
+      "In front of you sits an altar to a god of fire and emptiness. NL Atop the altar sits a demonic statue with axe outstretched. NL A flame burns, casting both light and shadow, demanding sacrifice, hungering.",
+      "As you forcefully set the idol onto the altar a #rhot wind swirls throughout the room. NL The arms of the statue begin to glow and twist. NL NL Your #ygolden #yidol ignites, casting dancing shadows across the room. NL The radiance never ceases.",
+      "You stand on the altar and thrust your arms into the flames. NL As you burn in sacrifice, the axe of the statue reaches out to touch your face. NL Everything goes dark. NL You wake up a short time later feeling a new potential surging through you.",
+      "You lash out and smash the statue in front of you, breaking the magical hold the room had placed upon you. NL A fiery roar echoes all around you, and you can feel the #p~cursed~ #p~magic~ seep into your bones."
+    ],
+    "OPTIONS": [
+      "[Offer: Golden Idol] #gObtain #ga #gspecial #gRelic. #rLose #rGolden #rIdol.",
+      "[Locked] Requires: Golden Idol.",
+      "[Sacrifice] #gGain #g{0} #gMax #gHP. #rLose #r{1} #rHP.",
+      "[Desecrate] #rBecome #rCursed #r- #rDecay.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:FireSanctum": {
+    "NAME": "Fire Sanctum",
+    "DESCRIPTIONS": [
+      "Scouting your path forward, you climb to a ledge and see a #bmassive #bcrater below, patrolled by #rcreatures #rof #relemental #rfire. There are #yornate #ystructures throughout the crater, and at its center you see a #r~towering~ #r~elemental~ and many lesser elementals. NL NL You resolve to go around this this #rdangerous #rlocation.",
+      "Suddenly, the ledge you are on ~collapses~ and you ~slide~ ~down~ into the #bcrater. NL NL Immediately, you are attacked! NL NL #r\"You #rcannot #rstop #rthe #rgathering #rflames!\"",
+      "Having dispatched the #rfire #relementals, you've bought enough time that you can skirt the edges of the #bcreater and continue onwards. Or you could see if the other #relementals you see nearby are guarding any #ytreasure."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Fight]",
+      "[Discretion] Sneak around the crater.",
+      "[Confrontation] Confront powerful elementals.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:ElementalBlades": {
+    "NAME": "Elemental Blades",
+    "DESCRIPTIONS": [
+      "While searching an old storehouse, a set of #bblades catch your eye. Each #bblade is #gunique and #gpowerful, constructed of strange ~elemental~ material.",
+      "As you examine the #bblades, a voice booms out, coming from everywhere at once. NL NL @\"WIELD@ @MY@ #b@BLADES,@ @MORTAL,@ @AND@ @BECOME@ @MY@ #g@CHAMPION.@ @TOUCH@ @EACH@ #b@BLADE@ @TO@ @ACCEPT@ @MY@ @PACT.\"@",
+      "As you touch each #bblade, you feel increasingly #p~drained.~ When you touch the final #bblade, you are #p@overcome@ by the elemental energies. As you lose consciousness, the voice speaks again. NL NL #r@\"GO@ #y@FORTH@ #b@AND@ #g@SEEK@ #p@VICTORY.\"@ NL NL #rYou #ywake #band #gcontinue #ponwards. NL #rYou #ymust #bconquer #gthe #pspire. NL #rYour #ynew #bmaster #gwill #ptriumph.",
+      "#p@\"DISAPPOINTING.\"@ NL NL @\"WE@ @WILL@ @WIN@ @ONE@ @DAY@ @AND@ @YOU@ @WILL@ @KNOW@ @DESPAIR.\"@"
+    ],
+    "OPTIONS": [
+      "[Examine the flaming blade]",
+      "[Examine the stormy blade]",
+      "[Examine the earthen blade]",
+      "[Examine the crystalline blade]",
+      "[Examine the shadow-shrouded blade]",
+      "[Touch the blades] #gGain #gthe #gfive #gelemental #gblades. #rLose #r{0} #rMax #rHP.",
+      "[Decline]",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:StickySituation": {
+    "NAME": "Sticky Situation",
+    "DESCRIPTIONS": [
+      "You come across a #bpristine #bwell in a #pfield #pof #ptar, with #ygold coins strewn all around.",
+      "You make your way through the #ptar to drink from the #bwell. The #bwater is very refreshing, but you're covered in #ptar.",
+      "You scavenge a few of the #ygold coins while avoiding the #ptar. No need to get into a sticky situation."
+    ],
+    "OPTIONS": [
+      "[Drink from the well] #gHeal #g{0} #gHP. #rGain #ra #rSticky #rTar.",
+      "[Take some coins] #gObtain #g{0} #gGold.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:BigGameHunter": {
+    "NAME": "Big Game Hunter",
+    "DESCRIPTIONS": [
+      "Navigating the treacherous caves, you come across a strangely dressed figure setting up camp. It's covered in so much gear and carrying so many weapons that you can't tell what the creature itself looks like under all of it. As you approach, the figure turns and greets you. NL NL \"Ho there, friend!\" he shouts at you. \"You must be here to hunt exotic game, the same reason I am! The #ygolems and #yelementals of this place make beasts of flesh and bone pale in comparison. Let me tell you about all the #g@exhilirating@ things I've seen!\" NL NL The figure regales you with tales of its exploits.",
+      "Finally, after a story about hunting #yliving #ystatues, the figure switches topics. NL NL \"If you're a #bhunter as well, perhaps you'd be interested my old gear? I've got my sling, my bracer, and my elixir. And if you're short on #ygold, I can take #r~blood~ instead.\"",
+      "\"Always a #gpleasure to meet a fellow #bhunter!\" The figure wishes you luck in your hunting as you leave."
+    ],
+    "OPTIONS": [
+      "[Listen]",
+      "[Sling] #rLose #r{0} #rGold. Gain the sling.",
+      "[Bracer] #rLose #r{0} #rGold. Gain the bracer.",
+      "[Elixir] #rLose #r{0} #rGold. Gain the elixir.",
+      "[Sling] #rLose #r{0} #rMax #rHP. Gain the sling.",
+      "[Bracer] #rLose #r{0} #rMax #rHP. Gain the bracer.",
+      "[Elixir] #rLose #r{0} #rMax #rHP. Gain the elixir.",
+      "[Sling] #rLose #r{0} #rGold #rand #r{1} #rMax #rHP. Gain the sling.",
+      "[Bracer] #rLose #r{0} #rGold #rand #r{1} #rMax #rHP. Gain the bracer.",
+      "[Elixir] #rLose #r{0} #rGold #rand #r{1} #rMax #rHP. Gain the elixir.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:LostScrolls": {
+    "NAME": "Lost Scrolls",
+    "DESCRIPTIONS": [
+      "Someone seems to have left a #ybundle #yof #yscrolls next to a #rblazing #rcampfire.",
+      "Reading the scrolls teaches you new techniques. Perhaps they'll help you survive the Elementarium?",
+      "Burning the scrolls lifts a weight from your mind. Who knows what #pdark #prituals were described within?"
+    ],
+    "OPTIONS": [
+      "[Read] #gChoose #g1 #gof #g{0} #guncommon #gcards #gto #gadd #gto #gyour #gdeck.",
+      "[Burn] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Leave]",
+      "Add a card to your deck.",
+      "Select a Card to Remove."
+    ]
+  },
+  "Elementarium:ShatteredPortal": {
+    "NAME": "Shattered Portal",
+    "DESCRIPTIONS": [
+      "You come across an #belemental #bportal which has been #r@shattered@ by #p~cataclysmic~ #p~forces.~ It still crackles with occasional bursts of #ypower. NL NL Peering into the portal, something #gvaluable seems to be stuck partway through.",
+      "With some #yfuel, you might be able to get the #grelic out of the #bportal. But what #yfuel to use?",
+      "You feed your chosen #yfuel into the #belemental #bportal and quickly back away to watch what happens. NL NL After sputtering for a few seconds, the #bportal reactivates, giving you a glimpse of something... different. NL NL You see #r~dancing~ #r~flames,~ #y~thunderous~ #y~storms,~ #b~ice-covered~ #b~fields,~ #g~shifting~ #g~stones,~ and at its center a great hungry #p@void.@ You sense the #rterrible #rinhabitants of that place turning their attention to you.",
+      "Before anything can come through, the #bportal #r@explodes@ and a #grelic pops out! You pick it up and continue onwards, thankful that you won't have to face the #r~things~ you saw in the #bportal."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Gold] #rLose #r{0} #rGold.",
+      "[Blood] #rLose #r{0} #rHP.",
+      "[Essence] #rLose #r{0} #rMax #rHP.",
+      "[Knowledge] #rLose {0}.",
+      "[Locked] Requires: Gold.",
+      "[Locked] Requires: HP.",
+      "[Locked] Requires: Max HP.",
+      "[Locked] Requires: Rare Card.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:AbandonedFactory": {
+    "NAME": "Abandoned Factory",
+    "DESCRIPTIONS": [
+      "You step into a squat building. The inside is in disarray, with #rscorch #rmarks, #ymelted #ymetal, #bicy #bpatches, and #ghuge #grocks everywhere. NL NL From what you can make out, this must have been a place for sculptors. There are fragments of sculpting material all about, some crafted into shapes of limbs and torsos and heads. and places for completed figures to be placed. You note one that could fit a truly #genormous figure.",
+      "As you continue exploring the building, you find a back room with a desk, covered with #yparchment #yscrolls. You pick one up; most of the text is illegible due to #rscorch #rmarks, but you can make some of it out. NL NL ...the #penemy pour through in endless numbers... NL ...uses the #rfire and #ylightning... NL ...power against them... NL ...protectors, made of every substance... NL ...an #bemperor, of all... NL ...with #glife itself... NL ...no #p~sacrifice~ is too great... NL ...heart...",
+      "Continuing your search of the desk, you find a #gsmall #gchest hidden underneath. You consider the #yscrolls and the #gchest. Which should you carry out?",
+      "You carry the #yscrolls out of the building, studying them along the way. Piecing together fragments of information, you experiment with new ways of fighting.",
+      "You carry the #gchest out of the building. Throwing it open, you find an irregularly shaped object that seems to be... #r~beating.~ As you take it, you have a sense of deep, lasting #ppain."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Scrolls] #gTransform #ga #gcard.",
+      "[Chest] #gGain {0}. #rBecome #rCursed #r- #rPain.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:GoldenStatues": {
+    "NAME": "Golden Statues",
+    "DESCRIPTIONS": [
+      "As you are walking past a row of #ygolden #ystatues, one of the statues #r~grabs~ you! You look and see the other statues begin to move as well. NL NL You can #btear #bfree #band #brun #baway, but you'll #rlose #rsomething in the process. Your only other way out is to #bfight.",
+      "Tearing free from the statue, you race away. You feel a bit more #ygolden."
+    ],
+    "OPTIONS": [
+      "[Tear free] #rLose {0}. #rGain {1}.",
+      "[Tear free] #rGain {0}.",
+      "[Fight!]",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:IncubationChamber": {
+    "NAME": "Incubation Chamber",
+    "DESCRIPTIONS": [
+      "You step inside a small building and see a small glass case. It has a door on one side and an indentation in the center where an #bovoid shape would rest naturally. A complex mechanical system surrounds the glass case, with pipes connected to large tanks in the corner.",
+      "You investigate the tanks. The substances inside could be useful.",
+      "You disassemble the machinery to discover how it works. You know a bit more now.",
+      "You place the #gegg in the chamber and shut the door. The machinery whirs to life, and you see various substances flowing through the pipes. Smoke billows inside the chamber. You wait. NL NL After a few minutes, you hear a brief ringing sound and the door pops open. A #gsmall #gbird flies out and circles around you. You can feel it's warm presence."
+    ],
+    "OPTIONS": [
+      "[Tanks] #gGain #g{0} #gpotions.",
+      "[Machinery] #gAdd #g2 #gColorless #gcards #gto #gyour #gdeck.",
+      "[Egg] #rLose {0}. #gGain {1}.",
+      "[Requires: Egg]",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:SculptureGarden": {
+    "NAME": "Sculpture Garden",
+    "DESCRIPTIONS": [
+      "You find a quiet garden amidst the chaos of this place, hidden within the inner ring of a larger building. It's filled with unmoving figures, statues or icons or sculptures, made of everything from #rclay and #gwood to #yrock and #bsteel. NL NL Whatever they were in the past, though, they're #rsmashed and #rbroken now. Whoever did it seems to have specifically targeted the heads and chests, and not a single one is intact.",
+      "As you circle the garden, examining the kneeling and toppled figures, you ponder what kind of dispute could have led to this... but quickly dismiss it as unknowable and focus on what you can take away from this place. NL NL You see a way you could #bgraft some of the sculpture materials onto your body. Or you could take the time to #bmeditate on the meaning of this place.",
+      "The #bmaterials are more flexible than you expect. You line your body with what you can gather and immediately feel more robust.",
+      "As you #bmeditate, you have a flash of insight on the fascinating crafting of the statues. You visualize remnant after remnant in your mind's eye as your thoughts race. NL NL The way the pieces fit together... it all had a purpose, a mission. NL NL Even if you can't grasp the full intent of the sculptors, you see how to apply the knowledge to your own techniques."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Graft] #gGain #g{0} #gMax #gHP.",
+      "[Meditate] #gUpgrade #gall #g2-cost #gcards.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:BladeSeller": {
+    "NAME": "Blade Seller",
+    "DESCRIPTIONS": [
+      "A woman carrying a large wrapped #ybundle on her back lets you share her campfire. You exchange tales of what you've seen through your travels, and eventually work your way around to asking what she's carrying in the #ybundle.",
+      "After looking around, she lowers her voice to explain. NL NL \"You see... I had copies made of some really outstanding #bblades I saw this one time. Never seen their like before or since. But something always seems to go wrong when people use them. Can't seem to draw them without getting hurt. I tell people that they just need the right technique and a protective charm or two, but who listens? \" NL NL She eyes you speculatively. \"You want to try one out? Don't say I didn't warn you.\"",
+      "You take one of the #bblades from the woman, giving it a few test swings. NL NL Shortly afterwards, you realize that the #bblade must have #rcut you when you picked it up. The wound doesn't seem to be healing....",
+      "You take one of the #bblades from the woman, giving it a few test swings. NL NL The blade fits comfortably with the rest of your gear.",
+      "#r@The@ #y@blades@ #g@are@ #b@sacred@ #p@treasures.@",
+      "You continue your journey. The #ygold you just found will be useful."
+    ],
+    "OPTIONS": [
+      "[Take] #gGain {0}. {1}%: #rGain #rCursed #r- #rInjury.",
+      "[Leave]",
+      "[Punish]",
+      "[Continue]"
+    ]
+  },
+  "Elementarium:HeartOfTheVoid": {
+    "NAME": "Heart of the Void",
+    "DESCRIPTIONS": [
+      "Navigating through treacherous pathways after entering a series of caverns, you come upon a large, open room lit by many #ylanterns. The #ylanterns cover the walls and the ceiling. They appear to be fueled by some #punknown #ppower, since you can't see a fire inside them. NL NL Proceeding further, you notice a #p~cloaked~ #p~figure~ at the center of the room. It has #ylanterns hanging from its robes, but is still wreathed in #pshadow so deeply that you can't see its body. NL NL Cautious, you observe the figure for a time.",
+      "After some time observing the figure, which does not move, you start to wonder why nothing else is here. Is there something about this place keeping #rmonsters away? You could take advantage of that to #brest here. Or you could #btake a #ylantern, to give you light on your journey. Considering your options, you eye the #p~cloaked~ #p~figure,~ and wonder what would happen if you #btouched it....",
+      "The figure's presence is disquieting, but it does seem to keep away the monsters. Eventually, you're able to relax a bit. NL NL Making your way carefully around the edges of the chamber, you leave the #ylanterns and figure behind.",
+      "You take one of the #ylanterns from the wall and use its light to carefully make your way around the edges of the chamber, avoiding the figure. NL NL Back outside the caverns, the #ylantern flickers, sometimes going out entirely, but the light always comes back.",
+      "Approaching the figure, your sense of unease grows. The #pshadows around it seem to move... or is that the figure itself? NL NL As you reach out to touch the figure, the #pshadows ~twist~ ~and~ ~reach~ ~out~ ~to~ ~you.~ NL NL You have touched the #pvoid, and it has left its #pmark on you."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Rest] #gHeal #g{0} #gHP.",
+      "[Take] #rGain {0}.",
+      "[Touch] #rLose #r{0} #rMax #rHP. #gGain {1}.",
+      "[Leave]"
+    ]
+  },
+  "Elementarium:VoidShrine": {
+    "NAME": "Void Shrine",
+    "DESCRIPTIONS": [
+      "Before you lies a shadowy shrine to unspeakable forces.",
+      "The shrine's chaotic energies flow into you.",
+      "The shrine's chaotic energies overwhelm you. The power feels so good, but you have some doubt about whether that was a good idea."
+    ],
+    "OPTIONS": [
+      "[Pray] #gUpgrade #ga #grandom #gcard.",
+      "[Embrace] #gDuplicate #ga #gcard #gin #gyour #gdeck. #rBecome #rCursed #r- #rDoubt.",
+      "[Leave]",
+      "Select a Card to Duplicate."
+    ]
+  }
+}

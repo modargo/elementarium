@@ -1,0 +1,171 @@
+{
+  "Elementarium:WarGolem": {
+    "MOVES": [
+      "Heartseeker",
+      "Shieldbreaker",
+      "Legbuster"
+    ],
+    "NAME": "War Golem"
+  },
+  "Elementarium:OrbOfFire": {
+    "MOVES": [
+      "Firebolt",
+      "Flare",
+      "Irradiate"
+    ],
+    "NAME": "Orb of Fire"
+  },
+  "Elementarium:LivingStormcloud": {
+    "MOVES": [
+      "Zap",
+      "Gust",
+      "Rainfall"
+    ],
+    "NAME": "Living Stormcloud"
+  },
+  "Elementarium:VoidCorruption": {
+    "MOVES": [
+      "Energy Drain",
+      "Corrupting Touch",
+      "Vigor Drain",
+      "Void Slam",
+      "Void Volley"
+    ],
+    "NAME": "Void Corruption"
+  },
+  "Elementarium:TarGolem": {
+    "MOVES": [
+      "Tar Shield",
+      "Tar Spray",
+      "Sticky Tar"
+    ],
+    "NAME": "Tar Golem"
+  },
+  "Elementarium:MudGolem": {
+    "MOVES": [
+      "Mud Eruption",
+      "Mud Tornado"
+    ],
+    "NAME": "Mud Golem"
+  },
+  "Elementarium:OpulentOffering": {
+    "MOVES": [
+      "Goblet Bash",
+      "Coin Barrage",
+      "Opulent Barrier",
+      "Opulent Overflow"
+    ],
+    "NAME": "Opulent Offering"
+  },
+  "Elementarium:Firelord": {
+    "MOVES": [
+      "Hammer of the Firelord",
+      "Fiery Wrath",
+      "Rain of Fire",
+      "Summon Orb"
+    ],
+    "NAME": "Firelord",
+    "DIALOG": ["BY FIRE BE PURGED!"]
+  },
+  "Elementarium:FlameHerald": {
+    "MOVES": [
+      "Gathering Flames",
+      "Spear Thrust",
+      "Ritual Strike",
+      "Protecting Slam"
+    ],
+    "NAME": "Flame Herald",
+    "DIALOG": ["Gather, flames, and empower me!"]
+  },
+  "Elementarium:ElementalPortal": {
+    "MOVES": [
+      "Portal",
+      "Strengthening Restoration",
+      "Chaotic Energies",
+      "Elemental Blast"
+    ],
+    "NAME": "Elemental Portal"
+  },
+  "Elementarium:GoldenEagle": {
+    "MOVES": [],
+    "NAME": "Golden Eagle"
+  },
+  "Elementarium:GoldenLion": {
+    "MOVES": [],
+    "NAME": "Golden Lion"
+  },
+  "Elementarium:GoldenAngel": {
+    "MOVES": [
+      "Turn to Gold"
+    ],
+    "NAME": "Golden Angel"
+  },
+  "Elementarium:ShimmeringMirage": {
+    "MOVES": [
+      "Shine",
+      "Glow",
+      "Pulse"
+    ],
+    "NAME": "Shimmering Mirage"
+  },
+  "Elementarium:StoneGolem": {
+    "MOVES": [
+      "Stone Bash",
+      "Solid Strike",
+      "Stomp and Slam"
+    ],
+    "NAME": "Stone Golem"
+  },
+  "Elementarium:GolemEmperor": {
+    "MOVES": [
+      "Call Golem",
+      "Solid Strike",
+      "Stomp and Slam"
+    ],
+    "NAME": "Golem Emperor"
+  },
+  "Elementarium:RubyGolem": {
+    "MOVES": [
+      "Ruby Knives",
+      "Prism"
+    ],
+    "NAME": "Ruby Golem"
+  },
+  "Elementarium:FirePhoenix": {
+    "MOVES": [
+      "Claw Swipe",
+      "Wing Sweep",
+      "Molten Frenzy",
+      "Burning Tempest"
+    ],
+    "NAME": "Fire Phoenix"
+  },
+  "Elementarium:IcePhoenix": {
+    "MOVES": [
+      "Claw Swipe",
+      "Wing Sweep",
+      "Glacial Calm",
+      "Freezing Tempest"
+    ],
+    "NAME": "Ice Phoenix"
+  },
+  "Elementarium:GoldenDragon": {
+    "MOVES": [
+      "Tail Slam",
+      "Breath Weapon",
+      "Empowering Roar",
+      "Claw and Bite",
+      "Turn to Gold"
+    ],
+    "NAME": "Golden Dragon"
+  },
+  "Elementarium:VoidBeast": {
+    "MOVES": [
+      "Corrupting Bite",
+      "Void Gaze",
+      "Shadow Claw"
+    ],
+    "NAME": "Void Beast"
+  }
+}
+

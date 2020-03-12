@@ -1,0 +1,58 @@
+{
+  "Elementarium:RadiantIdol": {
+    "NAME": "Radiant Idol",
+    "FLAVOR": "The idol now radiates intense heat.",
+    "DESCRIPTIONS": [
+      "Whenever you add a card to your deck, heal #b{0} HP."
+    ]
+  },
+  "Elementarium:HuntersSling": {
+    "NAME": "Hunter's Sling",
+    "FLAVOR": "A well-balanced sling crafted from hide and sinew.",
+    "DESCRIPTIONS": [
+      "Start each elite combat with #b{0} #yStrength and #yDexterity."
+    ]
+  },
+  "Elementarium:HuntersBracer": {
+    "NAME": "Hunter's Bracer",
+    "FLAVOR": "A protective bracer made out of the sharp scales of some creature.",
+    "DESCRIPTIONS": [
+      "Start each elite combat with #b{0} #yThorns and #yMetallicize."
+    ]
+  },
+  "Elementarium:HuntersElixir": {
+    "NAME": "Hunter's Elixir",
+    "FLAVOR": "A fortifying elixir of unknown provenance.",
+    "DESCRIPTIONS": [
+      "Start each elite combat with #b{0} #yArtifact and #b{1} #yRegen."
+    ]
+  },
+  "Elementarium:GoldenMirage": {
+    "NAME": "Golden Mirage",
+    "FLAVOR": "Beautiful. Untouchable.",
+    "DESCRIPTIONS": [
+      "The first time you shuffle your deck each combat, gain #b1 #yIntangible."
+    ]
+  },
+  "Elementarium:HatchlingPhoenix": {
+    "NAME": "Hatchling Phoenix",
+    "FLAVOR": "Hatched from a magical egg.",
+    "DESCRIPTIONS": [
+      "Whenever you add a #b1-cost card to your deck, it is #bUpgraded."
+    ]
+  },
+  "Elementarium:GolemsHeart": {
+    "NAME": "Golem's Heart",
+    "FLAVOR": "Still beating, very slowly.",
+    "DESCRIPTIONS": [
+      "The first card you play each combat is played twice."
+    ]
+  },
+  "Elementarium:FlickeringLantern": {
+    "NAME": "Flickering Lantern",
+    "FLAVOR": "It flickers with unearthly light, renewing itself and then fading.",
+    "DESCRIPTIONS": [
+      "At the start of your third turn, gain [E] ."
+    ]
+  }
+}

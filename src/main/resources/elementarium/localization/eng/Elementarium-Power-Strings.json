@@ -1,0 +1,77 @@
+{
+  "Elementarium:Hover": {
+    "NAME": "Hover",
+    "DESCRIPTIONS": ["Takes #b{0}% less damage from attacks."]
+  },
+  "Elementarium:EnergyLimit": {
+    "NAME": "Energy Limit",
+    "DESCRIPTIONS": ["Draw #b1 less card at the start of each turn. Start with at most #b3 energy each turn."]
+  },
+  "Elementarium:TarBody": {
+    "NAME": "Tar Body",
+    "DESCRIPTIONS": ["When this enemy takes attack damage, add a #yTar to your deck."]
+  },
+  "Elementarium:MidasAura": {
+    "NAME": "Midas Aura",
+    "DESCRIPTIONS": ["When you use an upgraded attack, skill, or power, #yExhaust it and add a Gilded Strike, Gilded Defend, or Gilded Essence to your deck."]
+  },
+  "Elementarium:Cleanse": {
+    "NAME": "Cleanse",
+    "DESCRIPTIONS": ["Reduce all debuffs by #b{0} at the end of each turn.", "Wears off after this turn."]
+  },
+  "Elementarium:FlourishingFlame": {
+    "NAME": "Flourishing Flame",
+    "DESCRIPTIONS": ["When you play a card that targets multiple enemies, this enemy gains #b{0} #yStrength."]
+  },
+  "Elementarium:SummoningPortal": {
+    "NAME": "Summoning Portal",
+    "DESCRIPTIONS": ["Summons elementals each turn up to a limit of #b{0} active. Invulnerable and won't attack until it has summoned #b{1} more elementals."]
+  },
+  "Elementarium:Sorrow": {
+    "NAME": "Sorrow",
+    "DESCRIPTIONS": ["Once per combat, gains #b{0} #yStrength at end of turn if it is the only {1}."]
+  },
+  "Elementarium:Crumbling": {
+    "NAME": "Crumbling",
+    "DESCRIPTIONS": [
+      "Dies in #b{0} turns. When this dies to to #yCrumbling, {1} loses #b{2} #yStrength.",
+      "Dies in #b1 turn. When this dies to to #yCrumbling, {0} loses #b{1} #yStrength."
+    ]
+  },
+  "Elementarium:Delicate": {
+    "NAME": "Delicate",
+    "DESCRIPTIONS": ["The first time this takes unblocked attack damage each turn, it loses #b{0} #yStrength."]
+  },
+  "Elementarium:BurningDisdain": {
+    "NAME": "Burning Disdain",
+    "DESCRIPTIONS": ["The third attack played each turn causes this to gain #b{0} #yStrength. Attacks played so far this turn: #b{1}."]
+  },
+  "Elementarium:FreezingContempt": {
+    "NAME": "Freezing Contempt",
+    "DESCRIPTIONS": ["The third skill played each turn causes this to gain #b{0} #yStrength. Skills played so far this turn: #b{1}."]
+  },
+  "Elementarium:BurningClaws": {
+    "NAME": "Burning Claws",
+    "DESCRIPTIONS": ["Whenever you receive attack damage from this enemy, add a #yBurn into your discard pile."]
+  },
+  "Elementarium:FreezingClaws": {
+    "NAME": "Freezing Claws",
+    "DESCRIPTIONS": ["Whenever you receive attack damage from this enemy, it gains #b{0} #yMetallicize."]
+  },
+  "Elementarium:PhoenixRebirth": {
+    "NAME": "Phoenix's Rebirth",
+    "DESCRIPTIONS": ["When brought to half HP, becomes invulnerable. At the end of that turn, removes all debuffs, loses this, and uses a special ability."]
+  },
+  "Elementarium:DelayedVulnerable": {
+    "NAME": "Delayed Vulnerable",
+    "DESCRIPTIONS": ["Applies #yVulnerable at the start of your turn."]
+  },
+  "Elementarium:DurableMinion": {
+    "NAME": "Durable Minion",
+    "DESCRIPTIONS": ["This minion will not abandon combat when its leader is defeated."]
+  },
+  "Elementarium:VoidPressure": {
+    "NAME": "Void Pressure",
+    "DESCRIPTIONS": ["Whenever a card is #yExhausted or you play a power, take #b{0} damage. Exhaust a random card in your hand that isn't a Status, a Curse, or Ethereal at the end of your turn."]
+  }
+}
