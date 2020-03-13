@@ -22,7 +22,7 @@ public class GreatTreasure extends AbstractImageEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     public static final String IMG = Elementarium.eventImage(ID);
 
-    private static final int DAMAGE_LOOK = 5;
+    private static final int DAMAGE_LOOK = 3;
     private static final int DAMAGE_EXCHANGE = 8;
     private static final int A15_DAMAGE_EXCHANGE = 12;
     private static final float SACRIFICE_MAX_HEALTH_LOSS_PERCENTAGE = 0.50F;

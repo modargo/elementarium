@@ -24,18 +24,18 @@ public class ShatteredPortal extends AbstractImageEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     public static final String IMG = Elementarium.eventImage(ID);
 
-    private static final int MIN_GOLD_COST = 90;
-    private static final int MAX_GOLD_COST = 110;
-    private static final int A15_MIN_GOLD_COST = 95;
-    private static final int A15_MAX_GOLD_COST = 120;
-    private static final float HEALTH_LOSS_PERCENTAGE = 0.25F;
-    private static final float A15_HEALTH_LOSS_PERCENTAGE = 0.30F;
-    private static final int HEALTH_LOSS_MINIMUM = 15;
-    private static final int A15_HEALTH_LOSS_MINIMUM = 18;
-    private static final float MAX_HEALTH_LOSS_PERCENTAGE = 0.12F;
-    private static final float A15_MAX_HEALTH_LOSS_PERCENTAGE = 0.16F;
-    private static final int MAX_HEALTH_LOSS_MINIMUM = 6;
-    private static final int A15_MAX_HEALTH_LOSS_MINIMUM = 8;
+    private static final int MIN_GOLD_COST = 85;
+    private static final int MAX_GOLD_COST = 105;
+    private static final int A15_MIN_GOLD_COST = 90;
+    private static final int A15_MAX_GOLD_COST = 110;
+    private static final float HEALTH_LOSS_PERCENTAGE = 0.20F;
+    private static final float A15_HEALTH_LOSS_PERCENTAGE = 0.25F;
+    private static final int HEALTH_LOSS_MINIMUM = 12;
+    private static final int A15_HEALTH_LOSS_MINIMUM = 15;
+    private static final float MAX_HEALTH_LOSS_PERCENTAGE = 0.10F;
+    private static final float A15_MAX_HEALTH_LOSS_PERCENTAGE = 0.14F;
+    private static final int MAX_HEALTH_LOSS_MINIMUM = 5;
+    private static final int A15_MAX_HEALTH_LOSS_MINIMUM = 7;
 
     private int goldCost;
     private int healthCost;
@@ -50,14 +50,12 @@ public class ShatteredPortal extends AbstractImageEvent {
             this.goldCost = AbstractDungeon.miscRng.random(A15_MIN_GOLD_COST, A15_MAX_GOLD_COST);
             this.healthCost = (int) ((float) AbstractDungeon.player.maxHealth * A15_HEALTH_LOSS_PERCENTAGE);
             this.healthCost = Math.max(this.healthCost, A15_HEALTH_LOSS_MINIMUM);
-            this.maxHealthCost = (int) ((float) AbstractDungeon.player.maxHealth * A15_MAX_HEALTH_LOSS_PERCENTAGE);
-            this.maxHealthCost = Math.max(this.maxHealthCost, A15_MAX_HEALTH_LOSS_MINIMUM);
+            this.maxHealthCost = Math.max((int) ((float) AbstractDungeon.player.maxHealth * A15_MAX_HEALTH_LOSS_PERCENTAGE), A15_MAX_HEALTH_LOSS_MINIMUM);
         } else {
             this.goldCost = AbstractDungeon.miscRng.random(MIN_GOLD_COST, MAX_GOLD_COST);
             this.healthCost = (int) ((float) AbstractDungeon.player.maxHealth * HEALTH_LOSS_PERCENTAGE);
             this.healthCost = Math.max(this.healthCost, HEALTH_LOSS_MINIMUM);
-            this.maxHealthCost = (int) ((float) AbstractDungeon.player.maxHealth * MAX_HEALTH_LOSS_PERCENTAGE);
-            this.maxHealthCost = Math.max(this.maxHealthCost, MAX_HEALTH_LOSS_MINIMUM);
+            this.maxHealthCost = Math.max((int) ((float) AbstractDungeon.player.maxHealth * MAX_HEALTH_LOSS_PERCENTAGE), MAX_HEALTH_LOSS_MINIMUM);
         }
 
         this.cardCost = this.getRandomRareCard();
@@ -66,7 +64,7 @@ public class ShatteredPortal extends AbstractImageEvent {
     }
 
     private AbstractCard getRandomRareCard() {
-        ArrayList<AbstractCard> list = new ArrayList();
+        ArrayList<AbstractCard> list = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.rarity == AbstractCard.CardRarity.RARE) {
                 list.add(c);

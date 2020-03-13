@@ -21,10 +21,10 @@ public class BigGameHunter extends AbstractImageEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     public static final String IMG = Elementarium.eventImage(ID);
 
-    private static final int MIN_GOLD_COST = 120;
-    private static final int MAX_GOLD_COST = 140;
-    private static final int A15_MIN_GOLD_COST = 130;
-    private static final int A15_MAX_GOLD_COST = 160;
+    private static final int MIN_GOLD_COST = 110;
+    private static final int MAX_GOLD_COST = 120;
+    private static final int A15_MIN_GOLD_COST = 120;
+    private static final int A15_MAX_GOLD_COST = 130;
     private static final int GOLD_TO_HEALTH_PERCENT_RATIO = 5;
 
     private int goldCost;
