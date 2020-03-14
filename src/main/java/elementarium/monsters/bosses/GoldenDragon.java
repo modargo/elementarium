@@ -33,21 +33,21 @@ public class GoldenDragon extends CustomMonster {
     private static final int BREATH_WEAPON_DAMAGE = 14;
     private static final int A4_BREATH_WEAPON_DAMAGE = 16;
     private static final int BREATH_WEAPON_DAZEDS = 2;
-    private static final int A19_BREATH_WEAPON_DAZEDS = 3;
+    private static final int A19_BREATH_WEAPON_DAZEDS = 2;
     private static final int EMPOWERING_ROAR_DAMAGE = 16;
     private static final int A4_EMPOWERING_ROAR_DAMAGE = 18;
     private static final int EMPOWERING_ROAR_ARTIFACT = 1;
-    private static final int A19_EMPOWERING_ROAR_ARTIFACT = 2;
+    private static final int A19_EMPOWERING_ROAR_ARTIFACT = 1;
     private static final int EMPOWERING_ROAR_STRENGTH = 1;
-    private static final int A19_EMPOWERING_ROAR_STRENGTH = 2;
+    private static final int A19_EMPOWERING_ROAR_STRENGTH = 1;
     private static final int CLAW_AND_BITE_DAMAGE = 2;
-    private static final int A4_CLAW_AND_BITE_DAMAGE = 2;
+    private static final int A4_CLAW_AND_BITE_DAMAGE = 3;
     private static final int TURN_TO_GOLD_WRAITH_FORM = 1;
     private static final int A19_TURN_TO_GOLD_WRAITH_FORM = 2;
     private static final int TURN_TO_GOLD_BIAS = 0;
     private static final int A19_TURN_TO_GOLD_BIAS = 1;
     private static final int ARTIFACT = 1;
-    private static final int A19_ARTIFACT = 2;
+    private static final int A19_ARTIFACT = 1;
     private static final int HP = 380;
     private static final int A9_HP = 400;
 
@@ -153,7 +153,7 @@ public class GoldenDragon extends CustomMonster {
             case TURN_TO_GOLD_DEBUFF:
                 AbstractDungeon.actionManager.addToBottom(new FastShakeAction(this, 0.5F, 0.2F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WraithFormPower(AbstractDungeon.player, -this.turnToGoldWraithForm), -this.turnToGoldWraithForm));
-                if (this.turnToGoldBias > 0 && !AbstractDungeon.player.orbs.isEmpty()) {
+                if (this.turnToGoldBias > 0 && !AbstractDungeon.player.orbs.isEmpty() && !AbstractDungeon.player.hasPower(ArtifactPower.POWER_ID)) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new BiasPower(AbstractDungeon.player, this.turnToGoldBias), this.turnToGoldBias));
                 }
                 break;
@@ -171,7 +171,7 @@ public class GoldenDragon extends CustomMonster {
 
     @Override
     protected void getMove(final int num) {
-        if (this.moveHistory.size() >= 2 && !this.lastMove(TURN_TO_GOLD_DEBUFF) && !AbstractDungeon.player.hasPower(WraithFormPower.POWER_ID)) {
+        if (this.moveHistory.size() >= 3 && !this.lastMove(TURN_TO_GOLD_DEBUFF) && !AbstractDungeon.player.hasPower(WraithFormPower.POWER_ID)) {
             this.setMove(MOVES[4], TURN_TO_GOLD_DEBUFF, Intent.STRONG_DEBUFF);
         } else {
             switch (this.movePattern[this.moveIndex % this.movePattern.length]) {
