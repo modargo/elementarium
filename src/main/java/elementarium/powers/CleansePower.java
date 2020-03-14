@@ -31,10 +31,20 @@ public class CleansePower extends AbstractPower {
         for (AbstractPower p : owner.powers) {
             if (p.type == PowerType.DEBUFF) {
                 if (p.amount > 0 && p.ID != GainStrengthPower.POWER_ID) {
-                    p.reducePower(Math.min(this.amount, p.amount));
+                    if (this.amount >= p.amount) {
+                        this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, p));
+                    }
+                    else {
+                        p.reducePower(this.amount);
+                    }
                 }
                 else if (p.amount < 0) {
-                    p.stackPower(Math.min(this.amount, Math.abs(p.amount)));
+                    if (this.amount >= Math.abs(p.amount)) {
+                        this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, p));
+                    }
+                    else {
+                        p.stackPower(this.amount);
+                    }
                 }
             }
         }
