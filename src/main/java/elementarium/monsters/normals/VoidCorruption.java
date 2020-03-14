@@ -33,8 +33,8 @@ public class VoidCorruption extends CustomMonster
     private static final int WEAK_DEBUFF_AMOUNT = 2;
     private static final int VOIDS_ATTACK_DAMAGE = 10;
     private static final int A2_VOIDS_ATTACK_DAMAGE = 12;
-    private static final int BIG_ATTACK_DAMAGE = 18;
-    private static final int A2_BIG_ATTACK_DAMAGE = 21;
+    private static final int BIG_ATTACK_DAMAGE = 17;
+    private static final int A2_BIG_ATTACK_DAMAGE = 20;
     private static final int MULTI_ATTACK_DAMAGE = 4;
     private static final int MULTI_ATTACK_COUNT = 2;
     private static final int A2_MULTI_ATTACK_COUNT = 3;

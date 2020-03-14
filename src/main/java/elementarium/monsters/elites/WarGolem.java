@@ -31,8 +31,8 @@ public class WarGolem extends CustomMonster
     private static final int A3_VULNERABLE_ATTACK_DAMAGE = 19;
     private static final int VULNERABLE_AMOUNT = 1;
 	private static final int A18_VULNERABLE_AMOUNT = 2;
-    private static final int FRAIL_ATTACK_DAMAGE = 17;
-    private static final int A3_FRAIL_ATTACK_DAMAGE = 19;
+    private static final int FRAIL_ATTACK_DAMAGE = 16;
+    private static final int A3_FRAIL_ATTACK_DAMAGE = 18;
     private static final int FRAIL_AMOUNT = 1;
 	private static final int A18_FRAIL_AMOUNT = 2;
     private static final int DEX_ATTACK_DAMAGE = 14;
@@ -152,7 +152,7 @@ public class WarGolem extends CustomMonster
             if (this.lastMove(DEX_ATTACK) || (num < 50 && !this.lastMove(FRAIL_ATTACK))) {
                 this.setMove(WarGolem.MOVES[1], FRAIL_ATTACK, Intent.ATTACK_DEBUFF, this.frailDamage);
             } else {
-                this.setMove(WarGolem.MOVES[2], DEX_ATTACK, Intent.ATTACK_DEBUFF, this.frailDamage);
+                this.setMove(WarGolem.MOVES[2], DEX_ATTACK, Intent.ATTACK_DEBUFF, this.dexDamage);
             }
         }
     }

@@ -24,7 +24,7 @@ public class FlameHerald extends CustomMonster
     private static final MonsterStrings monsterStrings;
     public static final String NAME;
     public static final String[] MOVES;
-    public static final String[] DIALOG;;
+    public static final String[] DIALOG;
     private static final String IMG = Elementarium.monsterImage(ID);
     private static final byte GATHERING_FLAMES = 1;
     private static final byte SPEAR_THRUST_ATTACK = 2;

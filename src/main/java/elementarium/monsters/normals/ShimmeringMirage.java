@@ -89,13 +89,12 @@ public class ShimmeringMirage extends CustomMonster
             this.firstMove = false;
         }
         switch (this.nextMove) {
-            case SHINE_ATTACK: {
+            case SHINE_ATTACK:
                 AbstractDungeon.effectsQueue.add(new LightFlareParticleEffect(this.drawX, this.drawY, Color.WHITE));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePower(this, 1)));
                 break;
-            }
-            case GLOW_BUFF: {
+            case GLOW_BUFF:
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                     if (m == this || !m.isDying) {
                         if (m != this) {
@@ -114,12 +113,10 @@ public class ShimmeringMirage extends CustomMonster
                     }
                 }
                 break;
-            }
-            case PULSE_ATTACK: {
+            case PULSE_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
                 AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, PULSE_ATTACK_HEAL));
                 break;
-            }
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }

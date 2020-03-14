@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import elementarium.Elementarium;
+import elementarium.powers.GoldenBulwarkPower;
 import elementarium.powers.MidasAuraPower;
 
 public class OpulentOffering extends CustomMonster
@@ -87,6 +88,7 @@ public class OpulentOffering extends CustomMonster
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MidasAuraPower(this)));
         int blockDivisor = AbstractDungeon.ascensionLevel >= 7 ? A7_GOLD_BLOCK_DIVISOR : GOLD_BLOCK_DIVISOR;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new GoldenBulwarkPower(this, blockDivisor)));
         int startingBlockAmount = STARTING_BLOCK_BASE + ((AbstractDungeon.player.gold + blockDivisor - 1) / blockDivisor);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, startingBlockAmount));
     }

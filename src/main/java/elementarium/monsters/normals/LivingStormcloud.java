@@ -109,7 +109,7 @@ public class LivingStormcloud extends CustomMonster
                 break;
             case GUST_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-                this.addHover(this.GUST_HOVER_AMOUNT);
+                this.addHover(GUST_HOVER_AMOUNT);
                 break;
             case RAIN_BUFF:
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {

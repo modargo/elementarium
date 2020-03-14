@@ -30,12 +30,12 @@ public class GoldenDragon extends CustomMonster {
     private static final int A4_TAIL_SLAM_DAMAGE = 20;
     private static final int TAIL_SLAM_BLOCK = 15;
     private static final int A9_TAIL_SLAM_BLOCK = 20;
-    private static final int BREATH_WEAPON_DAMAGE = 15;
-    private static final int A4_BREATH_WEAPON_DAMAGE = 17;
+    private static final int BREATH_WEAPON_DAMAGE = 14;
+    private static final int A4_BREATH_WEAPON_DAMAGE = 16;
     private static final int BREATH_WEAPON_DAZEDS = 2;
     private static final int A19_BREATH_WEAPON_DAZEDS = 3;
-    private static final int EMPOWERING_ROAR_DAMAGE = 17;
-    private static final int A4_EMPOWERING_ROAR_DAMAGE = 19;
+    private static final int EMPOWERING_ROAR_DAMAGE = 16;
+    private static final int A4_EMPOWERING_ROAR_DAMAGE = 18;
     private static final int EMPOWERING_ROAR_ARTIFACT = 1;
     private static final int A19_EMPOWERING_ROAR_ARTIFACT = 2;
     private static final int EMPOWERING_ROAR_STRENGTH = 1;

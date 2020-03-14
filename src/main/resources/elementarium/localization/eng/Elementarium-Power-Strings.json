@@ -73,5 +73,9 @@
   "Elementarium:VoidPressure": {
     "NAME": "Void Pressure",
     "DESCRIPTIONS": ["Whenever a card is #yExhausted or you play a power, take #b{0} damage. Exhaust a random card in your hand that isn't a Status, a Curse, or Ethereal at the end of your turn."]
+  },
+  "Elementarium:GoldenBulwark": {
+    "NAME": "Golden Bulwark",
+    "DESCRIPTIONS": ["Gains #b1 block at the start of combat for every #b{0} gold you have (rounded up)."]
   }
 }

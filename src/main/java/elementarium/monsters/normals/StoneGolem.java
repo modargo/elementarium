@@ -43,7 +43,7 @@ public class StoneGolem extends CustomMonster
     private static final int STARTING_PLATED_ARMOR = 4;
     private static final int A7_STARTING_PLATED_ARMOR = 5;
     private static final int SORROW_STRENGTH = 5;
-    private static final int A17_SORROW_STRENGTH = 9;
+    private static final int A17_SORROW_STRENGTH = 8;
     private static final int HP_MIN = 48;
     private static final int HP_MAX = 51;
     private static final int A7_HP_MIN = 50;

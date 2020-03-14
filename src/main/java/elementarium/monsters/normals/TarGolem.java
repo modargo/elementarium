@@ -34,10 +34,10 @@ public class TarGolem extends CustomMonster {
     private static final int A7_TAR_SHIELD_BLOCK = 5;
     private static final int STICKY_TAR_AMOUNT = 1;
     private static final int A17_STICKY_TAR_AMOUNT = 2;
-    private static final int HP_MIN = 43;
-    private static final int HP_MAX = 46;
-    private static final int A7_HP_MIN = 45;
-    private static final int A7_HP_MAX = 48;
+    private static final int HP_MIN = 40;
+    private static final int HP_MAX = 43;
+    private static final int A7_HP_MIN = 42;
+    private static final int A7_HP_MAX = 45;
     private int tarAttackDamage;
     private int tarShieldBlock;
     private int stickyTarAmount;
