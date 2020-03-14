@@ -29,12 +29,12 @@ public class VoidBeast extends CustomMonster
     private static final byte VOID_GAZE_DEBUFF = 2;
     private static final byte SHADOW_CLAW_ATTACK = 3;
     private static final int CORRUPTING_BITE_DAMAGE = 8;
-    private static final int A2_CORRUPTING_BITE_DAMAGE = 10;
+    private static final int A2_CORRUPTING_BITE_DAMAGE = 9;
     private static final int CORRUPTING_BITE_DAZES = 2;
     private static final int VOID_GAZE_FRAIL = 2;
-    private static final int A17_VOID_GAZE_FRAIL = 4;
-    private static final int VOID_GAZE_DAZES = 3;
-    private static final int A17_VOID_GAZE_DAZES = 5;
+    private static final int A17_VOID_GAZE_FRAIL = 3;
+    private static final int VOID_GAZE_DAZES = 2;
+    private static final int A17_VOID_GAZE_DAZES = 3;
     private static final int SHADOW_CLAW_DAMAGE = 6;
     private static final int A2_SHADOW_CLAW_DAMAGE = 7;
     private static final int SHADOW_CLAW_HITS = 2;

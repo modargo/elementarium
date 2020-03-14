@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import elementarium.Elementarium;
 import elementarium.actions.SummonElementalAction;
 import elementarium.monsters.normals.OrbOfFire;
@@ -136,17 +137,11 @@ public class Firelord extends CustomMonster
                 break;
             }
             case SUMMON_ORB: {
-                ArrayList<Float> xPositions = new ArrayList<>();
-                if (!hasLivingOrbs()) {
-                    xPositions.add(-500.0F);
-                }
-                if (!hasLivingHeralds()) {
-                    xPositions.add(100.0F);
-                }
+                ArrayList<Float> xPositions = this.getOpenPositions();
                 int strength = AbstractDungeon.ascensionLevel >= 18 ? this.summonActionsTaken * 5 : 0;
                 int block = AbstractDungeon.ascensionLevel >= 18 ? this.summonActionsTaken * 10 : 0;
                 for (Float x : xPositions) {
-                    AbstractDungeon.actionManager.addToBottom(new SummonElementalAction(OrbOfFire.ID, x, 0F, strength, block));
+                    AbstractDungeon.actionManager.addToBottom(new SummonElementalAction(OrbOfFire.ID, x, 125.0F, strength, block));
                 }
                 this.summonActionsTaken++;
                 break;
@@ -165,7 +160,7 @@ public class Firelord extends CustomMonster
         if (this.firstMove) {
             this.setMove(MOVES[0], HAMMER_OF_THE_FIRELORD_ATTACK, Intent.ATTACK_DEBUFF, this.hammerOfTheFirelordDamage);
         } else {
-            boolean canSummon = !hasLivingOrbs() || !hasLivingHeralds();
+            boolean canSummon = this.getOpenPositions().size() > 0;
             int option1;
             int option2;
             int move;
@@ -217,14 +212,21 @@ public class Firelord extends CustomMonster
         }
     }
 
-    private boolean hasLivingOrbs() {
-        return AbstractDungeon.getMonsters().monsters.stream()
-                .anyMatch(m -> m != null && !m.isDying && m instanceof OrbOfFire);
-    }
-
-    private boolean hasLivingHeralds() {
-        return AbstractDungeon.getMonsters().monsters.stream()
-                .anyMatch(m -> m != null && !m.isDying && m instanceof FlameHerald);
+    private ArrayList<Float> getOpenPositions() {
+        ArrayList<Float> xPositions = new ArrayList<>();
+        boolean hasPosition1 = false;
+        boolean hasPosition2 = false;
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            hasPosition1 = hasPosition1 || (!m.isDying && m.drawX < this.drawX);
+            hasPosition2 = hasPosition2 || (!m.isDying && m.drawX > this.drawX);
+        }
+        if (!hasPosition1) {
+            xPositions.add(-500.0F);
+        }
+        if (!hasPosition2) {
+            xPositions.add(100.0F);
+        }
+        return xPositions;
     }
 
     static {

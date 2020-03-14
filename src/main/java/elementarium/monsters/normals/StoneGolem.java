@@ -29,8 +29,8 @@ public class StoneGolem extends CustomMonster
     private static final byte STONE_BASH_ATTACK = 1;
     private static final byte SOLID_STRIKE_ATTACK = 2;
     private static final byte STOMP_AND_SLAM_ATTACK = 3;
-    private static final int STONE_BASH_DAMAGE = 8;
-    private static final int A2_STONE_BASH_DAMAGE = 9;
+    private static final int STONE_BASH_DAMAGE = 7;
+    private static final int A2_STONE_BASH_DAMAGE = 8;
     private static final int STONE_BASH_DEBUFF_DURATION = 1;
     private static final int A17_STONE_BASH_DEBUFF_DURATION = 1;
     private static final int SOLID_STRIKE_DAMAGE = 6;

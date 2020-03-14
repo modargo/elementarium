@@ -41,8 +41,8 @@ public class IcePhoenix extends CustomMonster
     private static final int CLAW_SWIPE_DAMAGE = 4;
     private static final int A4_CLAW_SWIPE_DAMAGE = 5;
     private static final int CLAW_SWIPE_HITS = 2;
-    private static final int WING_SWEEP_DAMAGE = 12;
-    private static final int A4_WING_SWEEP_DAMAGE = 14;
+    private static final int WING_SWEEP_DAMAGE = 11;
+    private static final int A4_WING_SWEEP_DAMAGE = 13;
     private static final int WING_SWEEP_DEBUFF_AMOUNT = 1;
     private static final int GLACIAL_CALM_BLOCK = 8;
     private static final int A9_GLACIAL_CALM_BLOCK = 10;
