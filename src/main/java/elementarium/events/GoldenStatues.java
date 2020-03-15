@@ -5,14 +5,12 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
+import com.megacrit.cardcrawl.events.city.MaskedBandits;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.Circlet;
-import com.megacrit.cardcrawl.relics.RedMask;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import elementarium.Elementarium;
 import elementarium.act.Encounters;
 import elementarium.cards.CardUtils;
 import elementarium.cards.CustomTags;
@@ -23,7 +21,9 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class GoldenStatues extends AbstractEvent {
+// We extend the MaskedBandits event because ProceedButton.java specifically checks if an event is an instance of this type
+// (or a few other types) in the logic for what happens when you click proceed. This is easier than a patch.
+public class GoldenStatues extends MaskedBandits {
     public static final String ID = "Elementarium:GoldenStatues";
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
@@ -33,6 +33,9 @@ public class GoldenStatues extends AbstractEvent {
     private AbstractCard cardGain;
 
     public GoldenStatues() {
+        super();
+        this.roomEventText.clear();
+
         this.cardCost = this.getCardCost();
         this.cardGain = CardUtils.gildCard(this.cardCost);
         if (this.cardGain == null) {
@@ -51,6 +54,7 @@ public class GoldenStatues extends AbstractEvent {
         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(Encounters.GOLDEN_STATUES);
     }
 
+    @Override
     public void update() {
         super.update();
         if (!RoomEventDialog.waitForInput) {
@@ -58,6 +62,7 @@ public class GoldenStatues extends AbstractEvent {
         }
     }
 
+    @Override
     protected void buttonEffect(int buttonPressed) {
         switch(this.screen) {
             case 0:

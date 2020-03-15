@@ -3,14 +3,16 @@ package elementarium.events;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import elementarium.Elementarium;
 import elementarium.act.Encounters;
 
-public class FireSanctum extends AbstractImageEvent {
+// We extend the Colosseum event because ProceedButton.java specifically checks if an event is an instance of this type
+// (or a few other types) in the logic for what happens when you click proceed. This is easier than a patch.
+public class FireSanctum extends Colosseum {
     public static final String ID = "Elementarium:FireSanctum";
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
     private static final String NAME = eventStrings.NAME;
@@ -20,11 +22,20 @@ public class FireSanctum extends AbstractImageEvent {
     private CurScreen screen;
 
     public FireSanctum() {
-        super(NAME, DESCRIPTIONS[0], IMG);
+        super();
+        this.imageEventText.clear();
+        this.roomEventText.clear();
+        this.title = NAME;
+        this.body = DESCRIPTIONS[0];
+        this.imageEventText.loadImage(IMG);
+        type = EventType.IMAGE;
+        this.noCardsInRewards = false;
+
         this.screen = CurScreen.INTRO;
         this.imageEventText.setDialogOption(OPTIONS[0]);
     }
 
+    @Override
     protected void buttonEffect(int buttonPressed) {
         switch(this.screen) {
             case INTRO:
@@ -65,6 +76,10 @@ public class FireSanctum extends AbstractImageEvent {
         }
     }
 
+    @Override
+    public void logMetric(String actionTaken) {}
+
+    @Override
     public void reopen() {
         if (this.screen != CurScreen.LEAVE) {
             AbstractDungeon.resetPlayer();
