@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import elementarium.Elementarium;
 import elementarium.cards.tar.StickyTar;
 import elementarium.cards.tar.Tar;
@@ -23,7 +24,7 @@ public class TarGolem extends CustomMonster {
     public static final String[] MOVES;
     private static final String IMG = Elementarium.monsterImage(ID);
     private boolean firstMove = true;
-    private boolean usedStickyTarDebuff = false;
+    private int stickyTarDebuffCount = 0;
     private static final byte TAR_SHIELD_ATTACK = 1;
     private static final byte TAR_SPRAY_ATTACK = 2;
     private static final byte STICKY_TAR_DEBUFF = 3;
@@ -32,15 +33,15 @@ public class TarGolem extends CustomMonster {
     private static final int TAR_ATTACK_HITS = 2;
     private static final int TAR_SHIELD_BLOCK = 3;
     private static final int A7_TAR_SHIELD_BLOCK = 5;
-    private static final int STICKY_TAR_AMOUNT = 1;
-    private static final int A17_STICKY_TAR_AMOUNT = 2;
+    private static final int STICKY_TAR_MAX = 1;
+    private static final int A17_STICKY_TAR_MAX = 2;
+    private static final int STICKY_TAR_DEBUFF_WEAK = 1;
     private static final int HP_MIN = 40;
     private static final int HP_MAX = 43;
     private static final int A7_HP_MIN = 42;
     private static final int A7_HP_MAX = 45;
     private int tarAttackDamage;
     private int tarShieldBlock;
-    private int stickyTarAmount;
 
     public TarGolem() {
         this(0.0f, 0.0f);
@@ -63,12 +64,6 @@ public class TarGolem extends CustomMonster {
             this.tarAttackDamage = TAR_ATTACK_DAMAGE;
         }
         this.damage.add(new DamageInfo(this, this.tarAttackDamage));
-
-        if (AbstractDungeon.ascensionLevel >= 17) {
-            this.stickyTarAmount = A17_STICKY_TAR_AMOUNT;
-        } else {
-            this.stickyTarAmount = STICKY_TAR_AMOUNT;
-        }
     }
 
     @Override
@@ -82,30 +77,30 @@ public class TarGolem extends CustomMonster {
             this.firstMove = false;
         }
         switch (this.nextMove) {
-            case TAR_SHIELD_ATTACK: {
+            case TAR_SHIELD_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
                 for (int i = 0; i < TAR_ATTACK_HITS; i++) {
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 }
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.tarShieldBlock));
                 break;
-            }
-            case TAR_SPRAY_ATTACK: {
+            case TAR_SPRAY_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
                 for (int i = 0; i < TAR_ATTACK_HITS; i++) {
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Tar(), 1, true, true));
                 break;
-            }
-            case STICKY_TAR_DEBUFF: {
-                this.usedStickyTarDebuff = true;
+            case STICKY_TAR_DEBUFF:
                 AbstractDungeon.actionManager.addToBottom(new FastShakeAction(this, 0.5F, 0.2F));
-                for (int i = 0; i < this.stickyTarAmount; i++) {
+                if (this.stickyTarDebuffCount < STICKY_TAR_MAX || AbstractDungeon.ascensionLevel >= 17) {
                     AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(new StickyTar()));
                 }
+                if (this.stickyTarDebuffCount > 0) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, STICKY_TAR_DEBUFF_WEAK, true), STICKY_TAR_DEBUFF_WEAK));
+                }
+                this.stickyTarDebuffCount++;
                 break;
-            }
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
@@ -117,8 +112,8 @@ public class TarGolem extends CustomMonster {
 
     @Override
     protected void getMove(final int num) {
-        if (!this.firstMove && !this.usedStickyTarDebuff) {
-            this.setMove(MOVES[2], STICKY_TAR_DEBUFF, Intent.STRONG_DEBUFF);
+        if (!this.firstMove && this.stickyTarDebuffCount < A17_STICKY_TAR_MAX) {
+            this.setMove(MOVES[2], STICKY_TAR_DEBUFF, this.stickyTarDebuffCount < STICKY_TAR_MAX || AbstractDungeon.ascensionLevel >= 17 ? Intent.STRONG_DEBUFF : Intent.DEBUFF);
         } else if ((this.firstMove && AbstractDungeon.ascensionLevel >= 17) || num < 50) {
             this.setMove(MOVES[0], TAR_SHIELD_ATTACK, Intent.ATTACK_DEFEND, this.tarAttackDamage, TAR_ATTACK_HITS, true);
         } else {

@@ -33,7 +33,7 @@ public class MudGolem extends CustomMonster
     private static final int A2_MUD_ERUPTION_DAMAGE = 10;
     private static final int MUD_ERUPTION_STRENGTH = 1;
     private static final int A17_MUD_ERUPTION_STRENGTH = 1;
-    private static final int MUD_TORNADO_DAMAGE = 1;
+    private static final int MUD_TORNADO_DAMAGE = 2;
     private static final int MUD_TORNADO_HITS = 3;
     private static final int A2_MUD_TORNADO_HITS = 4;
     private static final int MUD_TORNADO_BLOCK = 2;
@@ -97,6 +97,7 @@ public class MudGolem extends CustomMonster
         switch (this.nextMove) {
             case MUD_ERUPTION_ATTACK: {
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                     if (m == this || !m.isDying) {
                         // For this enemy, those to the left of it (which have already acted), and those that aren't attacking, give strength
@@ -109,7 +110,6 @@ public class MudGolem extends CustomMonster
                         }
                     }
                 }
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 break;
             }
             case MUD_TORNADO_ATTACK: {
@@ -135,7 +135,7 @@ public class MudGolem extends CustomMonster
             this.setMove(MOVES[0], MUD_ERUPTION_ATTACK, Intent.ATTACK_BUFF, this.mudEruptionDamage);
         }
         else {
-            this.setMove(MOVES[0], MUD_TORNADO_ATTACK, Intent.ATTACK_DEFEND, MUD_TORNADO_ATTACK, this.mudTornadoHits, true);
+            this.setMove(MOVES[0], MUD_TORNADO_ATTACK, Intent.ATTACK_DEFEND, MUD_TORNADO_DAMAGE, this.mudTornadoHits, true);
         }
     }
 

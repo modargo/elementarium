@@ -47,9 +47,9 @@ public class OpulentOffering extends CustomMonster
     private static final int GOLD_BLOCK_DIVISOR = 50;
     private static final int A7_GOLD_BLOCK_DIVISOR = 40;
     private static final int HP_MIN = 23;
-    private static final int HP_MAX = 26;
+    private static final int HP_MAX = 25;
     private static final int A7_HP_MIN = 24;
-    private static final int A7_HP_MAX = 27;
+    private static final int A7_HP_MAX = 26;
     private int gobletBashDamage;
     private int coinBarrageHits;
     private int opulentBarrierDamage;
