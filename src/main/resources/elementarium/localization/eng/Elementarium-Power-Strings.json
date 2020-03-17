@@ -34,8 +34,8 @@
   "Elementarium:Crumbling": {
     "NAME": "Crumbling",
     "DESCRIPTIONS": [
-      "Dies in #b{0} turns. When this dies to to #yCrumbling, {1} loses #b{2} #yStrength.",
-      "Dies in #b1 turn. When this dies to to #yCrumbling, {0} loses #b{1} #yStrength."
+      "Dies in #b{0} turns. When this dies to #yCrumbling, {1} loses #b{2} #yStrength.",
+      "Dies in #b1 turn. When this dies to #yCrumbling, {0} loses #b{1} #yStrength."
     ]
   },
   "Elementarium:Delicate": {

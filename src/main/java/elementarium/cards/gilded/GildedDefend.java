@@ -27,6 +27,7 @@ public class GildedDefend extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         this.baseBlock = BASE_BLOCK;
         this.baseMagicNumber = DEXTERITY_AMOUNT;
+        this.magicNumber = this.baseMagicNumber;
         this.tags.add(CustomTags.GILDED);
     }
 

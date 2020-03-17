@@ -29,6 +29,11 @@ public class GoldenMirage extends CustomRelic {
     }
 
     @Override
+    public void onVictory() {
+        this.grayscale = false;
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }
