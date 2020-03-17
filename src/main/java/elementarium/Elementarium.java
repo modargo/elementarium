@@ -13,6 +13,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -209,6 +210,9 @@ public class Elementarium implements
         BaseMod.addEvent(BladeSeller.ID, BladeSeller.class, ElementariumAct.ID);
         BaseMod.addEvent(HeartOfTheVoid.ID, HeartOfTheVoid.class, ElementariumAct.ID);
         BaseMod.addEvent(VoidShrine.ID, VoidShrine.class, ElementariumAct.ID);
+
+        // Events in other acts
+        BaseMod.addEvent(ChestOfTheGoldenMirage.ID, ChestOfTheGoldenMirage.class, TheBeyond.ID);
     }
 
     private static void addRelics() {
@@ -220,6 +224,7 @@ public class Elementarium implements
         BaseMod.addRelic(new GoldenMirage(), RelicType.SHARED);
         BaseMod.addRelic(new RadiantIdol(), RelicType.SHARED);
         BaseMod.addRelic(new FlickeringLantern(), RelicType.SHARED);
+        BaseMod.addRelic(new ElementariumTrophy(), RelicType.SHARED);
     }
 
     @Override

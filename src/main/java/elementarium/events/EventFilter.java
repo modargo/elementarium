@@ -1,6 +1,9 @@
 package elementarium.events;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.beyond.TombRedMask;
+import elementarium.relics.ElementariumTrophy;
+
 import java.util.ArrayList;
 
 public class EventFilter {
@@ -19,6 +22,18 @@ public class EventFilter {
             }
             if (event.equals(BigGameHunter.ID)) {
                 if (!(AbstractDungeon.currMapNode != null && AbstractDungeon.currMapNode.y <= AbstractDungeon.map.size() / 2)) {
+                    eventsToRemove.add(event);
+                }
+            }
+
+            if (event.equals(TombRedMask.ID)) {
+                if (AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
+                    eventsToRemove.add(event);
+                }
+            }
+
+            if (event.equals(ChestOfTheGoldenMirage.ID)) {
+                if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
                     eventsToRemove.add(event);
                 }
             }

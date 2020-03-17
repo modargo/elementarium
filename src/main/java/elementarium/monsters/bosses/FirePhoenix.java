@@ -24,6 +24,8 @@ import elementarium.powers.BurningClawsPower;
 import elementarium.powers.BurningDisdainPower;
 import elementarium.powers.DelayedVulnerablePower;
 import elementarium.powers.PhoenixRebirthPower;
+import elementarium.relics.ElementariumTrophy;
+import elementarium.relics.HuntersSling;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -200,6 +202,9 @@ public class FirePhoenix extends CustomMonster
             this.useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             this.onBossVictoryLogic();
+            if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new ElementariumTrophy());
+            }
         }
     }
 

@@ -10,10 +10,12 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.powers.*;
 import elementarium.Elementarium;
+import elementarium.relics.ElementariumTrophy;
 
 public class GoldenDragon extends CustomMonster {
     public static final String ID = "Elementarium:GoldenDragon";
@@ -198,6 +200,9 @@ public class GoldenDragon extends CustomMonster {
             this.useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             this.onBossVictoryLogic();
+            if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new ElementariumTrophy());
+            }
         }
     }
 

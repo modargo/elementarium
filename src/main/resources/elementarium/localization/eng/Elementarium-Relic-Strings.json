@@ -54,5 +54,12 @@
     "DESCRIPTIONS": [
       "At the start of your third turn, gain [E] ."
     ]
+  },
+  "Elementarium:ElementariumTrophy": {
+    "NAME": "Elementarium Trophy",
+    "FLAVOR": "Shimmers with many different energies.",
+    "DESCRIPTIONS": [
+      "A trophy of your victory in the Elementarium."
+    ]
   }
 }

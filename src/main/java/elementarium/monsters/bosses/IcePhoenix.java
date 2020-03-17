@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,6 +24,7 @@ import elementarium.Elementarium;
 import elementarium.powers.FreezingClawsPower;
 import elementarium.powers.FreezingContemptPower;
 import elementarium.powers.PhoenixRebirthPower;
+import elementarium.relics.ElementariumTrophy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -200,6 +202,9 @@ public class IcePhoenix extends CustomMonster
             this.useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             this.onBossVictoryLogic();
+            if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new ElementariumTrophy());
+            }
         }
     }
 

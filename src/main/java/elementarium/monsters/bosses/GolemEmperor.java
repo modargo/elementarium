@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.actions.common.SuicideAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,6 +27,7 @@ import elementarium.monsters.normals.RubyGolem;
 import elementarium.monsters.normals.StoneGolem;
 import elementarium.monsters.normals.TarGolem;
 import elementarium.monsters.elites.WarGolem;
+import elementarium.relics.ElementariumTrophy;
 
 import java.util.Arrays;
 import java.util.List;
@@ -168,6 +170,9 @@ public class GolemEmperor extends CustomMonster {
         this.deathTimer++;
         super.die();
         this.onBossVictoryLogic();
+        if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
+            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new ElementariumTrophy());
+        }
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!m.isDead && !m.isDying) {
                 AbstractDungeon.actionManager.addToTop(new HideHealthBarAction(m));

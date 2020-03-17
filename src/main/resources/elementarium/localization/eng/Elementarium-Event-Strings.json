@@ -281,5 +281,20 @@
       "[Leave]",
       "Select a Card to Duplicate."
     ]
+  },
+  "Elementarium:ChestOfTheGoldenMirage": {
+    "NAME": "Chest Of The Golden Mirage",
+    "DESCRIPTIONS": [
+      "A highly ornamented chest can be seen on the other side of a floating path. Upon reaching the chest, you feel an urge to put all your #ygold coins inside it.",
+      "You present the golden mirage and the chest starts to ~fade~ ~away...~ a hidden chamber! NL NL The chamber is filled with mounds of #ygold!",
+      "The gold coins shimmer and fade, turning into ghostly versions of what they once were. The result is untouchable but beautiful."
+    ],
+    "OPTIONS": [
+      "[Present the Golden Mirage] #gGain #g222 #gGold.",
+      "[Locked] Requires: Golden Mirage.",
+      "[Offer: ",
+      " Gold] #rLose #rall #rGold. #gObtain #ga #gRelic.",
+      "[Leave]"
+    ]
   }
 }
