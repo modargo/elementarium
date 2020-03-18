@@ -31,13 +31,15 @@ public class ShimmeringMirage extends CustomMonster
     private static final byte SHINE_ATTACK = 1;
     private static final byte GLOW_BUFF = 2;
     private static final byte PULSE_ATTACK = 3;
-    private static final int SHINE_ATTACK_DAMAGE = 6;
+    private static final int SHINE_ATTACK_DAMAGE = 7;
     private static final int A2_SHINE_ATTACK_DAMAGE = 8;
     private static final int GLOW_STRENGTH = 1;
     private static final int A17_GLOW_STRENGTH = 1;
+    private static final int GLOW_SELF_STRENGTH = 2;
+    private static final int A17_GLOW_SELF_STRENGTH = 4;
     private static final int GLOW_CLEANSE = 2;
-    private static final int PULSE_ATTACK_DAMAGE = 7;
-    private static final int A2_PULSE_ATTACK_DAMAGE = 9;
+    private static final int PULSE_ATTACK_DAMAGE = 8;
+    private static final int A2_PULSE_ATTACK_DAMAGE = 10;
     private static final int PULSE_ATTACK_HEAL = 6;
     private static final int CLEANSE_AMOUNT = 2;
     private static final int HP_MIN = 32;
@@ -47,6 +49,7 @@ public class ShimmeringMirage extends CustomMonster
     private int shineDamage;
     private int pulseDamage;
     private int glowStrength;
+    private int glowSelfStrength;
 
     public ShimmeringMirage() {
         this(0.0f, 0.0f);
@@ -63,8 +66,10 @@ public class ShimmeringMirage extends CustomMonster
 
         if (AbstractDungeon.ascensionLevel >= 17) {
             this.glowStrength = A17_GLOW_STRENGTH;
+            this.glowSelfStrength = A17_GLOW_SELF_STRENGTH;
         } else {
             this.glowStrength = GLOW_STRENGTH;
+            this.glowSelfStrength = GLOW_SELF_STRENGTH;
         }
 
         if (AbstractDungeon.ascensionLevel >= 2) {
@@ -100,15 +105,16 @@ public class ShimmeringMirage extends CustomMonster
                         if (m != this) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new CleansePower(m, GLOW_CLEANSE, true)));
                         }
-                        if (this.glowStrength != 0) {
-                            // For this enemy, those to the left of it (which have already acted), and those that aren't attacking, give strength
-                            // For enemies to the right of this enemy, give gain strength at end of turn, so their damage doesn't increase
-                            if (m == this || m.drawX < this.drawX || m.getIntentDmg() == -1) {
-                                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthPower(m, this.glowStrength), this.glowStrength));
-                            }
-                            else {
-                                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new GainStrengthPower(m, this.glowStrength), this.glowStrength));
-                            }
+                        // For this enemy, those to the left of it (which have already acted), and those that aren't attacking, give strength
+                        // For enemies to the right of this enemy, give gain strength at end of turn, so their damage doesn't increase
+                        if (m == this) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthPower(m, this.glowSelfStrength), this.glowSelfStrength));
+                        }
+                        else if (m.drawX < this.drawX || m.getIntentDmg() == -1) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthPower(m, this.glowStrength), this.glowStrength));
+                        }
+                        else {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new GainStrengthPower(m, this.glowStrength), this.glowStrength));
                         }
                     }
                 }

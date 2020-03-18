@@ -29,7 +29,7 @@ public class VoidBeast extends CustomMonster
     private static final byte VOID_GAZE_DEBUFF = 2;
     private static final byte SHADOW_CLAW_ATTACK = 3;
     private static final int CORRUPTING_BITE_DAMAGE = 8;
-    private static final int A2_CORRUPTING_BITE_DAMAGE = 9;
+    private static final int A2_CORRUPTING_BITE_DAMAGE = 10;
     private static final int CORRUPTING_BITE_DAZES = 2;
     private static final int VOID_GAZE_FRAIL = 2;
     private static final int A17_VOID_GAZE_FRAIL = 3;
@@ -40,10 +40,10 @@ public class VoidBeast extends CustomMonster
     private static final int SHADOW_CLAW_HITS = 2;
     private static final int VOID_PRESSURE_AMOUNT = 2;
     private static final int A17_VOID_PRESSURE_AMOUNT = 3;
-    private static final int HP_MIN = 108;
-    private static final int HP_MAX = 114;
-    private static final int A7_HP_MIN = 114;
-    private static final int A7_HP_MAX = 120;
+    private static final int HP_MIN = 110;
+    private static final int HP_MAX = 116;
+    private static final int A7_HP_MIN = 116;
+    private static final int A7_HP_MAX = 122;
     private int corruptingBiteDamage;
     private int voidGazeFrail;
     private int voidGazeDazes;

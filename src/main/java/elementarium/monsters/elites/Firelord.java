@@ -52,10 +52,10 @@ public class Firelord extends CustomMonster
     private static final int CLEANSE_AMOUNT = 1;
     private static final int A18_CLEANSE_AMOUNT = 2;
     private static final int FLOURISHING_FLAME_AMOUNT = 1;
-    private static final int HP_MIN = 93;
-    private static final int HP_MAX = 100;
-    private static final int A8_HP_MIN = 98;
-    private static final int A8_HP_MAX = 105;
+    private static final int HP_MIN = 102;
+    private static final int HP_MAX = 107;
+    private static final int A8_HP_MIN = 105;
+    private static final int A8_HP_MAX = 110;
     private int hammerOfTheFirelordDamage;
     private int hammerOfTheFirelordBurns;
     private int fieryWrathDamage;

@@ -26,12 +26,14 @@ public class RubyGolem extends CustomMonster
     public static final String[] MOVES;
     private static final String IMG = Elementarium.monsterImage(ID);
     private static final byte RUBY_KNIVES_ATTACK = 1;
-    private static final byte PRISM_DEBUFF = 2;
+    private static final byte PRISM_ATTACK = 2;
     private static final int RUBY_KNIVES_DAMAGE = 8;
     private static final int A2_RUBY_KNIVES_DAMAGE = 9;
     private static final int RUBY_KNIVES_HITS = 3;
     private static final int RUBY_KNIVES_BLOCK = 6;
     private static final int A7_RUBY_KNIVES_BLOCK = 9;
+    private static final int PRISM_DAMAGE = 10;
+    private static final int A2_PRISM_DAMAGE = 12;
     private static final int PRISM_DEBUFF_AMOUNT = 2;
     private static final int DELICATE_STRENGTH = 3;
     private static final int A17_DELICATE_STRENGTH = 2;
@@ -41,6 +43,7 @@ public class RubyGolem extends CustomMonster
     private static final int A7_HP_MAX = 84;
     private int rubyKnivesDamage;
     private int rubyKnivesBlock;
+    private int prismDamage;
     private int delicateStrength;
 
     public RubyGolem() {
@@ -67,10 +70,13 @@ public class RubyGolem extends CustomMonster
 
         if (AbstractDungeon.ascensionLevel >= 2) {
             this.rubyKnivesDamage = A2_RUBY_KNIVES_DAMAGE;
+            this.prismDamage = A2_PRISM_DAMAGE;
         } else {
             this.rubyKnivesDamage = RUBY_KNIVES_DAMAGE;
+            this.prismDamage = PRISM_DAMAGE;
         }
         this.damage.add(new DamageInfo(this, this.rubyKnivesDamage));
+        this.damage.add(new DamageInfo(this, this.prismDamage));
     }
 
     @Override
@@ -88,8 +94,9 @@ public class RubyGolem extends CustomMonster
                 }
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.rubyKnivesBlock));
                 break;
-            case PRISM_DEBUFF:
+            case PRISM_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new FastShakeAction(this, 0.5F, 0.2F));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, PRISM_DEBUFF_AMOUNT, true), PRISM_DEBUFF_AMOUNT));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, PRISM_DEBUFF_AMOUNT, true), PRISM_DEBUFF_AMOUNT));
                 break;
@@ -104,11 +111,11 @@ public class RubyGolem extends CustomMonster
 
     @Override
     protected void getMove(final int num) {
-        if (!this.lastTwoMoves(RUBY_KNIVES_ATTACK) && (this.lastMove(PRISM_DEBUFF) || this.lastMoveBefore(PRISM_DEBUFF) || num < 70)) {
+        if (!this.lastTwoMoves(RUBY_KNIVES_ATTACK) && (this.lastMove(PRISM_ATTACK) || this.lastMoveBefore(PRISM_ATTACK) || num < 70)) {
             this.setMove(MOVES[0], RUBY_KNIVES_ATTACK, Intent.ATTACK_DEFEND, this.rubyKnivesDamage, RUBY_KNIVES_HITS, true);
         }
         else {
-            this.setMove(MOVES[1], PRISM_DEBUFF, Intent.DEBUFF);
+            this.setMove(MOVES[1], PRISM_ATTACK, Intent.ATTACK_DEBUFF, this.prismDamage);
         }
     }
 

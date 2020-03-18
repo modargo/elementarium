@@ -48,23 +48,23 @@ public class GolemEmperor extends CustomMonster {
     private static final int CRUMBLING_STRENGTH_LOSS = 1;
     private static final int GOLEM_SHIELD_DAMAGE = 8;
     private static final int A4_GOLEM_SHIELD_DAMAGE = 10;
-    private static final int LOOSE_MATERIALS_DAMAGE = 2;
-    private static final int A4_LOOSE_MATERIALS_DAMAGE = 3;
+    private static final int LOOSE_MATERIALS_DAMAGE = 3;
+    private static final int A4_LOOSE_MATERIALS_DAMAGE = 4;
     private static final int LOOSE_MATERIALS_HITS = 2;
     private static final int HP = 260;
     private static final int A9_HP = 280;
 
     private static final float[] xPositions = new float[]{-170.0F, -450.0F};
     private static final List<List<GolemInfo>> GOLEM_GROUPS = Arrays.asList(
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -5)),
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -7)),
-            Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -12)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -5)),
+            Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10), new GolemInfo(RubyGolem.ID, xPositions[1], -4))
     );
     private static final List<List<GolemInfo>> A19_GOLEM_GROUPS = Arrays.asList(
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -5), new GolemInfo(TarGolem.ID, xPositions[1], -2)),
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -7)),
-            Arrays.asList(new GolemInfo(MudGolem.ID, xPositions[0], -3), new GolemInfo(WarGolem.ID, xPositions[1], -12)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(TarGolem.ID, xPositions[1], -2)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -5)),
+            Arrays.asList(new GolemInfo(MudGolem.ID, xPositions[0], -3), new GolemInfo(WarGolem.ID, xPositions[1], -10)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10), new GolemInfo(RubyGolem.ID, xPositions[1], -4))
     );
 

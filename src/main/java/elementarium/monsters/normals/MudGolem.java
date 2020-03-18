@@ -38,8 +38,8 @@ public class MudGolem extends CustomMonster
     private static final int A2_MUD_TORNADO_HITS = 4;
     private static final int MUD_TORNADO_BLOCK = 2;
     private static final int A7_MUD_TORNADO_BLOCK = 3;
-    private static final int MALLEABLE_AMOUNT = 1;
-    private static final int A17_MALLEABLE_AMOUNT = 2;
+    private static final int MALLEABLE_AMOUNT = 2;
+    private static final int A17_MALLEABLE_AMOUNT = 3;
     private static final int HP_MIN = 41;
     private static final int HP_MAX = 44;
     private static final int A7_HP_MIN = 43;

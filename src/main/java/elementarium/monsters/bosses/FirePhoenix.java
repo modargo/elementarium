@@ -25,7 +25,6 @@ import elementarium.powers.BurningDisdainPower;
 import elementarium.powers.DelayedVulnerablePower;
 import elementarium.powers.PhoenixRebirthPower;
 import elementarium.relics.ElementariumTrophy;
-import elementarium.relics.HuntersSling;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +48,7 @@ public class FirePhoenix extends CustomMonster
     private static final int WING_SWEEP_DEBUFF_AMOUNT = 1;
     private static final int MOLTEN_FRENZY_DAMAGE = 14;
     private static final int A4_MOLTEN_FRENZY_DAMAGE = 16;
-    private static final int MOLTEN_FRENZY_STRENGTH = 1;
+    private static final int MOLTEN_FRENZY_STRENGTH = 2;
     private static final int BURNING_TEMPEST_VULNERABLE = 1;
     private static final int A19_BURNING_TEMPEST_VULNERABLE = 1;
     private static final int BURNING_TEMPEST_BURNS = 1;

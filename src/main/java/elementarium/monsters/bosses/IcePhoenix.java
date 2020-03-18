@@ -48,7 +48,7 @@ public class IcePhoenix extends CustomMonster
     private static final int WING_SWEEP_DEBUFF_AMOUNT = 1;
     private static final int GLACIAL_CALM_BLOCK = 8;
     private static final int A9_GLACIAL_CALM_BLOCK = 10;
-    private static final int GLACIAL_CALM_METALLICIZE = 1;
+    private static final int GLACIAL_CALM_METALLICIZE = 2;
     private static final int FREEZING_TEMPEST_DAMAGE = 3;
     private static final int FREEZING_TEMPEST_HITS = 4;
     private static final int FREEZING_TEMPEST_ARTIFACT = 1;
