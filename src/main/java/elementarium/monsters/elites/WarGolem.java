@@ -31,8 +31,8 @@ public class WarGolem extends CustomMonster
     private static final int A3_VULNERABLE_ATTACK_DAMAGE = 19;
     private static final int VULNERABLE_AMOUNT = 1;
 	private static final int A18_VULNERABLE_AMOUNT = 2;
-    private static final int FRAIL_ATTACK_DAMAGE = 16;
-    private static final int A3_FRAIL_ATTACK_DAMAGE = 18;
+    private static final int FRAIL_ATTACK_DAMAGE = 15;
+    private static final int A3_FRAIL_ATTACK_DAMAGE = 17;
     private static final int FRAIL_AMOUNT = 1;
 	private static final int A18_FRAIL_AMOUNT = 2;
     private static final int DEX_ATTACK_DAMAGE = 13;
@@ -43,8 +43,8 @@ public class WarGolem extends CustomMonster
     private static final int A18_FOCUS_AMOUNT = 1;
     private static final int METALLICIZE = 6;
     private static final int A8_METALLICIZE = 9;
-    private static final int HP_MIN = 89;
-    private static final int HP_MAX = 91;
+    private static final int HP_MIN = 86;
+    private static final int HP_MAX = 88;
     private static final int A8_HP_MIN = 90;
     private static final int A8_HP_MAX = 92;
     private int vulnerableDamage;

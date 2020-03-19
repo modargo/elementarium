@@ -32,8 +32,8 @@ public class RubyGolem extends CustomMonster
     private static final int RUBY_KNIVES_HITS = 3;
     private static final int RUBY_KNIVES_BLOCK = 6;
     private static final int A7_RUBY_KNIVES_BLOCK = 9;
-    private static final int PRISM_DAMAGE = 10;
-    private static final int A2_PRISM_DAMAGE = 12;
+    private static final int PRISM_DAMAGE = 8;
+    private static final int A2_PRISM_DAMAGE = 9;
     private static final int PRISM_DEBUFF_AMOUNT = 2;
     private static final int DELICATE_STRENGTH = 3;
     private static final int A17_DELICATE_STRENGTH = 2;

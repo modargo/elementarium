@@ -34,8 +34,8 @@ public class OrbOfFire extends CustomMonster
     private static final byte FIREBOLT_ATTACK = 1;
     private static final byte FLARE_ATTACK = 2;
     private static final byte IRRADIATE_DEBUFF = 3;
-    private static final int FIREBOLT_ATTACK_DAMAGE = 4;
-    private static final int A2_FIREBOLT_ATTACK_DAMAGE = 5;
+    private static final int FIREBOLT_ATTACK_DAMAGE = 5;
+    private static final int A2_FIREBOLT_ATTACK_DAMAGE = 6;
     private static final int FLARE_ATTACK_DAMAGE = 11;
     private static final int A2_FLARE_ATTACK_DAMAGE = 13;
     private static final int IRRADIATE_DEBUFF_COUNT = 2;

@@ -33,7 +33,7 @@ public class LivingStormcloud extends CustomMonster
     private static final int ZAP_ATTACK_DAMAGE = 3;
     private static final int ZAP_ATTACK_HITS = 2;
     private static final int A2_ZAP_ATTACK_HITS = 3;
-    private static final int GUST_ATTACK_DAMAGE = 6;
+    private static final int GUST_ATTACK_DAMAGE = 7;
     private static final int A2_GUST_ATTACK_DAMAGE = 8;
     private static final int GUST_HOVER_AMOUNT = 10;
     private static final int RAIN_HEAL = 4;
