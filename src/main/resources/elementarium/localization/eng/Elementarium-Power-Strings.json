@@ -77,5 +77,9 @@
   "Elementarium:GoldenBulwark": {
     "NAME": "Golden Bulwark",
     "DESCRIPTIONS": ["Gains #b1 block at the start of combat for every #b{0} gold you have (rounded up)."]
+  },
+  "Elementarium:FierceWinds": {
+    "NAME": "FierceWinds",
+    "DESCRIPTIONS": ["Whenever you play an attack, take #b{0} damage."]
   }
 }

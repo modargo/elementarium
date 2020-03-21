@@ -89,6 +89,7 @@ public class Elementarium implements
         //Weak encounters
         BaseMod.addMonster(Encounters.ELEMENTALS_2, () -> new MonsterGroup(generateElementalGroup(2)));
         BaseMod.addMonster(VoidCorruption.ID, (BaseMod.GetMonster)VoidCorruption::new);
+        BaseMod.addMonster(Cyclone.ID, (BaseMod.GetMonster)Cyclone::new);
         BaseMod.addMonster(Encounters.MUD_AND_TAR_GOLEMS, () -> new MonsterGroup(
                 new AbstractMonster[] {
                         new MudGolem(X1, 0.0F),
@@ -104,11 +105,6 @@ public class Elementarium implements
                         new StoneGolem(X1, 0.0F, false, false),
                         new StoneGolem(X2, 0.0F, false, false)
                 }));
-        BaseMod.addMonster(Encounters.VOID_CORRUPTION_AND_LIVING_STORMCLOUD, () -> new MonsterGroup(
-                new AbstractMonster[] {
-                        new LivingStormcloud(X1, 125.0F),
-                        new VoidCorruption(X2, 0.0F)
-                }));
         BaseMod.addMonster(Encounters.VOID_CORRUPTION_AND_TAR_GOLEM, () -> new MonsterGroup(
                 new AbstractMonster[] {
                         new TarGolem(X1, 0.0F),
@@ -118,6 +114,16 @@ public class Elementarium implements
                 new AbstractMonster[] {
                         new OrbOfFire(X1, 125.0F),
                         new VoidCorruption(X2, 0.0F)
+                }));
+        BaseMod.addMonster(Encounters.CYCLONE_AND_LIVING_STORMCLOUD, () -> new MonsterGroup(
+                new AbstractMonster[] {
+                        new LivingStormcloud(X1, 125.0F),
+                        new Cyclone(X2, 0.0F)
+                }));
+        BaseMod.addMonster(Encounters.CYCLONE_AND_ORB_OF_FIRE, () -> new MonsterGroup(
+                new AbstractMonster[] {
+                        new OrbOfFire(X1, 125.0F),
+                        new Cyclone(X2, 0.0F)
                 }));
 
         //Elites

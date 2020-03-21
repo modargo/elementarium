@@ -166,6 +166,14 @@
       "Shadow Claw"
     ],
     "NAME": "Void Beast"
+  },
+  "Elementarium:Cyclone": {
+    "MOVES": [
+      "Blow Away",
+      "Invigorating Winds",
+      "Twister"
+    ],
+    "NAME": "Cyclone"
   }
 }
 

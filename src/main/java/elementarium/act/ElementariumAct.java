@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import com.megacrit.cardcrawl.scenes.AbstractScene;
 import com.megacrit.cardcrawl.scenes.TheCityScene;
+import elementarium.monsters.normals.Cyclone;
 import elementarium.monsters.normals.RubyGolem;
 import elementarium.monsters.elites.ElementalPortal;
 import elementarium.monsters.normals.VoidBeast;
@@ -75,24 +76,26 @@ public class ElementariumAct extends CustomDungeon {
 
     @Override
     protected void generateWeakEnemies(int count) {
-        ArrayList<MonsterInfo> monsters = new ArrayList();
-        monsters.add(new MonsterInfo(Encounters.ELEMENTALS_2, 50.0F));
-        monsters.add(new MonsterInfo(VoidCorruption.ID, 25.0F));
-        monsters.add(new MonsterInfo(Encounters.MUD_AND_TAR_GOLEMS, 25.0F));
+        ArrayList<MonsterInfo> monsters = new ArrayList<>();
+        monsters.add(new MonsterInfo(Encounters.ELEMENTALS_2, 40.0F));
+        monsters.add(new MonsterInfo(VoidCorruption.ID, 20.0F));
+        monsters.add(new MonsterInfo(Cyclone.ID, 20.0F));
+        monsters.add(new MonsterInfo(Encounters.MUD_AND_TAR_GOLEMS, 20.0F));
         MonsterInfo.normalizeWeights(monsters);
         this.populateMonsterList(monsters, count, false);
     }
 
     @Override
     protected void generateStrongEnemies(int count) {
-        ArrayList<MonsterInfo> monsters = new ArrayList();
-        monsters.add(new MonsterInfo(Encounters.ELEMENTALS_3, 34.0F));
-        monsters.add(new MonsterInfo(Encounters.STONE_GOLEMS, 15.0F));
-        monsters.add(new MonsterInfo(RubyGolem.ID, 15.0F));
-        monsters.add(new MonsterInfo(VoidBeast.ID, 15.0F));
+        ArrayList<MonsterInfo> monsters = new ArrayList<>();
+        monsters.add(new MonsterInfo(Encounters.ELEMENTALS_3, 30.0F));
+        monsters.add(new MonsterInfo(Encounters.STONE_GOLEMS, 14.0F));
+        monsters.add(new MonsterInfo(RubyGolem.ID, 14.0F));
+        monsters.add(new MonsterInfo(VoidBeast.ID, 14.0F));
         monsters.add(new MonsterInfo(Encounters.VOID_CORRUPTION_AND_ORB_OF_FIRE, 7.0F));
-        monsters.add(new MonsterInfo(Encounters.VOID_CORRUPTION_AND_LIVING_STORMCLOUD, 7.0F));
         monsters.add(new MonsterInfo(Encounters.VOID_CORRUPTION_AND_TAR_GOLEM, 7.0F));
+        monsters.add(new MonsterInfo(Encounters.CYCLONE_AND_LIVING_STORMCLOUD, 7.0F));
+        monsters.add(new MonsterInfo(Encounters.CYCLONE_AND_ORB_OF_FIRE, 7.0F));
         MonsterInfo.normalizeWeights(monsters);
         this.populateFirstStrongEnemy(monsters, this.generateExclusions());
         this.populateMonsterList(monsters, count, false);
@@ -100,7 +103,7 @@ public class ElementariumAct extends CustomDungeon {
 
     @Override
     protected void generateElites(int count) {
-        ArrayList<MonsterInfo> monsters = new ArrayList();
+        ArrayList<MonsterInfo> monsters = new ArrayList<>();
         monsters.add(new MonsterInfo(WarGolem.ID, 1.0F));
         monsters.add(new MonsterInfo(Encounters.FIRE_NOBILITY, 1.0F));
         monsters.add(new MonsterInfo(ElementalPortal.ID, 1.0F));
@@ -110,18 +113,22 @@ public class ElementariumAct extends CustomDungeon {
 
     @Override
     protected ArrayList<String> generateExclusions() {
-        ArrayList<String> retVal = new ArrayList();
+        ArrayList<String> retVal = new ArrayList<>();
         switch (monsterList.get(monsterList.size() - 1))
         {
             case Encounters.ELEMENTALS_2:
                 retVal.add(Encounters.ELEMENTALS_3);
                 retVal.add(Encounters.VOID_CORRUPTION_AND_ORB_OF_FIRE);
-                retVal.add(Encounters.VOID_CORRUPTION_AND_LIVING_STORMCLOUD);
+                retVal.add(Encounters.CYCLONE_AND_LIVING_STORMCLOUD);
+                retVal.add(Encounters.CYCLONE_AND_ORB_OF_FIRE);
                 break;
             case VoidCorruption.ID:
                 retVal.add(Encounters.VOID_CORRUPTION_AND_ORB_OF_FIRE);
-                retVal.add(Encounters.VOID_CORRUPTION_AND_LIVING_STORMCLOUD);
                 retVal.add(Encounters.VOID_CORRUPTION_AND_TAR_GOLEM);
+                break;
+            case Cyclone.ID:
+                retVal.add(Encounters.CYCLONE_AND_LIVING_STORMCLOUD);
+                retVal.add(Encounters.CYCLONE_AND_ORB_OF_FIRE);
                 break;
             case Encounters.MUD_AND_TAR_GOLEMS:
                 retVal.add(Encounters.VOID_CORRUPTION_AND_TAR_GOLEM);
