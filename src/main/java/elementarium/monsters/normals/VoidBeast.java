@@ -110,6 +110,7 @@ public class VoidBeast extends CustomMonster
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Dazed(), this.voidGazeDazes));
                 break;
             case SHADOW_CLAW_ATTACK:
+                AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
                 for (int i = 0; i < SHADOW_CLAW_HITS; i++) {
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 }
