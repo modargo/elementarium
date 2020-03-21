@@ -42,7 +42,7 @@ public class OpulentOffering extends CustomMonster
     private static final int COIN_BARRAGE_METALLICIZE_AMOUNT = 2;
     private static final int OPULENT_BARRIER_DAMAGE = 6;
     private static final int A2_OPULENT_BARRIER_DAMAGE = 7;
-    private static final int OPULENT_BLOCK = 4;
+    private static final int OPULENT_BLOCK = 3;
     private static final int STARTING_BLOCK_BASE = 4;
     private static final int GOLD_BLOCK_DIVISOR = 50;
     private static final int A7_GOLD_BLOCK_DIVISOR = 40;

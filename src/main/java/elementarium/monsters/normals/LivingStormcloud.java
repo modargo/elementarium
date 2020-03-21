@@ -35,11 +35,11 @@ public class LivingStormcloud extends CustomMonster
     private static final int A2_ZAP_ATTACK_HITS = 3;
     private static final int GUST_ATTACK_DAMAGE = 7;
     private static final int A2_GUST_ATTACK_DAMAGE = 8;
-    private static final int GUST_HOVER_AMOUNT = 10;
-    private static final int RAIN_HEAL = 4;
-    private static final int STARTING_HOVER = 30;
-    private static final int A17_STARTING_HOVER = 40;
-    private static final int MAX_HOVER = 80;
+    private static final int GUST_HOVER_AMOUNT = 5;
+    private static final int RAIN_HEAL = 2;
+    private static final int STARTING_HOVER = 25;
+    private static final int A17_STARTING_HOVER = 35;
+    private static final int MAX_HOVER = 60;
     private static final int HP_MIN = 26;
     private static final int HP_MAX = 28;
     private static final int A7_HP_MIN = 27;

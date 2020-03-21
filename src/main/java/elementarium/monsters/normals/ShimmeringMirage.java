@@ -35,17 +35,16 @@ public class ShimmeringMirage extends CustomMonster
     private static final int A2_SHINE_ATTACK_DAMAGE = 8;
     private static final int GLOW_STRENGTH = 1;
     private static final int A17_GLOW_STRENGTH = 1;
-    private static final int GLOW_SELF_STRENGTH = 2;
-    private static final int A17_GLOW_SELF_STRENGTH = 4;
-    private static final int GLOW_CLEANSE = 2;
-    private static final int PULSE_ATTACK_DAMAGE = 5;
-    private static final int A2_PULSE_ATTACK_DAMAGE = 6;
-    private static final int PULSE_ATTACK_HEAL = 6;
+    private static final int GLOW_SELF_STRENGTH = 1;
+    private static final int A17_GLOW_SELF_STRENGTH = 2;
+    private static final int PULSE_ATTACK_DAMAGE = 4;
+    private static final int A2_PULSE_ATTACK_DAMAGE = 5;
+    private static final int PULSE_ATTACK_HEAL = 3;
     private static final int CLEANSE_AMOUNT = 2;
-    private static final int HP_MIN = 32;
-    private static final int HP_MAX = 34;
-    private static final int A7_HP_MIN = 33;
-    private static final int A7_HP_MAX = 35;
+    private static final int HP_MIN = 30;
+    private static final int HP_MAX = 32;
+    private static final int A7_HP_MIN = 31;
+    private static final int A7_HP_MAX = 33;
     private int shineDamage;
     private int pulseDamage;
     private int glowStrength;
@@ -102,9 +101,6 @@ public class ShimmeringMirage extends CustomMonster
             case GLOW_BUFF:
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                     if (m == this || !m.isDying) {
-                        if (m != this) {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new CleansePower(m, GLOW_CLEANSE, true)));
-                        }
                         // For this enemy, those to the left of it (which have already acted), and those that aren't attacking, give strength
                         // For enemies to the right of this enemy, give gain strength at end of turn, so their damage doesn't increase
                         if (m == this) {

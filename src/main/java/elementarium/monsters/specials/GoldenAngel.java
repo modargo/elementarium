@@ -32,8 +32,8 @@ public class GoldenAngel extends CustomMonster
     private static final int A17_TURN_TO_GOLD_AMOUNT = 2;
     private static final int ATTACK_DAMAGE = 10;
     private static final int A2_ATTACK_DAMAGE = 12;
-    private static final int ATTACK_DEBUFF_DAMAGE = 8;
-    private static final int A2_ATTACK_DEBUFF_DAMAGE = 10;
+    private static final int ATTACK_DEBUFF_DAMAGE = 7;
+    private static final int A2_ATTACK_DEBUFF_DAMAGE = 8;
     private static final int ATTACK_DEBUFF_WEAK = 2;
     private static final int HP = 40;
     private static final int A7_HP = 44;
