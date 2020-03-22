@@ -119,7 +119,9 @@ public class GolemEmperor extends CustomMonster {
         switch (this.nextMove) {
             case CALL_GOLEM_MOVE:
                 this.summonNextGolemGroup(false);
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.callGolemStrength), this.callGolemStrength));
+                if (this.callGolemCounter > 1) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.callGolemStrength), this.callGolemStrength));
+                }
                 break;
             case GOLEM_SHIELD_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
