@@ -52,8 +52,8 @@ public class GolemEmperor extends CustomMonster {
     private static final int LOOSE_MATERIALS_DAMAGE = 3;
     private static final int A4_LOOSE_MATERIALS_DAMAGE = 4;
     private static final int LOOSE_MATERIALS_HITS = 2;
-    private static final int HP = 280;
-    private static final int A9_HP = 300;
+    private static final int HP = 290;
+    private static final int A9_HP = 310;
 
     private static final float[] xPositions = new float[]{-170.0F, -450.0F};
     private static final List<List<GolemInfo>> GOLEM_GROUPS = Arrays.asList(
