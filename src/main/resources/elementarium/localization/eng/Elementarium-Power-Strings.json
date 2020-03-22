@@ -62,7 +62,7 @@
     "NAME": "Phoenix's Rebirth",
     "DESCRIPTIONS": [
       "When brought to half HP, becomes invulnerable. At the end of that turn, removes all debuffs and loses this, then uses a special move next turn.",
-      "Invulnerable. At the end of that turn, removes all debuffs and loses this, then uses a special move next turn."
+      "Invulnerable. At end of turn, removes all debuffs and loses this, then uses a special move next turn."
     ]
   },
   "Elementarium:DelayedVulnerable": {

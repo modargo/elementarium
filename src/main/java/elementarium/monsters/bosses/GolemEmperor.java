@@ -38,6 +38,7 @@ public class GolemEmperor extends CustomMonster {
     public static final String NAME;
     public static final String[] MOVES;
     private static final String IMG = Elementarium.monsterImage(ID);
+    private boolean firstMove = true;
     private static final byte CALL_GOLEM_MOVE = 1;
     private static final byte GOLEM_SHIELD_ATTACK = 2;
     private static final byte LOOSE_MATERIALS_ATTACK = 3;
@@ -108,12 +109,13 @@ public class GolemEmperor extends CustomMonster {
         CardCrawlGame.music.unsilenceBGM();
         AbstractDungeon.scene.fadeOutAmbiance();
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_CITY");
-
-        this.summonNextGolemGroup(true);
     }
 
     @Override
     public void takeTurn() {
+        if (this.firstMove) {
+            this.firstMove = false;
+        }
         switch (this.nextMove) {
             case CALL_GOLEM_MOVE:
                 this.summonNextGolemGroup(false);
@@ -152,7 +154,7 @@ public class GolemEmperor extends CustomMonster {
 
     @Override
     protected void getMove(final int num) {
-        if (this.moveHistory.size() % CRUMBLING_AMOUNT == 2) {
+        if (this.moveHistory.size() % CRUMBLING_AMOUNT == 0) {
             this.setMove(MOVES[0], CALL_GOLEM_MOVE, Intent.UNKNOWN);
         } else {
             if (this.lastMove(LOOSE_MATERIALS_ATTACK) || (num < 50 && !this.lastMove(GOLEM_SHIELD_ATTACK))) {

@@ -24,6 +24,7 @@ public class GildedEssence extends CustomCard {
     public GildedEssence() {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.POWER, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         this.baseMagicNumber = BASE_MAGIC_NUMBER;
+		this.magicNumber = this.baseMagicNumber;
         this.tags.add(CustomTags.GILDED);
     }
 
