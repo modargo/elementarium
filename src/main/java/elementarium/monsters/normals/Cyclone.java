@@ -142,7 +142,7 @@ public class Cyclone extends CustomMonster
 
     private void addCardsToExhaust(ArrayList<CardToExhaust> cards, CardGroup group, int cost) {
         for (AbstractCard c : group.group){
-            if (c.cost == cost && c.type != AbstractCard.CardType.CURSE && c.type != AbstractCard.CardType.STATUS) {
+            if (c.cost == cost && !c.isCostModified && c.type != AbstractCard.CardType.CURSE && c.type != AbstractCard.CardType.STATUS) {
                 CardToExhaust cte = new CardToExhaust();
                 cte.card = c;
                 cte.group = group;
