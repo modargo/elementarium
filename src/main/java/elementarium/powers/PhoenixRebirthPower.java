@@ -9,13 +9,12 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import elementarium.Elementarium;
 
-import java.text.MessageFormat;
-
 public class PhoenixRebirthPower extends AbstractPower {
     public static final String POWER_ID = "Elementarium:PhoenixRebirth";
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
+    private boolean triggered = false;
 
     public PhoenixRebirthPower(AbstractCreature owner) {
         this.name = NAME;
@@ -27,7 +26,7 @@ public class PhoenixRebirthPower extends AbstractPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (this.owner.currentHealth <= this.owner.maxHealth / 2) {
+        if (this.triggered) {
             this.flash();
             this.addToBot(new RemoveDebuffsAction(this.owner));
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
@@ -38,6 +37,9 @@ public class PhoenixRebirthPower extends AbstractPower {
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         if (this.owner.currentHealth - damageAmount <= this.owner.maxHealth / 2) {
             damageAmount = this.owner.currentHealth - this.owner.maxHealth / 2;
+            this.flash();
+            this.triggered = true;
+            this.updateDescription();
         }
 
         return damageAmount;
@@ -45,7 +47,12 @@ public class PhoenixRebirthPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        if (!this.triggered) {
+            this.description = DESCRIPTIONS[0];
+        }
+        else {
+            this.description = DESCRIPTIONS[1];
+        }
     }
 
     static {
