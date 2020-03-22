@@ -49,6 +49,8 @@ public class Firelord extends CustomMonster
     private static final int RAIN_OF_FIRE_DAMAGE = 2;
     private static final int A3_RAIN_OF_FIRE_DAMAGE = 2;
     private static final int RAIN_OF_FIRE_HITS = 4;
+    private static final int A18_SUMMON_STRENGTH_SCALING = 1;
+    private static final int A18_SUMMON_BLOCK_SCALING = 2;
     private static final int CLEANSE_AMOUNT = 1;
     private static final int A18_CLEANSE_AMOUNT = 2;
     private static final int FLOURISHING_FLAME_AMOUNT = 1;
@@ -138,8 +140,8 @@ public class Firelord extends CustomMonster
             }
             case SUMMON_ORB: {
                 ArrayList<Float> xPositions = this.getOpenPositions();
-                int strength = AbstractDungeon.ascensionLevel >= 18 ? this.summonActionsTaken * 5 : 0;
-                int block = AbstractDungeon.ascensionLevel >= 18 ? this.summonActionsTaken * 10 : 0;
+                int strength = AbstractDungeon.ascensionLevel >= 18 ? this.summonActionsTaken * A18_SUMMON_STRENGTH_SCALING : 0;
+                int block = AbstractDungeon.ascensionLevel >= 18 ? this.summonActionsTaken * A18_SUMMON_BLOCK_SCALING : 0;
                 for (Float x : xPositions) {
                     AbstractDungeon.actionManager.addToBottom(new SummonElementalAction(OrbOfFire.ID, x, 125.0F, strength, block));
                 }
