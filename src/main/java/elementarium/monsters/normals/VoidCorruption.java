@@ -13,11 +13,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.DrawPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import elementarium.Elementarium;
 import elementarium.powers.EnergyLimitPower;
+import elementarium.powers.FixedTextDrawPower;
 
 public class VoidCorruption extends CustomMonster
 {
@@ -91,7 +91,7 @@ public class VoidCorruption extends CustomMonster
                 AbstractDungeon.actionManager.addToBottom(new FastShakeAction(this, 0.5F, 0.2F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new EnergyLimitPower(AbstractDungeon.player)));
                 if (!AbstractDungeon.player.hasPower(ArtifactPower.POWER_ID)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DrawPower(AbstractDungeon.player, -1)));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FixedTextDrawPower(AbstractDungeon.player, -1)));
                 }
                 break;
             case VOIDS_ATTACK:
