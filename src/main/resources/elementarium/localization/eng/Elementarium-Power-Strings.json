@@ -9,7 +9,7 @@
   },
   "Elementarium:TarBody": {
     "NAME": "Tar Body",
-    "DESCRIPTIONS": ["When this enemy takes attack damage, add a #yTar to your deck."]
+    "DESCRIPTIONS": ["When this enemy takes attack damage, add a #yTar status to your discard pile."]
   },
   "Elementarium:MidasAura": {
     "NAME": "Midas Aura",
