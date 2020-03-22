@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import elementarium.Elementarium;
-import elementarium.act.ElementariumAct;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,14 +28,6 @@ public class EnergyLimitPower extends AbstractPower {
         this.type = PowerType.DEBUFF;
         this.priority = 10;
         Elementarium.LoadPowerImage(this);
-    }
-
-    public void onInitialApplication() {
-        --AbstractDungeon.player.gameHandSize;
-    }
-
-    public void onRemove() {
-        ++AbstractDungeon.player.gameHandSize;
     }
 
     public void atStartOfTurnPostDraw() {

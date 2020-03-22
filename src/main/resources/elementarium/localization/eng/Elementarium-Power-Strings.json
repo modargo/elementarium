@@ -5,7 +5,7 @@
   },
   "Elementarium:EnergyLimit": {
     "NAME": "Energy Limit",
-    "DESCRIPTIONS": ["Draw #b1 less card at the start of each turn. Start with at most #b3 energy each turn."]
+    "DESCRIPTIONS": ["Start with at most #b3 energy each turn."]
   },
   "Elementarium:TarBody": {
     "NAME": "Tar Body",
