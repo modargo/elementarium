@@ -46,9 +46,10 @@ public class FirePhoenix extends CustomMonster
     private static final int WING_SWEEP_DAMAGE = 11;
     private static final int A4_WING_SWEEP_DAMAGE = 13;
     private static final int WING_SWEEP_DEBUFF_AMOUNT = 1;
-    private static final int MOLTEN_FRENZY_DAMAGE = 14;
-    private static final int A4_MOLTEN_FRENZY_DAMAGE = 16;
-    private static final int MOLTEN_FRENZY_STRENGTH = 2;
+    private static final int MOLTEN_FRENZY_DAMAGE = 12;
+    private static final int A4_MOLTEN_FRENZY_DAMAGE = 14;
+    private static final int MOLTEN_FRENZY_STRENGTH = 1;
+    private static final int A19_MOLTEN_FRENZY_STRENGTH = 2;
     private static final int BURNING_TEMPEST_VULNERABLE = 1;
     private static final int A19_BURNING_TEMPEST_VULNERABLE = 1;
     private static final int BURNING_TEMPEST_BURNS = 1;
@@ -61,6 +62,7 @@ public class FirePhoenix extends CustomMonster
     private int clawSwipeDamage;
     private int wingSweepDamage;
     private int moltenFrenzyDamage;
+    private int moltenFrenzyStrength;
     private int burningDisdainStrength;
     private int burningTempestVulnerable;
     private int burningTempestBurns;
@@ -93,10 +95,12 @@ public class FirePhoenix extends CustomMonster
         this.damage.add(new DamageInfo(this, this.moltenFrenzyDamage));
 
         if (AbstractDungeon.ascensionLevel >= 19) {
+            this.moltenFrenzyStrength = A19_MOLTEN_FRENZY_STRENGTH;
             this.burningDisdainStrength = A19_BURNING_DISDAIN_STRENGTH;
             this.burningTempestVulnerable = A19_BURNING_TEMPEST_VULNERABLE;
             this.burningTempestBurns = A19_BURNING_TEMPEST_BURNS;
         } else {
+            this.moltenFrenzyStrength = MOLTEN_FRENZY_STRENGTH;
             this.burningDisdainStrength = BURNING_DISDAIN_STRENGTH;
             this.burningTempestVulnerable = BURNING_TEMPEST_VULNERABLE;
             this.burningTempestBurns = BURNING_TEMPEST_BURNS;
@@ -130,7 +134,7 @@ public class FirePhoenix extends CustomMonster
                 break;
             case MOLTEN_FRENZY_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(2), AbstractGameAction.AttackEffect.FIRE));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, MOLTEN_FRENZY_STRENGTH), MOLTEN_FRENZY_STRENGTH));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.moltenFrenzyStrength), this.moltenFrenzyStrength));
                 break;
             case BURNING_TEMPEST_DEBUFF:
                 CardCrawlGame.sound.playA("ATTACK_FIRE", 0.3F);

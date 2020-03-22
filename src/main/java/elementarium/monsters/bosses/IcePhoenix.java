@@ -46,9 +46,10 @@ public class IcePhoenix extends CustomMonster
     private static final int WING_SWEEP_DAMAGE = 11;
     private static final int A4_WING_SWEEP_DAMAGE = 13;
     private static final int WING_SWEEP_DEBUFF_AMOUNT = 1;
-    private static final int GLACIAL_CALM_BLOCK = 8;
-    private static final int A9_GLACIAL_CALM_BLOCK = 10;
-    private static final int GLACIAL_CALM_METALLICIZE = 2;
+    private static final int GLACIAL_CALM_BLOCK = 6;
+    private static final int A9_GLACIAL_CALM_BLOCK = 8;
+    private static final int GLACIAL_CALM_METALLICIZE = 1;
+    private static final int A19_GLACIAL_CALM_METALLICIZE = 2;
     private static final int FREEZING_TEMPEST_DAMAGE = 3;
     private static final int FREEZING_TEMPEST_HITS = 4;
     private static final int FREEZING_TEMPEST_ARTIFACT = 1;
@@ -63,6 +64,7 @@ public class IcePhoenix extends CustomMonster
     private int clawSwipeDamage;
     private int wingSweepDamage;
     private int glacialCalmBlock;
+    private int glacialCalmMetallicize;
     private int freezingTempestArtifact;
     private int freezingContemptStrength;
     private int freezingClawsMetallicize;
@@ -95,10 +97,12 @@ public class IcePhoenix extends CustomMonster
         this.damage.add(new DamageInfo(this, FREEZING_TEMPEST_DAMAGE));
 
         if (AbstractDungeon.ascensionLevel >= 19) {
+            this.glacialCalmMetallicize = A19_GLACIAL_CALM_METALLICIZE;
             this.freezingContemptStrength = A19_FREEZING_CONTEMPT_STRENGTH;
             this.freezingClawsMetallicize = A19_FREEZING_CLAWS_METALLICIZE;
             this.freezingTempestArtifact = A19_FREEZING_TEMPEST_ARTIFACT;
         } else {
+            this.glacialCalmMetallicize = GLACIAL_CALM_METALLICIZE;
             this.freezingContemptStrength = FREEZING_CONTEMPT_STRENGTH;
             this.freezingClawsMetallicize = FREEZING_CLAWS_METALLICIZE;
             this.freezingTempestArtifact = FREEZING_TEMPEST_ARTIFACT;
@@ -132,7 +136,7 @@ public class IcePhoenix extends CustomMonster
                         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, this.glacialCalmBlock));
                     }
                 }
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, GLACIAL_CALM_METALLICIZE), GLACIAL_CALM_METALLICIZE));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, this.glacialCalmMetallicize), this.glacialCalmMetallicize));
                 break;
             case FREEZING_TEMPEST_ATTACK:
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new BlizzardEffect(30, true), 1.0F));
