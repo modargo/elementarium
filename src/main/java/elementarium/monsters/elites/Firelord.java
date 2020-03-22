@@ -184,13 +184,16 @@ public class Firelord extends CustomMonster
                 option2 = RAIN_OF_FIRE_ATTACK;
             }
             else if (this.lastTwoMoves(RAIN_OF_FIRE_ATTACK)) {
-                option1 = FIERY_WRATH_ATTACK;
+                option1 = canSummon ? SUMMON_ORB : FIERY_WRATH_ATTACK;
                 option2 = FIERY_WRATH_ATTACK;
             }
+            else if (this.lastMove(RAIN_OF_FIRE_ATTACK) && this.lastMoveBefore(SUMMON_ORB)) {
+                option1 = FIERY_WRATH_ATTACK;
+                option2 = RAIN_OF_FIRE_ATTACK;
+            }
             else if (this.lastMove(RAIN_OF_FIRE_ATTACK)) {
-                int onlyOption = canSummon ? SUMMON_ORB : RAIN_OF_FIRE_ATTACK;
-                option1 = onlyOption;
-                option2 = onlyOption;
+                option1 = canSummon ? SUMMON_ORB : RAIN_OF_FIRE_ATTACK;
+                option2 = RAIN_OF_FIRE_ATTACK;
             }
             else {
                 option1 = FIERY_WRATH_ATTACK;
