@@ -35,6 +35,7 @@ public class Firelord extends CustomMonster
     private static final String IMG = Elementarium.monsterImage(ID);
     private boolean firstMove = true;
     private int summonActionsTaken = 0;
+    private boolean unrestrictedSummoning;
     private static final byte HAMMER_OF_THE_FIRELORD_ATTACK = 1;
     private static final byte FIERY_WRATH_ATTACK = 2;
     private static final byte RAIN_OF_FIRE_ATTACK = 3;
@@ -43,21 +44,21 @@ public class Firelord extends CustomMonster
     private static final int A3_HAMMER_OF_THE_FIRELORD_DAMAGE = 15;
     private static final int HAMMER_OF_THE_FIRELORD_BURNS = 1;
     private static final int A18_HAMMER_OF_THE_FIRELORD_BURNS = 2;
-    private static final int FIERY_WRATH_DAMAGE = 6;
-    private static final int A3_FIERY_WRATH_DAMAGE = 7;
+    private static final int FIERY_WRATH_DAMAGE = 5;
+    private static final int A3_FIERY_WRATH_DAMAGE = 6;
     private static final int FIERY_WRATH_HITS = 2;
     private static final int RAIN_OF_FIRE_DAMAGE = 2;
     private static final int A3_RAIN_OF_FIRE_DAMAGE = 2;
     private static final int RAIN_OF_FIRE_HITS = 4;
-    private static final int A18_SUMMON_STRENGTH_SCALING = 1;
-    private static final int A18_SUMMON_BLOCK_SCALING = 2;
+    private static final int A18_SUMMON_STRENGTH_SCALING = 0;
+    private static final int A18_SUMMON_BLOCK_SCALING = 0;
     private static final int CLEANSE_AMOUNT = 1;
     private static final int A18_CLEANSE_AMOUNT = 2;
     private static final int FLOURISHING_FLAME_AMOUNT = 1;
-    private static final int HP_MIN = 102;
-    private static final int HP_MAX = 107;
-    private static final int A8_HP_MIN = 105;
-    private static final int A8_HP_MAX = 110;
+    private static final int HP_MIN = 100;
+    private static final int HP_MAX = 104;
+    private static final int A8_HP_MIN = 104;
+    private static final int A8_HP_MAX = 108;
     private int hammerOfTheFirelordDamage;
     private int hammerOfTheFirelordBurns;
     private int fieryWrathDamage;
@@ -67,9 +68,11 @@ public class Firelord extends CustomMonster
     public Firelord() {
         this(0.0f, 0.0f);
     }
+    public Firelord(final float x, final float y) { this(x, y, false); }
 
-    public Firelord(final float x, final float y) {
+    public Firelord(final float x, final float y, boolean unrestrictedSummoning) {
         super(Firelord.NAME, ID, HP_MAX, -5.0F, 0, 355, 300.0f, IMG, x, y);
+        this.unrestrictedSummoning = unrestrictedSummoning;
         this.type = EnemyType.ELITE;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
@@ -228,6 +231,11 @@ public class Firelord extends CustomMonster
         if (!hasPosition2) {
             xPositions.add(100.0F);
         }
+
+        if (xPositions.size() > 1 && this.summonActionsTaken < 2 && !this.unrestrictedSummoning) {
+            xPositions.remove(1);
+        }
+
         return xPositions;
     }
 

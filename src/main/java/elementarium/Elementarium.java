@@ -158,7 +158,7 @@ public class Elementarium implements
         BaseMod.addMonster(Encounters.FIRE_SANCTUM_FIRELORD, () -> new MonsterGroup(
                 new AbstractMonster[] {
                         new OrbOfFire(-500.0F, 125.0F),
-                        new Firelord(-200.0F, 0.0F),
+                        new Firelord(-200.0F, 0.0F, true),
                         new OrbOfFire(100.0F, 125.0F)
                 }));
         BaseMod.addMonster(Encounters.GOLDEN_STATUES, () -> new MonsterGroup(
