@@ -22,7 +22,7 @@ public class WindblessedBlade extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_DAMAGE = 5;
+    private static final int BASE_DAMAGE = 4;
     private static final int UPGRADE_DAMAGE = 1;
     private static final int HITS = 3;
     private static final int BASE_BLOCK = 4;

@@ -21,7 +21,7 @@ public class VoidblessedBlade extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_DAMAGE = 6;
+    private static final int BASE_DAMAGE = 4;
     private static final int BASE_HITS_STRENGTH = 2;
     private static final int UPGRADE_HITS_STRENGTH = 1;
     private static final int BLUR = 1;

@@ -37,7 +37,7 @@
   },
   "Elementarium:IceblessedBlade": {
     "NAME": "Ice-blessed Blade",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Artifact. NL Gain !M! Buffer. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Artifact. NL Gain 1 Buffer. NL Exhaust."
   },
   "Elementarium:VoidblessedBlade": {
     "NAME": "Void-blessed Blade",
