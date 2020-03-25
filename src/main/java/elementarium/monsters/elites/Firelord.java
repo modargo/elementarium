@@ -18,10 +18,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import elementarium.Elementarium;
+import elementarium.act.ElementariumAct;
 import elementarium.actions.SummonElementalAction;
 import elementarium.monsters.normals.OrbOfFire;
 import elementarium.powers.CleansePower;
 import elementarium.powers.FlourishingFlamePower;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
@@ -64,6 +67,8 @@ public class Firelord extends CustomMonster
     private int fieryWrathDamage;
     private int rainOfFireDamage;
     private int cleanseAmount;
+
+    private static final Logger logger = LogManager.getLogger(Firelord.class.getName());
 
     public Firelord() {
         this(0.0f, 0.0f);
@@ -171,7 +176,7 @@ public class Firelord extends CustomMonster
             int move;
             if (this.lastMove(HAMMER_OF_THE_FIRELORD_ATTACK)) {
                 option1 = FIERY_WRATH_ATTACK;
-                option2 = canSummon ? FIERY_WRATH_ATTACK : SUMMON_ORB;
+                option2 = canSummon ? SUMMON_ORB : FIERY_WRATH_ATTACK;
             }
             else if (this.lastMoveBefore(HAMMER_OF_THE_FIRELORD_ATTACK)) {
                 int onlyOption = this.lastMove(FIERY_WRATH_ATTACK) && canSummon ? SUMMON_ORB : FIERY_WRATH_ATTACK;
