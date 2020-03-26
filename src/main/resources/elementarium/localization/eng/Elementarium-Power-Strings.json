@@ -34,21 +34,21 @@
   "Elementarium:Crumbling": {
     "NAME": "Crumbling",
     "DESCRIPTIONS": [
-      "Dies in #b{0} turns. When this dies to #yCrumbling, {1} loses #b{2} #yStrength.",
-      "Dies in #b1 turn. When this dies to #yCrumbling, {0} loses #b{1} #yStrength."
+      "Dies in #b{0} turns. When this enemy dies to #yCrumbling, {1} loses #b{2} #yStrength.",
+      "Dies in #b1 turn. When this enemy dies to #yCrumbling, {0} loses #b{1} #yStrength."
     ]
   },
   "Elementarium:Delicate": {
     "NAME": "Delicate",
-    "DESCRIPTIONS": ["The first time this takes unblocked attack damage each turn, it loses #b{0} #yStrength."]
+    "DESCRIPTIONS": ["The first time this enemy takes unblocked attack damage each turn, it loses #b{0} #yStrength."]
   },
   "Elementarium:BurningDisdain": {
     "NAME": "Burning Disdain",
-    "DESCRIPTIONS": ["The third attack played each turn causes this to gain #b{0} #yStrength. Attacks played so far this turn: #b{1}."]
+    "DESCRIPTIONS": ["The third attack played each turn causes this enemy to gain #b{0} #yStrength. Attacks played so far this turn: #b{1}."]
   },
   "Elementarium:FreezingContempt": {
     "NAME": "Freezing Contempt",
-    "DESCRIPTIONS": ["The third skill played each turn causes this to gain #b{0} #yStrength. Skills played so far this turn: #b{1}."]
+    "DESCRIPTIONS": ["The third skill played each turn causes this enemy to gain #b{0} #yStrength. Skills played so far this turn: #b{1}."]
   },
   "Elementarium:BurningClaws": {
     "NAME": "Burning Claws",
