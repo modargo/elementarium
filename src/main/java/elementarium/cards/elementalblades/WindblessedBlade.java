@@ -27,7 +27,7 @@ public class WindblessedBlade extends CustomCard {
     private static final int HITS = 3;
     private static final int BASE_BLOCK = 4;
     private static final int BLOCK_TIMES = 2;
-    private static final int UPGRADE_BLOCK = 1;
+    private static final int UPGRADE_BLOCK = 2;
     private static final int BASE_WEAK = 2;
     private static final int UPGRADE_WEAK = 1;
 

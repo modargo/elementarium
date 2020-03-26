@@ -25,7 +25,7 @@
   },
   "Elementarium:FireblessedBlade": {
     "NAME": "Fire-blessed Blade",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength, Dexterity, and Focus. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength, 1 Dexterity, and 1 Focus. NL Exhaust."
   },
   "Elementarium:WindblessedBlade": {
     "NAME": "Wind-blessed Blade",
