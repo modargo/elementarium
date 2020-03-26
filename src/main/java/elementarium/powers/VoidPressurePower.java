@@ -31,7 +31,7 @@ public class VoidPressurePower extends AbstractPower {
         this.source = source;
         this.amount = amount;
         // Deliberately not a debuff -- this is intended to simply be an effect for the Void Beast fight, but had to be coded as a player power
-        this.description = MessageFormat.format(DESCRIPTIONS[0], this.amount);
+        this.description = DESCRIPTIONS[0].replace("{0}", this.amount + "");
         Elementarium.LoadPowerImage(this);
     }
 

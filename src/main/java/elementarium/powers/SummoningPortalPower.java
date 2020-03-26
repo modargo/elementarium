@@ -36,7 +36,7 @@ public class SummoningPortalPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = MessageFormat.format(DESCRIPTIONS[0], ElementalPortal.MAX_ELEMENTALS_ON_FIELD, this.amount).replace("{1}", this.amount + "");
+        this.description = DESCRIPTIONS[0].replace("{0}", ElementalPortal.MAX_ELEMENTALS_ON_FIELD + "").replace("{1}", this.amount + "");
     }
 
     static {

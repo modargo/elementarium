@@ -3,7 +3,7 @@
   "name": "Elementarium",
   "author_list": ["modargo"],
   "description": "An alternate act 2 themed around elementals and golems.",
-  "version": "0.56",
+  "version": "0.57",
   "sts_version": "01-27-2020",
   "mts_version": "3.15.0",
   "dependencies": ["basemod", "actlikeit"]
