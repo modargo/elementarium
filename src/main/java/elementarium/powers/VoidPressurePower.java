@@ -49,7 +49,7 @@ public class VoidPressurePower extends AbstractPower {
 
     public void damagePlayer() {
         this.flash();
-        this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
     @Override
