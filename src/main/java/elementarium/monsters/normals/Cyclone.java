@@ -32,8 +32,8 @@ public class Cyclone extends CustomMonster
     private static final byte BLOW_AWAY_MOVE = 1;
     private static final byte INVIGORATING_WINDS_MOVE = 2;
     private static final byte TWISTER_ATTACK = 3;
-    private static final int INVIGORATING_WINDS_RITUAL = 1;
-    private static final int A17_INVIGORATING_WINDS_RITUAL = 2;
+    private static final int INVIGORATING_WINDS_RITUAL = 2;
+    private static final int A17_INVIGORATING_WINDS_RITUAL = 3;
     private static final int INVIGORATING_WINDS_DRAW = 2;
     private static final int A17_INVIGORATING_WINDS_DRAW = 2;
     private static final int TWISTER_DAMAGE = 14;

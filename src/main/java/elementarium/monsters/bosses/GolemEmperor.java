@@ -47,10 +47,10 @@ public class GolemEmperor extends CustomMonster {
     private static final float SUMMONED_GOLEM_HP_MULTIPLIER = 0.50F;
     private static final int CRUMBLING_AMOUNT = 3;
     private static final int CRUMBLING_STRENGTH_LOSS = 1;
-    private static final int GOLEM_SHIELD_DAMAGE = 8;
-    private static final int A4_GOLEM_SHIELD_DAMAGE = 10;
-    private static final int LOOSE_MATERIALS_DAMAGE = 3;
-    private static final int A4_LOOSE_MATERIALS_DAMAGE = 4;
+    private static final int GOLEM_SHIELD_DAMAGE = 9;
+    private static final int A4_GOLEM_SHIELD_DAMAGE = 11;
+    private static final int LOOSE_MATERIALS_DAMAGE = 4;
+    private static final int A4_LOOSE_MATERIALS_DAMAGE = 5;
     private static final int LOOSE_MATERIALS_HITS = 2;
     private static final int HP = 290;
     private static final int A9_HP = 310;
