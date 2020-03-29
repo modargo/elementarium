@@ -46,6 +46,16 @@ public class ElementariumAct extends CustomDungeon {
     }
 
     @Override
+    public String getBodyText() {
+        return TEXT[2];
+    }
+
+    @Override
+    public String getOptionText() {
+        return TEXT[3];
+    }
+
+    @Override
     protected void initializeLevelSpecificChances() {
         //These are all deliberately the same as The City
         shopRoomChance = 0.05F;
