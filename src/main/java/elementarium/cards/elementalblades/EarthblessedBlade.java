@@ -50,7 +50,8 @@ public class EarthblessedBlade extends CustomCard {
         this.addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
     }
 
-    public void applyPowers() {
+    @Override
+    protected void applyPowersToBlock() {
     }
 
     public void upgrade() {

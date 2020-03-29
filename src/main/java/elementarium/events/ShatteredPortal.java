@@ -110,7 +110,7 @@ public class ShatteredPortal extends AbstractImageEvent {
                     imageEventText.setDialogOption(MessageFormat.format(OPTIONS[7], this.maxHealthCost), true);
                 }
                 if (this.cardCost != null) {
-                    imageEventText.setDialogOption(MessageFormat.format(OPTIONS[4], this.cardCost.name), this.cardCost);
+                    imageEventText.setDialogOption(MessageFormat.format(OPTIONS[4], this.cardCost.name), this.cardCost.makeStatEquivalentCopy());
                 }
                 else {
                     imageEventText.setDialogOption(OPTIONS[8], true);
