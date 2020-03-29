@@ -3,6 +3,7 @@ package elementarium.monsters.normals;
 import basemod.abstracts.CustomMonster;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -139,6 +140,15 @@ public class ShimmeringMirage extends CustomMonster
         else {
             this.setMove(PULSE_ATTACK, Intent.ATTACK_BUFF, this.pulseDamage);
         }
+    }
+
+    @Override
+    public void damage(DamageInfo info) {
+        if (info.output > 0 && this.hasPower(IntangiblePower.POWER_ID)) {
+            info.output = 1;
+        }
+
+        super.damage(info);
     }
 
     static {
