@@ -27,9 +27,9 @@ public class EarthblessedBlade extends CustomCard {
     private static final int BASE_DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 2;
     private static final int PLATED_ARMOR = 4;
-    private static final int UPGRADE_PLATED_ARMOR = 2;
+    private static final int UPGRADE_PLATED_ARMOR = 1;
     private static final int THORNS = 3;
-    private static final int UPGRADE_THORNS = 2;
+    private static final int UPGRADE_THORNS = 1;
 
     public EarthblessedBlade() {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
