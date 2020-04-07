@@ -126,7 +126,7 @@
     ],
     "OPTIONS": [
       "[Listen]",
-      "[Sling] #rLose #r{0} #rGold. #gGain #gthe s#gling.",
+      "[Sling] #rLose #r{0} #rGold. #gGain #gthe #gsling.",
       "[Bracer] #rLose #r{0} #rGold. #gGain #gthe #gbracer.",
       "[Elixir] #rLose #r{0} #rGold. #gGain #gthe #gelixir.",
       "[Sling] #rLose #r{0} #rMax #rHP. #gGain #gthe #gsling.",
