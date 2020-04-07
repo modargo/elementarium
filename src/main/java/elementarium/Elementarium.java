@@ -14,7 +14,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -77,7 +76,7 @@ public class Elementarium implements
         Texture badgeTexture = new Texture("elementarium/images/ElementariumBadge.png");
         BaseMod.registerModBadge(badgeTexture, "Elementarium", "modargo", "An alternate act 2 full of elementals and golems", new ModPanel());
 
-        CustomDungeon.addAct(TheCity.ID, new ElementariumAct());
+        CustomDungeon.addAct(ElementariumAct.ACT_NUM, new ElementariumAct());
         addMonsters();
         addEvents();
         addRelics();
@@ -216,6 +215,7 @@ public class Elementarium implements
         BaseMod.addEvent(BladeSeller.ID, BladeSeller.class, ElementariumAct.ID);
         BaseMod.addEvent(HeartOfTheVoid.ID, HeartOfTheVoid.class, ElementariumAct.ID);
         BaseMod.addEvent(VoidShrine.ID, VoidShrine.class, ElementariumAct.ID);
+        BaseMod.addEvent(OtherworldlyPassage.ID, OtherworldlyPassage.class, ElementariumAct.ID);
 
         // Events in other acts
         BaseMod.addEvent(ChestOfTheGoldenMirage.ID, ChestOfTheGoldenMirage.class, TheBeyond.ID);

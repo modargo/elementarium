@@ -25,6 +25,7 @@ public class ElementariumAct extends CustomDungeon {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
     public static final String[] TEXT = uiStrings.TEXT;
     public static final String NAME = TEXT[0];
+    public static final int ACT_NUM = 2;
     private static final Logger logger = LogManager.getLogger(ElementariumAct.class.getName());
 
     public ElementariumAct() {
