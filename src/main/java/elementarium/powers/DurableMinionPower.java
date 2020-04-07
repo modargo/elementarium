@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import elementarium.Elementarium;
 
 public class DurableMinionPower extends AbstractPower {
     public static final String POWER_ID = "Elementarium:DurableMinion";
@@ -16,7 +17,7 @@ public class DurableMinionPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         updateDescription();
-        this.loadRegion("minion");
+        Elementarium.LoadPowerImage(this);
     }
 
     @Override
