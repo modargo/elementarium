@@ -110,7 +110,18 @@ public class GreatTreasure extends AbstractImageEvent {
     }
 
     private boolean isUsedUpBossRelic(AbstractRelic r) {
-        List<String> usedUpBossRelics = Arrays.asList(Astrolabe.ID, CallingBell.ID, EmptyCage.ID, PandorasBox.ID, TinyHouse.ID);
+        List<String> usedUpBossRelics = Arrays.asList(
+            // Base game
+            Astrolabe.ID, CallingBell.ID, EmptyCage.ID, PandorasBox.ID, TinyHouse.ID,
+            // Replay the Spire
+            "Replay:Grab Bag", "ReplayTheSpireMod:SealedPack", "Kintsugi", "Replay:Drink Me",
+            // Conspire (none)
+            // Hubris
+            "hubris:Backtick",
+            // Animator
+            "animator:RacePiece"
+            // Aspiration (none)
+        );
         return usedUpBossRelics.contains(r.relicId);
     }
 }
