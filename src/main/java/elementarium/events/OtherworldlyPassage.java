@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.city.BookOfStabbing;
-import com.megacrit.cardcrawl.monsters.city.GremlinLeader;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import elementarium.Elementarium;
 import org.apache.logging.log4j.LogManager;
@@ -90,9 +88,9 @@ public class OtherworldlyPassage extends Colosseum {
                 if (actID != TheCity.ID) {
                     logger.warn("Unknown act for getting random elite: " + actID);
                 }
-                elites.add(GremlinLeader.ID);
+                elites.add("Gremlin Leader");
                 elites.add("Slavers");
-                elites.add(BookOfStabbing.ID);
+                elites.add("Book of Stabbing");
         }
         return elites.get(AbstractDungeon.miscRng.random(elites.size() - 1));
     }
@@ -135,6 +133,7 @@ public class OtherworldlyPassage extends Colosseum {
                     case 0: // Enter
                         this.screenNum = 2;
                         String elite = this.getRandomElite(this.actID);
+                        logger.info("Spawning elite: " + elite);
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(elite);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.enterCombatFromImage();
