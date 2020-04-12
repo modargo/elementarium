@@ -114,7 +114,7 @@ public class MudGolem extends CustomMonster
             }
             case MUD_TORNADO_ATTACK: {
                 AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
-                for (int i = 0; i < MUD_TORNADO_HITS; i++) {
+                for (int i = 0; i < this.mudTornadoHits; i++) {
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 }
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.mudTornadoBlock));
