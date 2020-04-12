@@ -42,10 +42,10 @@ public class OrbOfFire extends CustomMonster
     private static final int A17_IRRADIATE_DEBUFF_COUNT = 3;
     private static final int IRRADIATE_DEBUFF_AMOUNT = 1;
     private static final int IRRADIATE_STAT_AMOUNT = 1;
-    private static final int HP_MIN = 33;
-    private static final int HP_MAX = 35;
-    private static final int A7_HP_MIN = 34;
-    private static final int A7_HP_MAX = 36;
+    private static final int HP_MIN = 35;
+    private static final int HP_MAX = 37;
+    private static final int A7_HP_MIN = 36;
+    private static final int A7_HP_MAX = 38;
     private int fireboltDamage;
     private int flareDamage;
 

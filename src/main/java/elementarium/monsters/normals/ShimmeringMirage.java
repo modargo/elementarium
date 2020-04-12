@@ -40,7 +40,7 @@ public class ShimmeringMirage extends CustomMonster
     private static final int A17_GLOW_SELF_STRENGTH = 2;
     private static final int PULSE_ATTACK_DAMAGE = 4;
     private static final int A2_PULSE_ATTACK_DAMAGE = 5;
-    private static final int PULSE_ATTACK_HEAL = 3;
+    private static final int PULSE_ATTACK_HEAL = 4;
     private static final int CLEANSE_AMOUNT = 2;
     private static final int HP_MIN = 30;
     private static final int HP_MAX = 32;
