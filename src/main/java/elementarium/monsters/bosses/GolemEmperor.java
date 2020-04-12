@@ -52,19 +52,19 @@ public class GolemEmperor extends CustomMonster {
     private static final int LOOSE_MATERIALS_DAMAGE = 4;
     private static final int A4_LOOSE_MATERIALS_DAMAGE = 5;
     private static final int LOOSE_MATERIALS_HITS = 2;
-    private static final int HP = 290;
-    private static final int A9_HP = 310;
+    private static final int HP = 300;
+    private static final int A9_HP = 325;
 
     private static final float[] xPositions = new float[]{-170.0F, -450.0F};
     private static final List<List<GolemInfo>> GOLEM_GROUPS = Arrays.asList(
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4)),
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -4)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -3), new GolemInfo(TarGolem.ID, xPositions[1], -1)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -3), new GolemInfo(StoneGolem.ID, xPositions[1], -3)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10), new GolemInfo(RubyGolem.ID, xPositions[1], -4))
     );
     private static final List<List<GolemInfo>> A19_GOLEM_GROUPS = Arrays.asList(
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(TarGolem.ID, xPositions[1], -2)),
-            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -4), new GolemInfo(StoneGolem.ID, xPositions[1], -4)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -3), new GolemInfo(TarGolem.ID, xPositions[1], -1)),
+            Arrays.asList(new GolemInfo(RubyGolem.ID, xPositions[0], -3), new GolemInfo(StoneGolem.ID, xPositions[1], -3)),
             Arrays.asList(new GolemInfo(MudGolem.ID, xPositions[0], -3), new GolemInfo(WarGolem.ID, xPositions[1], -10)),
             Arrays.asList(new GolemInfo(WarGolem.ID, xPositions[0], -10), new GolemInfo(RubyGolem.ID, xPositions[1], -4))
     );
