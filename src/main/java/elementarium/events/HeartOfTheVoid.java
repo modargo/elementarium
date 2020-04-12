@@ -1,6 +1,5 @@
 package elementarium.events;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,11 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import elementarium.Elementarium;
-import elementarium.cards.gilded.GildedForm;
 import elementarium.relics.FlickeringLantern;
 
 import java.text.MessageFormat;
