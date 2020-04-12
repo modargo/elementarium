@@ -36,8 +36,8 @@ public class Cyclone extends CustomMonster
     private static final int A17_INVIGORATING_WINDS_RITUAL = 3;
     private static final int INVIGORATING_WINDS_DRAW = 2;
     private static final int A17_INVIGORATING_WINDS_DRAW = 2;
-    private static final int TWISTER_DAMAGE = 14;
-    private static final int A2_TWISTER_DAMAGE = 16;
+    private static final int TWISTER_DAMAGE = 13;
+    private static final int A2_TWISTER_DAMAGE = 15;
     private static final int FIERCE_WINDS_AMOUNT = 1;
     private static final int A17_FIERCE_WINDS_AMOUNT = 1;
     private static final int HP_MIN = 112;
@@ -100,6 +100,7 @@ public class Cyclone extends CustomMonster
             case INVIGORATING_WINDS_MOVE:
                 AbstractDungeon.actionManager.addToBottom(new FastShakeAction(this, 0.5F, 0.2F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RitualPower(this, this.invigoratingWindsRitual, false), this.invigoratingWindsRitual));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.invigoratingWindsRitual), this.invigoratingWindsRitual));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DrawPower(AbstractDungeon.player, this.invigoratingWindsDraw), this.invigoratingWindsDraw));
                 break;
             case TWISTER_ATTACK:
