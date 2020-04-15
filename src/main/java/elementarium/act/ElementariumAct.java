@@ -9,11 +9,8 @@ import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import com.megacrit.cardcrawl.scenes.AbstractScene;
 import com.megacrit.cardcrawl.scenes.TheCityScene;
-import elementarium.monsters.normals.Cyclone;
-import elementarium.monsters.normals.RubyGolem;
+import elementarium.monsters.normals.*;
 import elementarium.monsters.elites.ElementalPortal;
-import elementarium.monsters.normals.VoidBeast;
-import elementarium.monsters.normals.VoidCorruption;
 import elementarium.monsters.elites.WarGolem;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -99,12 +96,13 @@ public class ElementariumAct extends CustomDungeon {
     @Override
     protected void generateStrongEnemies(int count) {
         ArrayList<MonsterInfo> monsters = new ArrayList<>();
-        monsters.add(new MonsterInfo(Encounters.ELEMENTALS_3, 30.0F));
-        monsters.add(new MonsterInfo(Encounters.STONE_GOLEMS, 14.0F));
+        monsters.add(new MonsterInfo(Encounters.ELEMENTALS_3, 16.0F));
         monsters.add(new MonsterInfo(RubyGolem.ID, 14.0F));
         monsters.add(new MonsterInfo(VoidBeast.ID, 14.0F));
-        monsters.add(new MonsterInfo(Encounters.VOID_CORRUPTION_AND_ORB_OF_FIRE, 7.0F));
+        monsters.add(new MonsterInfo(Hydrostalker.ID, 14.0F));
+        monsters.add(new MonsterInfo(Encounters.STONE_GOLEMS, 14.0F));
         monsters.add(new MonsterInfo(Encounters.VOID_CORRUPTION_AND_TAR_GOLEM, 7.0F));
+        monsters.add(new MonsterInfo(Encounters.VOID_CORRUPTION_AND_ORB_OF_FIRE, 7.0F));
         monsters.add(new MonsterInfo(Encounters.CYCLONE_AND_LIVING_STORMCLOUD, 7.0F));
         monsters.add(new MonsterInfo(Encounters.CYCLONE_AND_ORB_OF_FIRE, 7.0F));
         MonsterInfo.normalizeWeights(monsters);

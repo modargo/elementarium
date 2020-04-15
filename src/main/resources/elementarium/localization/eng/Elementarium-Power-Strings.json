@@ -94,5 +94,20 @@
       " additional cards.",
       " less cards."
     ]
+  },
+  "Elementarium:WaveformStrength": {
+    "NAME": "Waveform: Strength",
+    "DESCRIPTIONS": ["Whenever you play a skill or power, this enemy gains #yStrength equal to its cost. Switches to #yWaveform: #yArmor next turn."]
+  },
+  "Elementarium:WaveformArmor": {
+    "NAME": "Waveform: Armor",
+    "DESCRIPTIONS": [
+      "Whenever you play a skill or power, this enemy gains #yPlated #yArmor equal to twice its cost. Switches to #yWaveform: #yStrength next turn.",
+      "Whenever you play a skill or power, this enemy gains #yPlated #yArmor equal to twice its cost. Switches to #yWaveform: #yStill next turn."
+    ]
+  },
+  "Elementarium:WaveformStill": {
+    "NAME": "Waveform: Still",
+    "DESCRIPTIONS": ["No effect. Switches to #yWaveform: #yStrength next turn."]
   }
 }

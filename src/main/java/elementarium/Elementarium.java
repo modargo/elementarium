@@ -99,6 +99,7 @@ public class Elementarium implements
         BaseMod.addMonster(Encounters.ELEMENTALS_3, () -> new MonsterGroup(generateElementalGroup(3)));
         BaseMod.addMonster(RubyGolem.ID, (BaseMod.GetMonster)RubyGolem::new);
         BaseMod.addMonster(VoidBeast.ID, (BaseMod.GetMonster)VoidBeast::new);
+        BaseMod.addMonster(Hydrostalker.ID, (BaseMod.GetMonster)Hydrostalker::new);
         BaseMod.addMonster(Encounters.STONE_GOLEMS, () -> new MonsterGroup(
                 new AbstractMonster[] {
                         new StoneGolem(X1, 0.0F, false, false),
