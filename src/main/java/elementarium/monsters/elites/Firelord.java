@@ -1,7 +1,6 @@
 package elementarium.monsters.elites;
 
 import basemod.abstracts.CustomMonster;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateFastAttackAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
@@ -18,13 +17,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import elementarium.Elementarium;
-import elementarium.act.ElementariumAct;
 import elementarium.actions.SummonElementalAction;
 import elementarium.monsters.normals.OrbOfFire;
 import elementarium.powers.CleansePower;
 import elementarium.powers.FlourishingFlamePower;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
@@ -67,8 +63,6 @@ public class Firelord extends CustomMonster
     private int fieryWrathDamage;
     private int rainOfFireDamage;
     private int cleanseAmount;
-
-    private static final Logger logger = LogManager.getLogger(Firelord.class.getName());
 
     public Firelord() {
         this(0.0f, 0.0f);
@@ -158,11 +152,6 @@ public class Firelord extends CustomMonster
             }
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
     }
 
     @Override

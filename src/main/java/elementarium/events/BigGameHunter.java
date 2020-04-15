@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import elementarium.Elementarium;
 import elementarium.relics.HuntersElixir;
-import elementarium.relics.RadiantIdol;
 import elementarium.relics.HuntersBracer;
 import elementarium.relics.HuntersSling;
 

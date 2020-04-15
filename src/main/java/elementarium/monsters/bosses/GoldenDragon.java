@@ -1,7 +1,6 @@
 package elementarium.monsters.bosses;
 
 import basemod.abstracts.CustomMonster;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateFastAttackAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
@@ -164,11 +163,6 @@ public class GoldenDragon extends CustomMonster {
             this.moveIndex++;
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
     }
 
     @Override

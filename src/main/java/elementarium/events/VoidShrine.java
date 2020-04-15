@@ -83,7 +83,7 @@ public class VoidShrine extends AbstractImageEvent {
 
     private void upgradeRandomCard() {
         AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-        ArrayList<AbstractCard> upgradableCards = new ArrayList();
+        ArrayList<AbstractCard> upgradableCards = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.canUpgrade()) {
                 upgradableCards.add(c);

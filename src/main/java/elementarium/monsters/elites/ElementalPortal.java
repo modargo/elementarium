@@ -1,7 +1,6 @@
 package elementarium.monsters.elites;
 
 import basemod.abstracts.CustomMonster;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.FastShakeAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -133,11 +132,6 @@ public class ElementalPortal extends CustomMonster
                 break;
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
     }
 
     @Override

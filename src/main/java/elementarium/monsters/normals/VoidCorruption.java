@@ -1,7 +1,6 @@
 package elementarium.monsters.normals;
 
 import basemod.abstracts.CustomMonster;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateFastAttackAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
@@ -75,10 +74,6 @@ public class VoidCorruption extends CustomMonster
         this.damage.add(new DamageInfo(this, this.bigAttackDamage));
         this.damage.add(new DamageInfo(this, MULTI_ATTACK_DAMAGE));
     }
-
-    @Override
-    public void usePreBattleAction() {
-    }
     
     @Override
     public void takeTurn() {
@@ -120,11 +115,6 @@ public class VoidCorruption extends CustomMonster
                 break;
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
     }
 
     @Override

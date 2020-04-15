@@ -80,28 +80,25 @@ public class LostScrolls extends AbstractImageEvent {
                             AbstractCard card = AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy();
                             boolean containsDupe = true;
 
-                            while(true) {
-                                while(containsDupe) {
-                                    containsDupe = false;
+                            while(containsDupe) {
+                                containsDupe = false;
 
-                                    for (AbstractCard c : group.group) {
-                                        if (c.cardID.equals(card.cardID)) {
-                                            containsDupe = true;
-                                            card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
-                                            break;
-                                        }
+                                for (AbstractCard c : group.group) {
+                                    if (c.cardID.equals(card.cardID)) {
+                                        containsDupe = true;
+                                        card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
+                                        break;
                                     }
                                 }
+                            }
 
-                                if (group.contains(card)) {
-                                    i--;
-                                } else {
-                                    for (AbstractRelic r : AbstractDungeon.player.relics) {
-                                        r.onPreviewObtainCard(card);
-                                    }
-                                    group.addToBottom(card);
+                            if (group.contains(card)) {
+                                i--;
+                            } else {
+                                for (AbstractRelic r : AbstractDungeon.player.relics) {
+                                    r.onPreviewObtainCard(card);
                                 }
-                                break;
+                                group.addToBottom(card);
                             }
                         }
 

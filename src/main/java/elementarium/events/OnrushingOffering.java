@@ -102,7 +102,7 @@ public class OnrushingOffering extends AbstractImageEvent {
     private void replaceAttacks() {
         ArrayList<AbstractCard> masterDeck = AbstractDungeon.player.masterDeck.group;
 
-        ArrayList<AbstractCard> strikes = new ArrayList<AbstractCard>();
+        ArrayList<AbstractCard> strikes = new ArrayList<>();
         for (AbstractCard card : masterDeck) {
             if (card.tags.contains(AbstractCard.CardTags.STARTER_STRIKE)) {
                 strikes.add(card);

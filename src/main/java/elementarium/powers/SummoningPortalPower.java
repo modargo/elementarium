@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import elementarium.Elementarium;
 import elementarium.monsters.elites.ElementalPortal;
 
-import java.text.MessageFormat;
-
 public class SummoningPortalPower extends AbstractPower {
     public static final String POWER_ID = "Elementarium:SummoningPortal";
     private static final PowerStrings powerStrings;

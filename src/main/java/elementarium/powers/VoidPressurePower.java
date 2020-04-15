@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import elementarium.Elementarium;
 
-import java.text.MessageFormat;
 import java.util.ArrayList;
 
 public class VoidPressurePower extends AbstractPower {

@@ -100,7 +100,7 @@ public class GoldenStatues extends MaskedBandits {
 
     private AbstractCard getCardCost() {
         CardGroup cg = CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards());
-        ArrayList<AbstractCard> list = new ArrayList();
+        ArrayList<AbstractCard> list = new ArrayList<>();
         for (AbstractCard c : cg.group) {
             if (c.rarity != AbstractCard.CardRarity.BASIC && c.type != AbstractCard.CardType.CURSE && !c.hasTag(CustomTags.GILDED)) {
                 list.add(c);

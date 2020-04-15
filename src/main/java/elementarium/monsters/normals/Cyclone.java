@@ -1,7 +1,6 @@
 package elementarium.monsters.normals;
 
 import basemod.abstracts.CustomMonster;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.FastShakeAction;
@@ -112,11 +111,6 @@ public class Cyclone extends CustomMonster
     }
 
     @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
-    }
-
-    @Override
     protected void getMove(final int num) {
         if (this.firstMove) {
             this.setMove(MOVES[0], BLOW_AWAY_MOVE, Intent.STRONG_DEBUFF);
@@ -152,7 +146,7 @@ public class Cyclone extends CustomMonster
         }
     }
 
-    private class CardToExhaust {
+    private static class CardToExhaust {
         public AbstractCard card;
         public CardGroup group;
     }
