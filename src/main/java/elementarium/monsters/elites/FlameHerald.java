@@ -35,8 +35,8 @@ public class FlameHerald extends CustomMonster
     private static final int A8_GATHERING_FLAMES_BLOCK = 5;
     private static final int GATHERING_FLAMES_HEAL = 3;
     private static final int A18_GATHERING_FLAMES_HEAL = 3;
-    private static final int SPEAR_THRUST_DAMAGE = 8;
-    private static final int A3_SPEAR_THRUST_DAMAGE = 10;
+    private static final int SPEAR_THRUST_DAMAGE = 9;
+    private static final int A3_SPEAR_THRUST_DAMAGE = 11;
     private static final int RITUAL_STRIKE_DAMAGE = 5;
     private static final int A3_RITUAL_STRIKE_DAMAGE = 6;
     private static final int RITUAL_STRIKE_THORNS = 1;

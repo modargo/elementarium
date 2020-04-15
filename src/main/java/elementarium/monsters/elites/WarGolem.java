@@ -26,8 +26,8 @@ public class WarGolem extends CustomMonster
     private static final byte VULNERABLE_ATTACK = 1;
     private static final byte FRAIL_ATTACK = 2;
     private static final byte DEX_ATTACK = 3;
-    private static final int VULNERABLE_ATTACK_DAMAGE = 17;
-    private static final int A3_VULNERABLE_ATTACK_DAMAGE = 19;
+    private static final int VULNERABLE_ATTACK_DAMAGE = 18;
+    private static final int A3_VULNERABLE_ATTACK_DAMAGE = 20;
     private static final int VULNERABLE_AMOUNT = 1;
 	private static final int A18_VULNERABLE_AMOUNT = 2;
     private static final int FRAIL_ATTACK_DAMAGE = 15;
