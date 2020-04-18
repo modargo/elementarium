@@ -149,22 +149,11 @@ public class ElementariumAct extends CustomDungeon {
 
     @Override
     protected void initializeShrineList() {
-        shrineList.clear();
-        //shrineList.add(GoldShrine.ID);
-        //shrineList.add(Transmogrifier.ID);
-        //shrineList.add(PurificationShrine.ID);
-        //shrineList.add(UpgradeShrine.ID);
-        //shrineList.add(Bonfire.ID);
-        //shrineList.add(Duplicator.ID);
-        //shrineList.add(FaceTrader.ID);
-        //shrineList.add(FountainOfCurseRemoval.ID);
-        //shrineList.add(Designer.ID);
+        // No shrines in this act, since we want to experience as many of the new events as possible
     }
 
     @Override
     protected void initializeEventList() {
         // Events are added via BaseMod in Elementarium.addEvents()
-        // We clear the one time events in addition to the shrines because we want only Elementarium-specific events
-        specialOneTimeEventList.clear();
     }
 }
