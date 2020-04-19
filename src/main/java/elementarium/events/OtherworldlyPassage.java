@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import elementarium.Elementarium;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -136,6 +137,8 @@ public class OtherworldlyPassage extends Colosseum {
                         logger.info("Spawning elite: " + elite);
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(elite);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                        AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25, 35));
+                        AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractDungeon.returnRandomRelicTier());
                         this.enterCombatFromImage();
                         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new StrengthPower(monster, STRENGTH_AMOUNT), STRENGTH_AMOUNT));
