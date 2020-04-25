@@ -35,6 +35,7 @@ public class OtherworldlyPassage extends Colosseum {
     private static final int A15_MAX_HP_LOSS = 2;
 
     private static final String GensokyoActId = "Gensokyo:Gensokyoer";
+    private static final String HallownestActId = "Hallownest:CityofTears";
 
     private int screenNum = 0;
     private String actID;
@@ -65,6 +66,9 @@ public class OtherworldlyPassage extends Colosseum {
         if (Loader.isModLoaded("Gensokyo")) {
             acts.add(GensokyoActId);
         }
+        if (Loader.isModLoaded("Hallownest")) {
+            acts.add(HallownestActId);
+        }
         // We always prioritize other modded acts over the base game, since crossover content is fun
         if (acts.isEmpty()){
             acts.add(TheCity.ID);
@@ -85,6 +89,11 @@ public class OtherworldlyPassage extends Colosseum {
                 elites.add("Gensokyo:Koishi");
                 elites.add("Gensokyo:Tenshi");
                 break;
+            case HallownestActId:
+                elites.add("Hallownest:Nosk");
+                elites.add("Hallownest:eliteSoulWarrior");
+                elites.add("Hallownest:eliteWatcherKnight");
+                break;
             default:
                 if (actID != TheCity.ID) {
                     logger.warn("Unknown act for getting random elite: " + actID);
@@ -101,6 +110,9 @@ public class OtherworldlyPassage extends Colosseum {
         switch (actID) {
             case GensokyoActId:
                 text = DESCRIPTIONS[4];
+                break;
+            case HallownestActId:
+                text = DESCRIPTIONS[5];
                 break;
             default:
                 text = DESCRIPTIONS[3];
