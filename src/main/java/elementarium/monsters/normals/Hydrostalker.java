@@ -34,10 +34,10 @@ public class Hydrostalker extends CustomMonster
     private static final int FLOOD_DAMAGE = 2;
     private static final int A2_FLOOD_DAMAGE = 3;
     private static final int FLOOD_HITS = 2;
-    private static final int HP_MIN = 142;
-    private static final int HP_MAX = 150;
-    private static final int A7_HP_MIN = 147;
-    private static final int A7_HP_MAX = 155;
+    private static final int HP_MIN = 147;
+    private static final int HP_MAX = 155;
+    private static final int A7_HP_MIN = 152;
+    private static final int A7_HP_MAX = 160;
     private int gushDamage;
     private int surgeDamage;
     private int floodDamage;
