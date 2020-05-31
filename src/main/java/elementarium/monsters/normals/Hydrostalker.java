@@ -26,10 +26,10 @@ public class Hydrostalker extends CustomMonster
     private static final byte GUSH_ATTACK = 1;
     private static final byte SURGE_ATTACK = 2;
     private static final byte FLOOD_ATTACK = 3;
-    private static final int GUSH_DAMAGE = 12;
-    private static final int A2_GUSH_DAMAGE = 14;
-    private static final int SURGE_DAMAGE = 8;
-    private static final int A2_SURGE_DAMAGE = 9;
+    private static final int GUSH_DAMAGE = 13;
+    private static final int A2_GUSH_DAMAGE = 15;
+    private static final int SURGE_DAMAGE = 9;
+    private static final int A2_SURGE_DAMAGE = 10;
     private static final int SURGE_ARTIFACT = 1;
     private static final int FLOOD_DAMAGE = 2;
     private static final int A2_FLOOD_DAMAGE = 3;
