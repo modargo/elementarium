@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import elementarium.Elementarium;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
