@@ -14,22 +14,11 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import elementarium.monsters.MonsterUtils;
 import elementarium.powers.DurableMinionPower;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class SummonElementalAction extends AbstractGameAction {
-    private static final Logger logger = LogManager.getLogger(SummonElementalAction.class.getName());
     private AbstractMonster m;
     private int strength;
     private int block;
-
-    public SummonElementalAction(String elementalID, float x, float y) {
-        this(elementalID, x, y, 0, 0);
-    }
-
-    public SummonElementalAction(String elementalID, float x, float y, AbstractMonster[] elementals, int slot) {
-        this(elementalID, x, y, elementals, slot, 0, 0, false);
-    }
 
     public SummonElementalAction(String elementalID, float x, float y, int strength, int block) {
         this(elementalID, x, y, null, -1, strength, block, false);
@@ -52,7 +41,7 @@ public class SummonElementalAction extends AbstractGameAction {
                 r.onSpawnMonster(this.m);
             }
         }
-        if(elementals != null && slot != -1) {
+        if (elementals != null && slot != -1) {
             elementals[slot] = m;
         }
     }

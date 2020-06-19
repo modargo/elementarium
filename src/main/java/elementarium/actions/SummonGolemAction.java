@@ -14,20 +14,13 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import elementarium.monsters.MonsterUtils;
 import elementarium.powers.CrumblingPower;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class SummonGolemAction extends AbstractGameAction {
-    private static final Logger logger = LogManager.getLogger(SummonGolemAction.class.getName());
     private AbstractMonster m;
     private int strength;
     private int crumbling;
     private AbstractCreature crumblingTarget;
     private int crumblingStrengthLoss;
-
-    public SummonGolemAction(String golemID, float x, float y) {
-        this(golemID, x, y, 0, 1.0F, 0, null, 0, false);
-    }
 
     public SummonGolemAction(String golemID, float x, float y, int strength, float hpMultiplier, int crumbling, AbstractCreature crumblingTarget, int crumblingStrengthLoss, boolean firstTurn) {
         this.actionType = ActionType.SPECIAL;
