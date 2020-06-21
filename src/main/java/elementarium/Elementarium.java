@@ -74,7 +74,7 @@ public class Elementarium implements
     @Override
     public void receivePostInitialize() {
         Texture badgeTexture = new Texture("elementarium/images/ElementariumBadge.png");
-        BaseMod.registerModBadge(badgeTexture, "Elementarium", "modargo", "An alternate act 2 full of elementals and golems", new ModPanel());
+        BaseMod.registerModBadge(badgeTexture, "Elementarium", "modargo", "An alternate act 2 themed around elementals and golems. Once the center of a thriving civilization, the Elementarium is now a ruined and desolate land.", new ModPanel());
 
         CustomDungeon.addAct(ElementariumAct.ACT_NUM, new ElementariumAct());
         addMonsters();
