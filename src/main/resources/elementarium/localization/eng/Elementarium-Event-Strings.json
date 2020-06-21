@@ -313,5 +313,19 @@
       "[Detour] #rLose #r{0} #rMax #rHP.",
       "[Leave]"
     ]
+  },
+  "Elementarium:BeastsOfTheMenagerie": {
+    "NAME": "Beasts of the Menagerie",
+    "DESCRIPTIONS": [
+      "The signs are clear. Great beasts of the #bMenagerie are nearby, likely hoarding #gtreasure. NL NL Before following the tracks, you pause. Any creature from the Menagerie that's made it this far into the Elementarium must be #r@exceptionally@ #r@strong@, even stronger than the terrible monsters that sit at the top of the Menagerie's food chain. Will you survive the encounter?",
+      "As you consider your options, you note the tracks show both #yclaw and #bhoof.",
+      "As you consider your options, you note the ground is #rhot and #rsmoldering.",
+      "As you consider your options, you note the area is littered with #bshed #bscales.",
+      "No need to take that kind of risk."
+    ],
+    "OPTIONS": [
+      "[Follow] Face a Menagerie boss with {0} extra strength and {1}% extra HP.",
+      "[Leave]"
+    ]
   }
 }

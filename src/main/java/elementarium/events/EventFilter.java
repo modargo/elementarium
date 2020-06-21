@@ -1,5 +1,6 @@
 package elementarium.events;
 
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.beyond.TombRedMask;
 import elementarium.relics.ElementariumTrophy;
@@ -35,6 +36,12 @@ public class EventFilter {
 
             if (event.equals(ChestOfTheGoldenMirage.ID)) {
                 if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
+                    eventsToRemove.add(event);
+                }
+            }
+
+            if (event.equals(BeastsOfTheMenagerie.ID)) {
+                if (!(Loader.isModLoaded("Menagerie") && AbstractDungeon.currMapNode != null && AbstractDungeon.currMapNode.y <= AbstractDungeon.map.size() / 2)) {
                     eventsToRemove.add(event);
                 }
             }

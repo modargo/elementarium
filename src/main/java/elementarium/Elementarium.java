@@ -217,6 +217,7 @@ public class Elementarium implements
         BaseMod.addEvent(HeartOfTheVoid.ID, HeartOfTheVoid.class, ElementariumAct.ID);
         BaseMod.addEvent(VoidShrine.ID, VoidShrine.class, ElementariumAct.ID);
         BaseMod.addEvent(OtherworldlyPassage.ID, OtherworldlyPassage.class, ElementariumAct.ID);
+        BaseMod.addEvent(BeastsOfTheMenagerie.ID, BeastsOfTheMenagerie.class, ElementariumAct.ID);
 
         // Events in other acts
         BaseMod.addEvent(ChestOfTheGoldenMirage.ID, ChestOfTheGoldenMirage.class, TheBeyond.ID);
