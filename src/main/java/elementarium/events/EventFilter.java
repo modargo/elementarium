@@ -20,6 +20,7 @@ public class EventFilter {
                     eventsToRemove.add(event);
                 }
             }
+
             if (event.equals(BigGameHunter.ID)) {
                 if (!(AbstractDungeon.currMapNode != null && AbstractDungeon.currMapNode.y <= AbstractDungeon.map.size() / 2)) {
                     eventsToRemove.add(event);
