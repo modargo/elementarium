@@ -100,6 +100,7 @@ public class OtherworldlyPassage extends Colosseum {
                 elites.add("Gremlin Leader");
                 elites.add("Slavers");
                 elites.add("Book of Stabbing");
+                break;
         }
         return elites.get(AbstractDungeon.miscRng.random(elites.size() - 1));
     }
