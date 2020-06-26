@@ -29,7 +29,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
 
     private static final String Chimera = "Menagerie:Chimera";
     private static final String Sunstalker = "Menagerie:Sunstalker";
-    private static final String Avatars = "Menagerie:Avatars";
+    private static final String Avatars = "Menagerie:AVATARS";
 
     private static final int STRENGTH = 1;
     private static final int A15_STRENGTH = 2;
