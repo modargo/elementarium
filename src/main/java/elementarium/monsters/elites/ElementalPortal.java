@@ -47,10 +47,10 @@ public class ElementalPortal extends CustomMonster
     private static final int CHAOTIC_ENERGIES_STAT_AMOUNT = 1;
     private static final int ELEMENTAL_COUNT = 5;
     private static final int A18_ELEMENTAL_COUNT = 6;
-    private static final int HP_MIN = 50;
-    private static final int HP_MAX = 55;
-    private static final int A8_HP_MIN = 53;
-    private static final int A8_HP_MAX = 58;
+    private static final int HP_MIN = 44;
+    private static final int HP_MAX = 49;
+    private static final int A8_HP_MIN = 47;
+    private static final int A8_HP_MAX = 52;
     private int elementalBlastDamage;
     private int elementalCount;
     private ArrayList<String> elementalIDs;
