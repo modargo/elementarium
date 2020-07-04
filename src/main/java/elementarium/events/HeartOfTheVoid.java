@@ -25,7 +25,7 @@ public class HeartOfTheVoid extends AbstractImageEvent {
     private static final float HEAL_PERCENT = 0.24F;
     private static final float A15_HEAL_PERCENT = 0.18F;
     private static final float MAX_HEALTH_LOSS_PERCENTAGE = 0.12F;
-    private static final float A15_MAX_HEALTH_LOSS_PERCENTAGE = 0.18F;
+    private static final float A15_MAX_HEALTH_LOSS_PERCENTAGE = 0.16F;
 
     private AbstractRelic relic;
     private AbstractCard card;
