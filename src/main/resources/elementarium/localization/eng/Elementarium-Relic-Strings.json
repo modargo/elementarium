@@ -10,7 +10,7 @@
     "NAME": "Hunter's Sling",
     "FLAVOR": "A well-balanced sling crafted from hide and sinew.",
     "DESCRIPTIONS": [
-      "Start each elite combat with #b{0} #yStrength and #yDexterity."
+      "Start each elite combat with #b{0} #yStrength and #b{1} #yDexterity."
     ]
   },
   "Elementarium:HuntersBracer": {

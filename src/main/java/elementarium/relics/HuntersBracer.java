@@ -17,7 +17,7 @@ public class HuntersBracer extends CustomRelic {
     public static final String ID = "Elementarium:HuntersBracer";
     private static final Texture IMG = TextureLoader.getTexture(Elementarium.relicImage(ID));
     private static final Texture OUTLINE = TextureLoader.getTexture(Elementarium.relicOutlineImage(ID));
-    private static final int STATS = 2;
+    private static final int STATS = 3;
 
     public HuntersBracer() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.CLINK);

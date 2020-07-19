@@ -17,7 +17,8 @@ public class HuntersSling extends CustomRelic {
     public static final String ID = "Elementarium:HuntersSling";
     private static final Texture IMG = TextureLoader.getTexture(Elementarium.relicImage(ID));
     private static final Texture OUTLINE = TextureLoader.getTexture(Elementarium.relicOutlineImage(ID));
-    private static final int STATS = 1;
+    private static final int STRENGTH = 2;
+    private static final int DEXTERITY = 1;
 
     public HuntersSling() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.CLINK);
@@ -27,14 +28,14 @@ public class HuntersSling extends CustomRelic {
         if (AbstractDungeon.getCurrRoom().eliteTrigger) {
             this.flash();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, STATS), STATS));
-            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, STATS), STATS));
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, STRENGTH), STRENGTH));
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, DEXTERITY), DEXTERITY));
         }
     }
 
     @Override
     public String getUpdatedDescription() {
-        return MessageFormat.format(DESCRIPTIONS[0], STATS);
+        return MessageFormat.format(DESCRIPTIONS[0], STRENGTH, DEXTERITY);
     }
 
     public AbstractRelic makeCopy() {
