@@ -42,7 +42,7 @@ public class ChestOfTheGoldenMirage extends AbstractImageEvent {
                     AbstractDungeon.effectList.add(new RainingGoldEffect(GOLD_AMT));
                     AbstractDungeon.player.gainGold(GOLD_AMT);
                     this.imageEventText.updateBodyText(MIRAGE_RESULT);
-                } else if (buttonPressed == 1 && !AbstractDungeon.player.hasRelic("Red Mask")) {
+                } else if (buttonPressed == 1 && !AbstractDungeon.player.hasRelic(GoldenMirage.ID)) {
                     AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new GoldenMirage());
                     this.imageEventText.updateBodyText(RELIC_RESULT);
@@ -50,9 +50,6 @@ public class ChestOfTheGoldenMirage extends AbstractImageEvent {
                     this.openMap();
                 }
 
-                this.imageEventText.clearAllDialogs();
-                this.imageEventText.setDialogOption(OPTIONS[4]);
-                this.screen = 1;
                 break;
             default:
                 this.openMap();
