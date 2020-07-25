@@ -111,7 +111,6 @@ public class BladeSeller extends AbstractImageEvent {
                 this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                 this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                 this.imageEventText.clearRemainingOptions();
-                this.openMap();
                 break;
             default:
                 this.openMap();
