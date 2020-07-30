@@ -94,7 +94,7 @@ public class GoldenAngel extends CustomMonster
             case ATTACK_DEBUFF:
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
 				AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, -ATTACK_DEBUFF_WEAK, true), -ATTACK_DEBUFF_WEAK));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, ATTACK_DEBUFF_WEAK, true), ATTACK_DEBUFF_WEAK));
                 break;
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
