@@ -28,7 +28,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
     private static final Logger logger = LogManager.getLogger(BeastsOfTheMenagerie.class.getName());
 
     private static final String Chimera = "Menagerie:Chimera";
-    private static final String Sunstalker = "Menagerie:Sunstalker";
+    private static final String Suneater = "Menagerie:Suneater";
     private static final String Avatars = "Menagerie:AVATARS";
 
     private static final int STRENGTH = 1;
@@ -68,7 +68,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
     private String getRandomMenagerieBoss(){
         List<String> bosses = new ArrayList<>();
         bosses.add(Chimera);
-        bosses.add(Sunstalker);
+        bosses.add(Suneater);
         bosses.add(Avatars);
         return bosses.get(AbstractDungeon.miscRng.random(bosses.size() - 1));
     }
@@ -79,7 +79,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
             case Chimera:
                 text = DESCRIPTIONS[1];
                 break;
-            case Sunstalker:
+            case Suneater:
                 text = DESCRIPTIONS[2];
                 break;
             default:
