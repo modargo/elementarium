@@ -34,7 +34,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
     private static final int STRENGTH = 1;
     private static final int A15_STRENGTH = 2;
     private static final int HP_MULTIPLIER = 20;
-    private static final int A15_HP_MULTIPLIER = 30;
+    private static final int A15_HP_MULTIPLIER = 25;
 
     private int screenNum = 0;
     private String bossID;
