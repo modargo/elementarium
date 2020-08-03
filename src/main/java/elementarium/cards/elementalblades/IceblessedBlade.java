@@ -21,7 +21,7 @@ public class IceblessedBlade extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_DAMAGE = 9;
+    private static final int BASE_DAMAGE = 8;
     private static final int UPGRADE_DAMAGE = 6;
     private static final int BASE_BENEFITS = 1;
     private static final int UPGRADE_BENEFITS = 1;

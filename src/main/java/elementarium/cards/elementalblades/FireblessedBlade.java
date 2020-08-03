@@ -24,7 +24,7 @@ public class FireblessedBlade extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_DAMAGE = 13;
+    private static final int BASE_DAMAGE = 12;
     private static final int UPGRADE_DAMAGE = 7;
     private static final int STAT_AMOUNT = 1;
     private static final int UPGRADE_STAT_AMOUNT = 1;
