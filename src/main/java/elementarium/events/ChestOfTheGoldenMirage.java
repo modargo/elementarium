@@ -20,11 +20,10 @@ public class ChestOfTheGoldenMirage extends AbstractImageEvent {
     private static final String DIALOG_1;
     private static final String MIRAGE_RESULT;
     private static final String RELIC_RESULT;
-    private int screen;
 
     public ChestOfTheGoldenMirage() {
         super(NAME, DIALOG_1, IMG);
-        this.screen = 0;
+        this.screenNum = 0;
         if (AbstractDungeon.player.hasRelic(GoldenMirage.ID)) {
             this.imageEventText.setDialogOption(OPTIONS[0]);
         } else {
@@ -36,16 +35,22 @@ public class ChestOfTheGoldenMirage extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch(this.screenNum) {
             case 0:
                 if (buttonPressed == 0) {
                     AbstractDungeon.effectList.add(new RainingGoldEffect(GOLD_AMT));
                     AbstractDungeon.player.gainGold(GOLD_AMT);
                     this.imageEventText.updateBodyText(MIRAGE_RESULT);
+                    this.screenNum = 1;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[4]);
+                    this.imageEventText.clearRemainingOptions();
                 } else if (buttonPressed == 1 && !AbstractDungeon.player.hasRelic(GoldenMirage.ID)) {
                     AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new GoldenMirage());
                     this.imageEventText.updateBodyText(RELIC_RESULT);
+                    this.screenNum = 1;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[4]);
+                    this.imageEventText.clearRemainingOptions();
                 } else {
                     this.openMap();
                 }
