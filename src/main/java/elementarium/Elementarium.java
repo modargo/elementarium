@@ -79,7 +79,6 @@ public class Elementarium implements
         CustomDungeon.addAct(ElementariumAct.ACT_NUM, new ElementariumAct());
         addMonsters();
         addEvents();
-        addRelics();
 
         BaseMod.subscribe(new RemoveStickyTarPostEliteBattleSubscriber());
     }
@@ -223,18 +222,6 @@ public class Elementarium implements
         BaseMod.addEvent(ChestOfTheGoldenMirage.ID, ChestOfTheGoldenMirage.class, TheBeyond.ID);
     }
 
-    private static void addRelics() {
-        BaseMod.addRelic(new GolemsHeart(), RelicType.SHARED);
-        BaseMod.addRelic(new HatchlingPhoenix(), RelicType.SHARED);
-        BaseMod.addRelic(new HuntersBracer(), RelicType.SHARED);
-        BaseMod.addRelic(new HuntersElixir(), RelicType.SHARED);
-        BaseMod.addRelic(new HuntersSling(), RelicType.SHARED);
-        BaseMod.addRelic(new GoldenMirage(), RelicType.SHARED);
-        BaseMod.addRelic(new RadiantIdol(), RelicType.SHARED);
-        BaseMod.addRelic(new FlickeringLantern(), RelicType.SHARED);
-        BaseMod.addRelic(new ElementariumTrophy(), RelicType.SHARED);
-    }
-
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new EarthblessedBlade());
@@ -252,6 +239,15 @@ public class Elementarium implements
 
     @Override
     public void receiveEditRelics() {
+        BaseMod.addRelic(new GolemsHeart(), RelicType.SHARED);
+        BaseMod.addRelic(new HatchlingPhoenix(), RelicType.SHARED);
+        BaseMod.addRelic(new HuntersBracer(), RelicType.SHARED);
+        BaseMod.addRelic(new HuntersElixir(), RelicType.SHARED);
+        BaseMod.addRelic(new HuntersSling(), RelicType.SHARED);
+        BaseMod.addRelic(new GoldenMirage(), RelicType.SHARED);
+        BaseMod.addRelic(new RadiantIdol(), RelicType.SHARED);
+        BaseMod.addRelic(new FlickeringLantern(), RelicType.SHARED);
+        BaseMod.addRelic(new ElementariumTrophy(), RelicType.SHARED);
     }
 
     private static String makeLocPath(Settings.GameLanguage language, String filename)
