@@ -90,10 +90,6 @@ public class HeartOfTheVoid extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
                         break;
-                    default: // Leave
-                        logMetricIgnored(ID);
-                        this.openMap();
-                        break;
                 }
                 break;
             default:
