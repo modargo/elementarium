@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import elementarium.Elementarium;
@@ -58,7 +59,9 @@ public class RadiantAltar extends AbstractImageEvent {
                     case 0: // Offer
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.player.loseRelic(GoldenIdol.ID);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new RadiantIdol());
+                        AbstractRelic radiantIdol = new RadiantIdol();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), radiantIdol);
+                        logMetricRelicSwap(ID, "Offer", radiantIdol, new GoldenIdol());
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
@@ -68,6 +71,7 @@ public class RadiantAltar extends AbstractImageEvent {
                         AbstractDungeon.player.increaseMaxHp(MAX_HEALTH_GAIN, false);
                         AbstractDungeon.player.damage(new DamageInfo(null, this.healthLoss));
                         CardCrawlGame.sound.play("HEAL_3");
+                        logMetricDamageAndMaxHPGain(ID, "Sacrifice", this.healthLoss, MAX_HEALTH_GAIN);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
@@ -78,6 +82,7 @@ public class RadiantAltar extends AbstractImageEvent {
                         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.HIGH, ScreenShake.ShakeDur.MED, true);
                         AbstractCard curse = new Decay();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                        logMetricObtainCard(ID, "Desecrate", curse);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();

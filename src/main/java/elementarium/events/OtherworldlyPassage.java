@@ -144,6 +144,7 @@ public class OtherworldlyPassage extends Colosseum {
             case 1:
                 switch (buttonPressed) {
                     case 0: // Enter
+                        logMetric(ID, "Enter");
                         this.screenNum = 2;
                         String elite = this.getRandomElite(this.actID);
                         logger.info("Spawning elite: " + elite);
@@ -160,6 +161,7 @@ public class OtherworldlyPassage extends Colosseum {
                     default: // Detour
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.player.decreaseMaxHealth(this.maxHpLoss);
+                        logMetricMaxHPLoss(ID, "Detour", this.maxHpLoss);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();

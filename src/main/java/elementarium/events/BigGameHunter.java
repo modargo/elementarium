@@ -5,12 +5,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import elementarium.Elementarium;
 import elementarium.relics.HuntersElixir;
 import elementarium.relics.HuntersBracer;
 import elementarium.relics.HuntersSling;
 
 import java.text.MessageFormat;
+import java.util.Collections;
 
 public class BigGameHunter extends AbstractImageEvent {
     public static final String ID = "Elementarium:BigGameHunter";
@@ -82,7 +84,9 @@ public class BigGameHunter extends AbstractImageEvent {
                     case 0: // Sling
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.loseGoldAndHealth();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new HuntersSling());
+                        AbstractRelic sling = new HuntersSling();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), sling);
+                        logMetric(ID, "Sling", null, null, null, null, Collections.singletonList(sling.relicId), null, null, 0, 0, this.maxHealthLoss, 0, 0, this.goldCost);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[10]);
                         this.imageEventText.clearRemainingOptions();
@@ -90,7 +94,9 @@ public class BigGameHunter extends AbstractImageEvent {
                     case 1: // Bracer
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.loseGoldAndHealth();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new HuntersBracer());
+                        AbstractRelic bracer = new HuntersBracer();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), bracer);
+                        logMetric(ID, "Sling", null, null, null, null, Collections.singletonList(bracer.relicId), null, null, 0, 0, this.maxHealthLoss, 0, 0, this.goldCost);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[10]);
                         this.imageEventText.clearRemainingOptions();
@@ -98,12 +104,15 @@ public class BigGameHunter extends AbstractImageEvent {
                     case 2: // Elixir
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.loseGoldAndHealth();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new HuntersElixir());
+                        AbstractRelic elixir = new HuntersElixir();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), elixir);
+                        logMetric(ID, "Sling", null, null, null, null, Collections.singletonList(elixir.relicId), null, null, 0, 0, this.maxHealthLoss, 0, 0, this.goldCost);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[10]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }

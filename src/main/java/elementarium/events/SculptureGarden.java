@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import elementarium.Elementarium;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
 
 public class SculptureGarden extends AbstractImageEvent {
     public static final String ID = "Elementarium:SculptureGarden";
@@ -57,6 +58,7 @@ public class SculptureGarden extends AbstractImageEvent {
                     case 0: // Graft
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         AbstractDungeon.player.increaseMaxHp(this.maxHealth, false);
+                        this.logMetricMaxHPGain(ID, "Graft", this.maxHealth);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
@@ -69,6 +71,7 @@ public class SculptureGarden extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         break;
                     default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }
@@ -80,6 +83,7 @@ public class SculptureGarden extends AbstractImageEvent {
     }
 
     private void Upgrade2CostCards() {
+        ArrayList<String> upgradedCards = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.cost == 2 && c.canUpgrade()) {
                 c.upgrade();
@@ -88,7 +92,9 @@ public class SculptureGarden extends AbstractImageEvent {
                 float y = MathUtils.random(0.2F, 0.8F) * (float)Settings.HEIGHT;
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
                 AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+                upgradedCards.add(c.cardID);
             }
         }
+        logMetricUpgradeCards(ID, "Meditate", upgradedCards);
     }
 }

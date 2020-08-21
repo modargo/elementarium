@@ -24,12 +24,14 @@ public class AbandonedFactory extends AbstractImageEvent {
     public static final String IMG = Elementarium.eventImage(ID);
 
     private AbstractRelic relic;
+    private AbstractCard curse;
     private int screenNum = 0;
 
     public AbandonedFactory() {
         super(NAME, DESCRIPTIONS[0], IMG);
 
         this.relic = new GolemsHeart();
+        this.curse = new Pain();
 
         imageEventText.setDialogOption(OPTIONS[0]);
     }
@@ -44,6 +46,7 @@ public class AbandonedFactory extends AbstractImageEvent {
             AbstractCard transCard = AbstractDungeon.getTransformedCard();
             AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            logMetricTransformCard(ID, "Scrolls", c, transCard);
         }
     }
 
@@ -75,13 +78,15 @@ public class AbandonedFactory extends AbstractImageEvent {
                         break;
                     case 1: // Chest
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Pain(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), this.relic);
+                        logMetricObtainCardAndRelic(ID, "Chest", this.curse, this.relic);
                         this.screenNum = 3;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }

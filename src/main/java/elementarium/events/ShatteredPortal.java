@@ -42,6 +42,7 @@ public class ShatteredPortal extends AbstractImageEvent {
     private AbstractCard cardCost;
 
     private int screenNum = 0;
+    private int choice = -1;
 
     public ShatteredPortal() {
         super(NAME, DESCRIPTIONS[0], IMG);
@@ -81,6 +82,20 @@ public class ShatteredPortal extends AbstractImageEvent {
     private void reward() {
         AbstractRelic relic = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), relic);
+        switch (this.choice) {
+            case 0:
+                logMetricObtainRelicAtCost(ID, "Gold", relic, this.goldCost);
+                break;
+            case 1:
+                logMetricObtainRelicAndDamage(ID, "Blood", relic, this.healthCost);
+                break;
+            case 2:
+                logMetricObtainRelicAndLoseMaxHP(ID, "Essence", relic, this.maxHealthCost);
+                break;
+            case 3:
+                logMetricRemoveCardAndObtainRelic(ID, "Knowledge", this.cardCost, relic);
+                break;
+        }
     }
 
     @Override
@@ -117,6 +132,7 @@ public class ShatteredPortal extends AbstractImageEvent {
                 imageEventText.setDialogOption(OPTIONS[9]);
                 break;
             case 1:
+                this.choice = buttonPressed;
                 switch (buttonPressed) {
                     case 0: // Gold
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
@@ -148,6 +164,7 @@ public class ShatteredPortal extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         break;
                     default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }

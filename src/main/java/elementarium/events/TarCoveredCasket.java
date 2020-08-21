@@ -10,7 +10,10 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import elementarium.Elementarium;
 import elementarium.cards.tar.StickyTar;
 
+import javax.print.DocFlavor;
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class TarCoveredCasket extends AbstractImageEvent {
     public static final String ID = "Elementarium:TarCoveredCasket";
@@ -47,17 +50,21 @@ public class TarCoveredCasket extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0: // Open
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                        ArrayList<String> cards = new ArrayList<>();
                         for (int i = 0; i < this.curseCount; i++) {
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new StickyTar(), (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                            cards.add(StickyTar.ID);
                         }
                         AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), r);
+                        logMetric(ID, "Open", cards, null, null, null, Collections.singletonList(r.relicId), null, null, 0, 0, 0, 0, 0, 0);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 1: // Leave
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        logMetricIgnored(ID);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();

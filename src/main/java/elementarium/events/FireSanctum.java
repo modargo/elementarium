@@ -45,6 +45,7 @@ public class FireSanctum extends Colosseum {
                 break;
             case FIGHT:
                 this.screen = CurScreen.POST_COMBAT;
+                logMetric(ID,"Fight");
                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(Encounters.FIRE_SANCTUM_HERALD);
                 AbstractDungeon.getCurrRoom().rewards.clear();
                 AbstractDungeon.getCurrRoom().rewardAllowed = false;
@@ -55,6 +56,7 @@ public class FireSanctum extends Colosseum {
                 AbstractDungeon.getCurrRoom().rewardAllowed = true;
                 switch(buttonPressed) {
                     case 1:
+                        logMetric(ID,"Confrontation");
                         this.screen = CurScreen.LEAVE;
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(Encounters.FIRE_SANCTUM_FIRELORD);
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -66,6 +68,7 @@ public class FireSanctum extends Colosseum {
                         AbstractDungeon.lastCombatMetricKey = Encounters.FIRE_SANCTUM_FIRELORD;
                         break;
                     default:
+                        logMetric(ID,"Discretion");
                         this.openMap();
                         break;
                 }
@@ -75,9 +78,6 @@ public class FireSanctum extends Colosseum {
                 break;
         }
     }
-
-    @Override
-    public void logMetric(String actionTaken) {}
 
     @Override
     public void reopen() {

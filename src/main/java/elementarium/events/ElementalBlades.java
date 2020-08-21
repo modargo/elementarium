@@ -11,6 +11,7 @@ import elementarium.Elementarium;
 import elementarium.cards.elementalblades.*;
 
 import java.text.MessageFormat;
+import java.util.Arrays;
 
 public class ElementalBlades extends AbstractImageEvent {
     public static final String ID = "Elementarium:ElementalBlades";
@@ -69,12 +70,14 @@ public class ElementalBlades extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new EarthblessedBlade(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new IceblessedBlade(), (float) Settings.WIDTH / 2.0F + widthPerCard, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new VoidblessedBlade(), (float) Settings.WIDTH / 2.0F + (2 * widthPerCard), (float) Settings.HEIGHT / 2.0F));
+                        logMetricObtainCardsLoseMapHP(ID, "Touch", Arrays.asList(FireblessedBlade.ID, WindblessedBlade.ID, EarthblessedBlade.ID, IceblessedBlade.ID, VoidblessedBlade.ID), this.maxHealthLoss);
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[7]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     default: // Leave
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                        logMetricIgnored(ID);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[7]);
                         this.imageEventText.clearRemainingOptions();

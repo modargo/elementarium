@@ -13,6 +13,7 @@ import elementarium.Elementarium;
 import elementarium.relics.FlickeringLantern;
 
 import java.text.MessageFormat;
+import java.util.Collections;
 
 public class HeartOfTheVoid extends AbstractImageEvent {
     public static final String ID = "Elementarium:HeartOfTheVoid";
@@ -67,6 +68,7 @@ public class HeartOfTheVoid extends AbstractImageEvent {
                     case 0: // Rest
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         AbstractDungeon.player.heal(this.heal, true);
+                        logMetricHeal(ID, "Rest", this.heal);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
@@ -74,6 +76,7 @@ public class HeartOfTheVoid extends AbstractImageEvent {
                     case 1: // Take
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), this.relic);
+                        logMetricObtainRelic(ID, "Take", this.relic);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
@@ -82,11 +85,13 @@ public class HeartOfTheVoid extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                         AbstractDungeon.player.decreaseMaxHealth(this.maxHealthLoss);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.card, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        logMetricObtainCardsLoseMapHP(ID, "Touch", Collections.singletonList(this.card.cardID), this.maxHealthLoss);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }

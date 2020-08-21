@@ -16,6 +16,7 @@ import elementarium.cards.gilded.GildedStrike;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class OnrushingOffering extends AbstractImageEvent {
     public static final String ID = "Elementarium:OnrushingOffering";
@@ -76,17 +77,21 @@ public class OnrushingOffering extends AbstractImageEvent {
                         break;
                     case 1: // Defend
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new GildedDefend(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractCard gildedDefend = new GildedDefend();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gildedDefend, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldGain));
                         AbstractDungeon.player.gainGold(this.goldGain);
+                        logMetricGainGoldAndCard(ID, "Defend", gildedDefend, this.goldGain);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 2: // Toss
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new GildedEssence(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractCard gildedEssence = new GildedEssence();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gildedEssence, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                         AbstractDungeon.player.loseGold(this.goldLoss);
+                        logMetric(ID, "Toss", Collections.singletonList(gildedEssence.cardID), null, null, null, null, null, null, 0, 0, 0, 0, 0, this.goldLoss);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
@@ -112,9 +117,12 @@ public class OnrushingOffering extends AbstractImageEvent {
             AbstractDungeon.player.masterDeck.removeCard(card);
         }
 
+        ArrayList<String> gildedStrikes = new ArrayList<>();
         for (int i = 0; i < GILDED_STRIKE_COUNT; i++) {
             AbstractCard c = new GildedStrike();
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            gildedStrikes.add(c.cardID);
         }
+        logMetric(ID, "Strike", gildedStrikes, null, null, null, null, null, null, this.healthLoss, 0, 0, 0, 0, 0);
     }
 }

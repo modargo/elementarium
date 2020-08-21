@@ -1,5 +1,6 @@
 package elementarium.events;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,6 +11,7 @@ import elementarium.Elementarium;
 import elementarium.cards.gilded.GildedForm;
 
 import java.text.MessageFormat;
+import java.util.Collections;
 
 public class FountainOfGold extends AbstractImageEvent {
     public static final String ID = "Elementarium:FountainOfGold";
@@ -46,13 +48,16 @@ public class FountainOfGold extends AbstractImageEvent {
                     case 0: // Dive in
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.player.decreaseMaxHealth(this.maxHealthLoss);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new GildedForm(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractCard card = new GildedForm();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        logMetricObtainCardsLoseMapHP(ID, "Dive in", Collections.singletonList(card.cardID), this.maxHealthLoss);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 1: // Leave
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        logMetricIgnored(ID);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();

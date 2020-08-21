@@ -62,7 +62,7 @@ public class GreatTreasure extends AbstractImageEvent {
         switch (screenNum) {
             case 0:
                 switch (buttonPressed) {
-                    case 0:
+                    case 0: // Poke through
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.player.damage(new DamageInfo(null, DAMAGE_LOOK, DamageInfo.DamageType.HP_LOSS));
                         this.screenNum = 1;
@@ -75,7 +75,8 @@ public class GreatTreasure extends AbstractImageEvent {
                         }
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         break;
-                    default:
+                    default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }
@@ -87,11 +88,13 @@ public class GreatTreasure extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             AbstractDungeon.player.loseRelic(this.offering.relicId);
                             AbstractDungeon.player.damage(new DamageInfo(null, this.damageExchange, DamageInfo.DamageType.HP_LOSS));
+                            logMetricRelicSwap(ID, "Offer", this.relic, this.offering);
                         }
                         else {
                             // If you only have used up boss relic or get here without a boss relic, congratulations! You can get a boss relic, for the price of only half your max HP
                             this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                             AbstractDungeon.player.decreaseMaxHealth(this.sacrificeMaxHealthLoss);
+                            logMetricObtainRelicAndLoseMaxHP(ID, "Sacrifice", this.relic, this.sacrificeMaxHealthLoss);
                         }
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), this.relic);
                         this.screenNum = 2;
@@ -99,6 +102,7 @@ public class GreatTreasure extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         break;
                     default: // Leave
+                        logMetricTakeDamage(ID, "Poke through", DAMAGE_LOOK);
                         this.openMap();
                         break;
                 }

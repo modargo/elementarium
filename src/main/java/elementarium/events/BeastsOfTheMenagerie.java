@@ -95,6 +95,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
             case 0:
                 switch (buttonPressed) {
                     case 0: // Follow
+                        logMetric(ID, "Follow");
                         this.screenNum = 1;
                         logger.info("Spawning boss: " + this.bossID);
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(this.bossID);
@@ -109,6 +110,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
                         break;
                     default: // Leave
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                        logMetricIgnored(ID);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();

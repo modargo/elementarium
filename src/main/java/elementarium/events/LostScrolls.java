@@ -53,12 +53,15 @@ public class LostScrolls extends AbstractImageEvent {
                 AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeCopy();
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                logMetricObtainCard(ID, "Read", c);
             }
             else if (this.removeCard) {
                 CardCrawlGame.sound.play("CARD_EXHAUST");
-                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
-                AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+                AbstractCard removedCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(removedCard, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                AbstractDungeon.player.masterDeck.removeCard(removedCard);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                logMetricCardRemoval(ID, "Burn", removedCard);
             }
         }
     }
@@ -117,6 +120,7 @@ public class LostScrolls extends AbstractImageEvent {
                         AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[4], false, false, false, true);
                         break;
                     default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }

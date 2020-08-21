@@ -75,6 +75,7 @@ public class IncubationChamber extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[4]);
 
+                        logMetric(ID, "Tanks");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         for (int i = 0; i < this.numPotions; i++) {
                             AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
@@ -89,6 +90,7 @@ public class IncubationChamber extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[4]);
 
+                        logMetric(ID, "Machinery");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         for(int i = 0; i < NUM_COLORLESS_CARDS; ++i) {
                             AbstractDungeon.getCurrRoom().addCardReward(new RewardItem(AbstractCard.CardColor.COLORLESS));
@@ -102,10 +104,12 @@ public class IncubationChamber extends AbstractImageEvent {
                         this.screenNum = 1;
                         AbstractDungeon.player.loseRelic(this.egg.relicId);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), this.hatched);
+                        logMetricRelicSwap(ID, "Egg", this.hatched, this.egg);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[4]);
                         break;
                     default:
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }

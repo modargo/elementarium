@@ -75,6 +75,7 @@ public class GoldenStatues extends MaskedBandits {
                         this.screen = 1;
                         break;
                     case 1:
+                        logMetric(ID, "Fight");
                         if (Settings.isDailyRun) {
                             AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(30));
                         } else {
@@ -120,5 +121,12 @@ public class GoldenStatues extends MaskedBandits {
             AbstractDungeon.player.masterDeck.removeCard(this.cardCost);
         }
         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.cardGain, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+
+        if (this.cardCost != null) {
+            logMetricObtainCardAndLoseCard(ID, "Tear free", this.cardGain, this.cardCost);
+        }
+        else {
+            logMetricObtainCard(ID, "Tear free", this.cardGain);
+        }
     }
 }

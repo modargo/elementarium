@@ -32,6 +32,7 @@ public class BladeSeller extends AbstractImageEvent {
     private int curseChance;
     private int gold;
     private AbstractCard card;
+    private AbstractCard curse;
     private boolean hasBlades = false;
 
     private int screenNum = 0;
@@ -46,7 +47,6 @@ public class BladeSeller extends AbstractImageEvent {
         else {
             this.curseChance = CURSE_CHANCE;
             this.gold = GOLD;
-
         }
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
@@ -56,6 +56,7 @@ public class BladeSeller extends AbstractImageEvent {
         if (!this.hasBlades) {
             List<AbstractCard> blades = Arrays.asList(new FireblessedBlade(), new WindblessedBlade(), new EarthblessedBlade(), new IceblessedBlade(), new VoidblessedBlade());
             this.card = blades.get(AbstractDungeon.miscRng.random(0, blades.size() - 1));
+            this.curse = new Injury();
         }
 
         imageEventText.setDialogOption(OPTIONS[3]);
@@ -83,11 +84,13 @@ public class BladeSeller extends AbstractImageEvent {
                             if (AbstractDungeon.miscRng.randomBoolean(this.curseChance / 100.0F)) {
                                 this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.card, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 20.0F * Settings.scale, (float)(Settings.HEIGHT / 2)));
-                                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Injury(), (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 20.0F * Settings.scale, (float)(Settings.HEIGHT / 2)));
+                                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 20.0F * Settings.scale, (float)(Settings.HEIGHT / 2)));
+                                logMetricObtainCards(ID, "Take", Arrays.asList(this.card.cardID, this.curse.cardID));
                             }
                             else {
                                 this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.card, (float)Settings.WIDTH / 2.0F, (float)(Settings.HEIGHT / 2)));
+                                logMetricObtainCard(ID, "Take", this.card);
                             }
                             this.screenNum = 3;
                             this.imageEventText.updateDialogOption(0, OPTIONS[1]);
@@ -101,12 +104,14 @@ public class BladeSeller extends AbstractImageEvent {
                         }
                         break;
                     default: // Leave
+                        logMetricIgnored(ID);
                         this.openMap();
                         break;
                 }
                 break;
             case 2:
                 AbstractDungeon.player.gainGold(this.gold);
+                logMetricGainGold(ID, "Punish", this.gold);
                 this.screenNum = 3;
                 this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                 this.imageEventText.updateDialogOption(0, OPTIONS[2]);

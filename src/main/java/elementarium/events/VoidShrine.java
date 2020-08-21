@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import elementarium.Elementarium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class VoidShrine extends AbstractImageEvent {
     public static final String ID = "Elementarium:VoidShrine";
@@ -22,13 +23,17 @@ public class VoidShrine extends AbstractImageEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     public static final String IMG = Elementarium.eventImage(ID);
 
+    private AbstractCard curse;
+
     private int screenNum = 0;
 
     public VoidShrine() {
         super(NAME, DESCRIPTIONS[0], IMG);
 
+        this.curse = new Doubt();
+
         imageEventText.setDialogOption(OPTIONS[0]);
-        imageEventText.setDialogOption(OPTIONS[1], new Doubt());
+        imageEventText.setDialogOption(OPTIONS[1], this.curse);
         imageEventText.setDialogOption(OPTIONS[2]);
     }
 
@@ -47,6 +52,7 @@ public class VoidShrine extends AbstractImageEvent {
             c.inBottleTornado = false;
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            logMetricObtainCards(ID, "Embrace", Arrays.asList(this.curse.cardID, c.cardID));
         }
     }
 
@@ -56,14 +62,17 @@ public class VoidShrine extends AbstractImageEvent {
             case 0:
                 switch (buttonPressed) {
                     case 0: // Pray
-                        this.upgradeRandomCard();
+                        AbstractCard card = this.upgradeRandomCard();
+                        if (card != null) {
+                            logMetricCardUpgrade(ID, "Pray", card);
+                        }
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 1: // Embrace
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Doubt(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                         AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck, 1, OPTIONS[3], false, false, false, false);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.screenNum = 1;
@@ -81,7 +90,7 @@ public class VoidShrine extends AbstractImageEvent {
         }
     }
 
-    private void upgradeRandomCard() {
+    private AbstractCard upgradeRandomCard() {
         AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
         ArrayList<AbstractCard> upgradableCards = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
@@ -96,6 +105,8 @@ public class VoidShrine extends AbstractImageEvent {
             card.upgrade();
             AbstractDungeon.player.bottledCardUpgradeCheck(card);
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+            return card;
         }
+        return null;
     }
 }

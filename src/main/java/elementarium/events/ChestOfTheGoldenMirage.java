@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import elementarium.Elementarium;
 import elementarium.relics.GoldenMirage;
@@ -40,18 +41,23 @@ public class ChestOfTheGoldenMirage extends AbstractImageEvent {
                 if (buttonPressed == 0) {
                     AbstractDungeon.effectList.add(new RainingGoldEffect(GOLD_AMT));
                     AbstractDungeon.player.gainGold(GOLD_AMT);
+                    logMetricGainGold(ID, "Presented the Golden Mirage", GOLD_AMT);
                     this.imageEventText.updateBodyText(MIRAGE_RESULT);
                     this.screenNum = 1;
                     this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                     this.imageEventText.clearRemainingOptions();
                 } else if (buttonPressed == 1 && !AbstractDungeon.player.hasRelic(GoldenMirage.ID)) {
-                    AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new GoldenMirage());
+                    int gold = AbstractDungeon.player.gold;
+                    AbstractRelic relic = new GoldenMirage();
+                    AbstractDungeon.player.loseGold(gold);
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), relic);
+                    logMetricObtainRelicAtCost(ID, "Offer", relic, gold);
                     this.imageEventText.updateBodyText(RELIC_RESULT);
                     this.screenNum = 1;
                     this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                     this.imageEventText.clearRemainingOptions();
                 } else {
+                    logMetricIgnored(ID);
                     this.openMap();
                 }
 

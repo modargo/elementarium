@@ -49,18 +49,20 @@ public class StickySituation extends AbstractImageEvent {
         switch(this.screenNum) {
             case 0:
                 switch(buttonPressed) {
-                    case 0:
+                    case 0: // Drink
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.player.heal(this.healAmount, true);
                         AbstractCard curse = new StickyTar();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                        logMetricObtainCardAndHeal(ID, "Drink", curse, this.healAmount);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
                         break;
-                    default:
+                    default: // Take
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         AbstractDungeon.player.gainGold(this.goldAmount);
+                        logMetricGainGold(ID, "Take", this.goldAmount);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
