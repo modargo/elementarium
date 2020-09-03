@@ -33,12 +33,12 @@
       "An mythical tree stands before you, said to contain the #ygreatest #yof #ytreasure. A #bprotective #bbarrier #bof #b~magic~ surrounds it, preventing you from getting close enough to see what it holds. NL NL If you could only get past the outer layer, you could see what's #ginside. Maybe you can just poke your head through?",
       "With the protective barrier gone, you see the #ytreasure of your #g@wildest@ #g@imaginings.@ ~You~ ~must~ ~have~ ~it.~ But #bmagic protecting the treasure will surely retaliate against whoever takes it. NL NL You consider your #bpossessions and your #boptions....",
       "By exchanging a #ytreasure of #gsimilar #gvalue, you blunt the worst of the #rretaliation. You cradle your new #ytreasure as you continue further into the spire. All the #ytreasure will be yours.",
-      "Without anything of similar value to exchange, the powerful #rretaliation leaves you feeling #p~drained~. You #rslowly #rand #rpainfully make your way further into the spire."
+      "Without anything of similar value to exchange, the powerful #rretaliation leaves you feeling #p~drained.~ You #rslowly #rand #rpainfully make your way further into the spire."
     ],
     "OPTIONS": [
       "[Poke through] #rTake #r{0} #rdamage. See what's inside.",
       "[Exchange {0}] #gGain {1}. #rLose #r{2} #rHP.",
-      "[Sacrifice] #gGain {0}. #rLose #r{0} #rMax #rHP.",
+      "[Sacrifice] #gGain {0}. #rLose #r{1} #rMax #rHP.",
       "[Leave]"
     ]
   },

@@ -71,7 +71,7 @@ public class GreatTreasure extends AbstractImageEvent {
                             this.imageEventText.setDialogOption(MessageFormat.format(OPTIONS[1], this.offering.name, this.relic.name, this.damageExchange), relic);
                         }
                         else {
-                            this.imageEventText.setDialogOption(MessageFormat.format(OPTIONS[2], this.relic.name), relic);
+                            this.imageEventText.setDialogOption(MessageFormat.format(OPTIONS[2], this.relic.name, this.sacrificeMaxHealthLoss), relic);
                         }
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         break;
