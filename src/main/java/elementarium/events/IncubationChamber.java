@@ -11,9 +11,14 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import elementarium.Elementarium;
+import elementarium.cards.CardUtil;
 import elementarium.relics.HatchlingPhoenix;
 
+import java.lang.reflect.Array;
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 public class IncubationChamber extends AbstractImageEvent {
@@ -26,7 +31,8 @@ public class IncubationChamber extends AbstractImageEvent {
 
     private static final int NUM_POTIONS = 3;
     private static final int A15_NUM_POTIONS = 2;
-    private static  final int NUM_COLORLESS_CARDS = 2;
+    private static final int NUM_COLORLESS_CARDS = 1;
+    private static final int NUM_OTHER_COLOR_CARDS = 1;
 
     private int numPotions;
     private AbstractRelic egg;
@@ -92,8 +98,11 @@ public class IncubationChamber extends AbstractImageEvent {
 
                         logMetric(ID, "Machinery");
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        for(int i = 0; i < NUM_COLORLESS_CARDS; ++i) {
+                        for (int i = 0; i < NUM_COLORLESS_CARDS; ++i) {
                             AbstractDungeon.getCurrRoom().addCardReward(new RewardItem(AbstractCard.CardColor.COLORLESS));
+                        }
+                        for (RewardItem reward : this.getOtherColorCardReward(NUM_OTHER_COLOR_CARDS)) {
+                            AbstractDungeon.getCurrRoom().addCardReward(reward);
                         }
 
                         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
@@ -118,5 +127,22 @@ public class IncubationChamber extends AbstractImageEvent {
                 this.openMap();
                 break;
         }
+    }
+
+    private List<RewardItem> getOtherColorCardReward(int numRewards) {
+        List<RewardItem> rewards = new ArrayList<>();
+        for(int i = 0; i < numRewards; ++i) {
+            RewardItem reward = new RewardItem();
+            ArrayList<AbstractCard> cards = new ArrayList<>();
+            //We see what was already generated and use that, to avoid advancing the rare counter further
+            for (AbstractCard c : reward.cards) {
+                AbstractCard.CardRarity rarity = c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE ? c.rarity : AbstractCard.CardRarity.COMMON;
+                cards.add(CardUtil.getOtherColorCard(rarity, Arrays.asList(AbstractDungeon.player.getCardColor(), AbstractCard.CardColor.COLORLESS)));
+            }
+            reward.cards = cards;
+            rewards.add(reward);
+        }
+
+        return rewards;
     }
 }

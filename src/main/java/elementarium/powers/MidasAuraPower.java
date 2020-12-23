@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import elementarium.Elementarium;
-import elementarium.cards.CardUtils;
+import elementarium.cards.CardUtil;
 import elementarium.cards.CustomTags;
 
 public class MidasAuraPower extends AbstractPower {
@@ -30,7 +30,7 @@ public class MidasAuraPower extends AbstractPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.upgraded && !card.hasTag(CustomTags.GILDED)) {
-            AbstractCard gildedCard = CardUtils.gildCard(card);
+            AbstractCard gildedCard = CardUtil.gildCard(card);
             if (gildedCard != null) {
                 this.flash();
                 if(card.type != AbstractCard.CardType.POWER) {

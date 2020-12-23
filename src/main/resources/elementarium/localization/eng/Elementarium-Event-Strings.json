@@ -213,7 +213,7 @@
     ],
     "OPTIONS": [
       "[Tanks] #gGain #g{0} #gpotions.",
-      "[Machinery] #gAdd #g2 #gColorless #gcards #gto #gyour #gdeck.",
+      "[Machinery] #gAdd #ga #gColorless #gcard #gand #ga #gcard #gof #ga #gdifferent #gcolor #gto #gyour #gdeck.",
       "[Egg] #rLose {0}. #gGain {1}.",
       "[Requires: Egg]",
       "[Leave]"

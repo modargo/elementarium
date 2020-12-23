@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import elementarium.act.Encounters;
-import elementarium.cards.CardUtils;
+import elementarium.cards.CardUtil;
 import elementarium.cards.CustomTags;
 import elementarium.cards.gilded.GildedDefend;
 import elementarium.relics.GoldenMirage;
@@ -37,7 +37,7 @@ public class GoldenStatues extends MaskedBandits {
         this.roomEventText.clear();
 
         this.cardCost = this.getCardCost();
-        this.cardGain = CardUtils.gildCard(this.cardCost);
+        this.cardGain = CardUtil.gildCard(this.cardCost);
         if (this.cardGain == null) {
             this.cardGain = new GildedDefend();
         }
