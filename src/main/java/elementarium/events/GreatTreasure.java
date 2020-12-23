@@ -12,6 +12,7 @@ import elementarium.Elementarium;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class GreatTreasure extends AbstractImageEvent {
@@ -88,7 +89,7 @@ public class GreatTreasure extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             AbstractDungeon.player.loseRelic(this.offering.relicId);
                             AbstractDungeon.player.damage(new DamageInfo(null, this.damageExchange, DamageInfo.DamageType.HP_LOSS));
-                            logMetricRelicSwap(ID, "Offer", this.relic, this.offering);
+                            logMetric(ID, "Offer", null, null, null, null, Collections.singletonList(this.relic.relicId), null, Collections.singletonList(this.offering.relicId), this.damageExchange, 0, 0, 0, 0, 0);
                         }
                         else {
                             // If you only have used up boss relic or get here without a boss relic, congratulations! You can get a boss relic, for the price of only half your max HP

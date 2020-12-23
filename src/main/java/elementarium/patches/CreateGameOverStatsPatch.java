@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.screens.DeathScreen;
 import com.megacrit.cardcrawl.screens.GameOverScreen;
 import com.megacrit.cardcrawl.screens.GameOverStat;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
-import javafx.scene.effect.Reflection;
 
 import java.util.ArrayList;
 import java.util.Map;

@@ -1,7 +1,7 @@
 {
   "Elementarium:Tar": {
     "NAME": "Tar",
-    "DESCRIPTION": "Ethereal. NL Gain 1 Weak at end of turn. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL At the end of your turn, gain 1 Weak. NL Exhaust."
   },
   "Elementarium:StickyTar": {
     "NAME": "Sticky Tar",
