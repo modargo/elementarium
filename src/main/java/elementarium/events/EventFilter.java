@@ -2,12 +2,15 @@ package elementarium.events;
 
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.events.beyond.TombRedMask;
 import elementarium.relics.ElementariumTrophy;
 
 import java.util.ArrayList;
 
 public class EventFilter {
+    private static final String AbyssActId = "Abyss:Abyss";
+
     //Not supposed to be instantiated
     private EventFilter() {
         throw new AssertionError();
@@ -35,7 +38,10 @@ public class EventFilter {
             }
 
             if (event.equals(ChestOfTheGoldenMirage.ID)) {
-                if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
+                if (AbstractDungeon.id.equals(TheBeyond.ID) || AbstractDungeon.id.equals(AbyssActId)) {
+                    eventsToRemove.add(event);
+                }
+                else if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
                     eventsToRemove.add(event);
                 }
             }

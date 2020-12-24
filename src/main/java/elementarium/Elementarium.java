@@ -219,7 +219,8 @@ public class Elementarium implements
         BaseMod.addEvent(BeastsOfTheMenagerie.ID, BeastsOfTheMenagerie.class, ElementariumAct.ID);
 
         // Events in other acts
-        BaseMod.addEvent(ChestOfTheGoldenMirage.ID, ChestOfTheGoldenMirage.class, TheBeyond.ID);
+        // Chest of the Golden Mirage only shows up in The Beyond or The Abyss, which is controlled by EventFilter
+        BaseMod.addEvent(ChestOfTheGoldenMirage.ID, ChestOfTheGoldenMirage.class);
     }
 
     @Override
