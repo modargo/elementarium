@@ -13,7 +13,6 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -28,7 +27,7 @@ import elementarium.cards.gilded.GildedStrike;
 import elementarium.cards.tar.StickyTar;
 import elementarium.cards.tar.Tar;
 import elementarium.events.*;
-import elementarium.monsters.*;
+import elementarium.monsters.MonsterUtils;
 import elementarium.monsters.bosses.FirePhoenix;
 import elementarium.monsters.bosses.GoldenDragon;
 import elementarium.monsters.bosses.GolemEmperor;
@@ -38,9 +37,9 @@ import elementarium.monsters.elites.Firelord;
 import elementarium.monsters.elites.FlameHerald;
 import elementarium.monsters.elites.WarGolem;
 import elementarium.monsters.normals.*;
+import elementarium.monsters.specials.GoldenAngel;
 import elementarium.monsters.specials.GoldenEagle;
 import elementarium.monsters.specials.GoldenLion;
-import elementarium.monsters.specials.GoldenAngel;
 import elementarium.relics.*;
 import elementarium.subscribers.RemoveStickyTarPostEliteBattleSubscriber;
 import elementarium.util.TextureLoader;
@@ -50,7 +49,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static com.megacrit.cardcrawl.core.Settings.*;
+import static com.megacrit.cardcrawl.core.Settings.GameLanguage;
+import static com.megacrit.cardcrawl.core.Settings.language;
 
 @SpireInitializer
 public class Elementarium implements
