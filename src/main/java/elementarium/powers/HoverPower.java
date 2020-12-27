@@ -27,7 +27,7 @@ public class HoverPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = MessageFormat.format(DESCRIPTIONS[0], this.amount).replace("{0}", this.amount + "");
+        this.description = MessageFormat.format(DESCRIPTIONS[0], this.amount);
     }
 
     @Override
