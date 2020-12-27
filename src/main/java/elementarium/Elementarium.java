@@ -4,13 +4,12 @@ import actlikeit.dungeons.CustomDungeon;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.helpers.RelicType;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
+import basemod.interfaces.*;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
@@ -46,6 +45,7 @@ import elementarium.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -57,7 +57,8 @@ public class Elementarium implements
         PostInitializeSubscriber,
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        EditStringsSubscriber {
+        EditStringsSubscriber,
+        EditKeywordsSubscriber {
     private static final float X1 = -350.0F;
     private static final float X2 = 0.0F;
     
@@ -281,6 +282,20 @@ public class Elementarium implements
         }
     }
 
+    @Override
+    public void receiveEditKeywords() {
+        Gson gson = new Gson();
+        String json = Gdx.files.internal(makeLocPath(Settings.language, "Elementarium-Keyword-Strings")).readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                //The modID here must be lowercase
+                BaseMod.addKeyword("elementarium", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+    }
+
     public static String cardImage(String id) {
         return "elementarium/images/cards/" + removeModId(id) + ".png";
     }
@@ -319,4 +334,10 @@ public class Elementarium implements
         power.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
     }
 
+    private static class Keyword
+    {
+        public String PROPER_NAME;
+        public String[] NAMES;
+        public String DESCRIPTION;
+    }
 }

@@ -17,11 +17,11 @@
   },
   "Elementarium:GildedEssence": {
     "NAME": "Gilded Essence",
-    "DESCRIPTION": "Gain !M! Plated Armor."
+    "DESCRIPTION": "Gain !M! elementarium:Plated\u00a0Armor."
   },
   "Elementarium:GildedForm": {
     "NAME": "Gilded Form",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Plated Armor. NL Gain 20 Gold. NL Lose 1 Dexterity."
+    "DESCRIPTION": "Ethereal. NL Gain !M! elementarium:Plated\u00a0Armor. NL Gain 20 Gold. NL Lose 1 Dexterity."
   },
   "Elementarium:FireblessedBlade": {
     "NAME": "Fire-blessed Blade",
@@ -33,14 +33,14 @@
   },
   "Elementarium:EarthblessedBlade": {
     "NAME": "Earth-blessed Blade",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Plated Armor. NL Gain !M! Thorns. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! elementarium:Plated\u00a0Armor. NL Gain !M! Thorns. NL Exhaust."
   },
   "Elementarium:IceblessedBlade": {
     "NAME": "Ice-blessed Blade",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Artifact. NL Gain 1 Buffer. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Artifact. NL Gain 1 elementarium:Buffer. NL Exhaust."
   },
   "Elementarium:VoidblessedBlade": {
     "NAME": "Void-blessed Blade",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Enemy loses !M! Strength. NL Gain 1 Blur. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enemy loses !M! Strength. NL Gain 1 elementarium:Blur. NL Exhaust."
   }
 }
