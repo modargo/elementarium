@@ -38,7 +38,7 @@ public class EventFilter {
             }
 
             if (event.equals(ChestOfTheGoldenMirage.ID)) {
-                if (AbstractDungeon.id.equals(TheBeyond.ID) || AbstractDungeon.id.equals(AbyssActId)) {
+                if (!AbstractDungeon.id.equals(TheBeyond.ID) && !AbstractDungeon.id.equals(AbyssActId)) {
                     eventsToRemove.add(event);
                 }
                 else if (!AbstractDungeon.player.hasRelic(ElementariumTrophy.ID)) {
