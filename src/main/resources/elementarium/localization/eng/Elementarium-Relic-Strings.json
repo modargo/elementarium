@@ -38,7 +38,7 @@
     "NAME": "Hatchling Phoenix",
     "FLAVOR": "Hatched from a magical egg.",
     "DESCRIPTIONS": [
-      "Whenever you add a #b1-cost card to your deck, it is #bUpgraded."
+      "Whenever you add a #b1-cost card to your deck, #yUpgrade it."
     ]
   },
   "Elementarium:GolemsHeart": {
