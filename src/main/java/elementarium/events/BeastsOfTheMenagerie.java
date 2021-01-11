@@ -98,6 +98,7 @@ public class BeastsOfTheMenagerie extends Colosseum {
                         logMetric(ID, "Follow");
                         this.screenNum = 1;
                         logger.info("Spawning boss: " + this.bossID);
+                        CardCrawlGame.music.playTempBgmInstantly("BOSS_BOTTOM", true);
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(this.bossID);
                         AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(25, 35));
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
