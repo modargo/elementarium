@@ -21,7 +21,7 @@ public class Tar extends CustomCard {
     private static final int COST = 1;
 
     public Tar() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.STATUS, CardColor.COLORLESS, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.STATUS, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         this.exhaust = true;
         this.isEthereal = true;
     }

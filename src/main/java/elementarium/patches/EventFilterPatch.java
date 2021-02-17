@@ -16,7 +16,6 @@ import java.util.ArrayList;
         clz = AbstractDungeon.class,
         method = "getEvent",
         paramtypez = Random.class
-
 )
 // A patch to make certain events only appear if the player fulfills some condition
 public class EventFilterPatch {

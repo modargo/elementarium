@@ -17,7 +17,7 @@ public class StickyTar extends CustomCard {
     private static final int COST = -2;
 
     public StickyTar() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.SPECIAL, CardTarget.NONE);
     }
 
     @Override
