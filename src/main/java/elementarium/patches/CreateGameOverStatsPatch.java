@@ -22,7 +22,7 @@ public class CreateGameOverStatsPatch {
     private static String ActID = TheCity.ID;
 
     public static void RemoveScoreEntries(ArrayList<GameOverStat> stats) {
-        int elitesSlain = CardCrawlGame.elites1Slain;
+        int elitesSlain = CardCrawlGame.elites2Slain;
         String statLabel = EliteName + " (" + elitesSlain + ")";
         if (!Settings.isEndless && elitesSlain == 0) {
             Map<Integer, String> breadCrumbs = BreadCrumbs.getBreadCrumbs();
