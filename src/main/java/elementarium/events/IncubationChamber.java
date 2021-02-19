@@ -14,7 +14,6 @@ import elementarium.Elementarium;
 import elementarium.cards.CardUtil;
 import elementarium.relics.HatchlingPhoenix;
 
-import java.lang.reflect.Array;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Arrays;

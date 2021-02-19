@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import elementarium.Elementarium;
 import elementarium.cards.tar.StickyTar;
 
-import javax.print.DocFlavor;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;

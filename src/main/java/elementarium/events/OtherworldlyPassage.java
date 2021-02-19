@@ -94,7 +94,7 @@ public class OtherworldlyPassage extends Colosseum {
                 elites.add("Hallownest:eliteWatcherKnight");
                 break;
             default:
-                if (actID != TheCity.ID) {
+                if (!actID.equals(TheCity.ID)) {
                     logger.warn("Unknown act for getting random elite: " + actID);
                 }
                 elites.add("Gremlin Leader");

@@ -38,7 +38,7 @@ public class SorrowPower extends AbstractPower {
         }
         boolean hasFriends = false;
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            hasFriends = hasFriends || (m != null && m != this.owner && !m.isDying && m.id == this.owner.id);
+            hasFriends = hasFriends || (m != null && m != this.owner && !m.isDying && m.id.equals(this.owner.id));
         }
 
         if (!hasFriends) {

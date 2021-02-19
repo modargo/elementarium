@@ -30,7 +30,7 @@ public class CleansePower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         for (AbstractPower p : owner.powers) {
             if (p.type == PowerType.DEBUFF) {
-                if (p.amount > 0 && p.ID != GainStrengthPower.POWER_ID) {
+                if (p.amount > 0 && !p.ID.equals(GainStrengthPower.POWER_ID)) {
                     if (this.amount >= p.amount) {
                         this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, p));
                     }
