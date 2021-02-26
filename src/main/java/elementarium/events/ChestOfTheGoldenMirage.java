@@ -58,6 +58,7 @@ public class ChestOfTheGoldenMirage extends AbstractImageEvent {
                     this.imageEventText.clearRemainingOptions();
                 } else {
                     logMetricIgnored(ID);
+                    this.screenNum = 1;
                     this.openMap();
                 }
 
