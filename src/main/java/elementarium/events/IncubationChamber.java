@@ -137,7 +137,13 @@ public class IncubationChamber extends AbstractImageEvent {
             for (AbstractCard c : reward.cards) {
                 AbstractCard.CardRarity rarity = c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE ? c.rarity : AbstractCard.CardRarity.COMMON;
 
-                AbstractCard card = CardUtil.getOtherColorCard(rarity, Arrays.asList(AbstractDungeon.player.getCardColor(), AbstractCard.CardColor.COLORLESS));
+                AbstractCard card = null;
+                while (card == null) {
+                    AbstractCard potentialCard = CardUtil.getOtherColorCard(rarity, Arrays.asList(AbstractDungeon.player.getCardColor(), AbstractCard.CardColor.COLORLESS));
+                    if (cards.stream().noneMatch(c1 -> c1.cardID.equals(potentialCard.cardID))) {
+                        card = potentialCard;
+                    }
+                }
                 for (AbstractRelic r : AbstractDungeon.player.relics) {
                     r.onPreviewObtainCard(card);
                 }
