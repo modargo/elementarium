@@ -18,7 +18,7 @@ public class HuntersElixir extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(Elementarium.relicImage(ID));
     private static final Texture OUTLINE = TextureLoader.getTexture(Elementarium.relicOutlineImage(ID));
     private static final int ARTIFACT = 1;
-    private static final int REGEN = 4;
+    private static final int REGEN = 3;
 
     public HuntersElixir() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.CLINK);
