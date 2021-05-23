@@ -77,14 +77,16 @@ public class Elementarium implements
         Texture badgeTexture = new Texture("elementarium/images/ElementariumBadge.png");
         BaseMod.registerModBadge(badgeTexture, "Elementarium", "modargo", "An alternate act 2 themed around elementals and golems. Once the center of a thriving civilization, the Elementarium is now a ruined and desolate land.", new ModPanel());
 
-        CustomDungeon.addAct(ElementariumAct.ACT_NUM, new ElementariumAct());
-        addMonsters();
+        addActAndMonsters();
         addEvents();
 
         BaseMod.subscribe(new RemoveStickyTarPostEliteBattleSubscriber());
     }
 
-    private static void addMonsters() {
+    private static void addActAndMonsters() {
+        CustomDungeon act = new ElementariumAct();
+        act.addAct(ElementariumAct.ACT_NUM);
+
         //Weak encounters
         BaseMod.addMonster(Encounters.ELEMENTALS_2, () -> new MonsterGroup(generateElementalGroup(2)));
         BaseMod.addMonster(VoidCorruption.ID, (BaseMod.GetMonster)VoidCorruption::new);
@@ -138,16 +140,13 @@ public class Elementarium implements
         BaseMod.addMonster(ElementalPortal.ID, () -> new ElementalPortal(150.0F, 0.0F));
 
         //Bosses
-        BaseMod.addMonster(GolemEmperor.ID, () -> new GolemEmperor(150.0F, 0.0F));
-        BaseMod.addBoss(ElementariumAct.ID, GolemEmperor.ID, "elementarium/images/map/bosses/GolemEmperor.png", "elementarium/images/map/bosses/GolemEmperorOutline.png");
-        BaseMod.addMonster(Encounters.PHOENIXES, () -> new MonsterGroup(
+        act.addBoss(GolemEmperor.ID, () -> new GolemEmperor(150.0F, 0.0F), "elementarium/images/map/bosses/GolemEmperor.png", "elementarium/images/map/bosses/GolemEmperorOutline.png");
+        act.addBoss(Encounters.PHOENIXES, () -> new MonsterGroup(
                 new AbstractMonster[] {
                         new FirePhoenix(X1, 125.0F),
                         new IcePhoenix(X2, 125.0F)
-                }));
-        BaseMod.addBoss(ElementariumAct.ID, Encounters.PHOENIXES, "elementarium/images/map/bosses/Phoenixes2.png", "elementarium/images/map/bosses/PhoenixesOutline.png");
-        BaseMod.addMonster(GoldenDragon.ID, () -> new GoldenDragon(0.0F, 0.0F));
-        BaseMod.addBoss(ElementariumAct.ID, GoldenDragon.ID, "elementarium/images/map/bosses/GoldenDragon.png", "elementarium/images/map/bosses/GoldenDragon.png");
+                }), "elementarium/images/map/bosses/Phoenixes2.png", "elementarium/images/map/bosses/PhoenixesOutline.png");
+        act.addBoss(GoldenDragon.ID, () -> new GoldenDragon(0.0F, 0.0F), "elementarium/images/map/bosses/GoldenDragon.png", "elementarium/images/map/bosses/GoldenDragon.png");
 
         //Special fights
         BaseMod.addMonster(Encounters.FIRE_SANCTUM_HERALD, () -> new MonsterGroup(
