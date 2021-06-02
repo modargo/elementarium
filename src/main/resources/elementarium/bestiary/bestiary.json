@@ -168,16 +168,155 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with 60-40 split between #wZap and #wRain. Afterwards, move is based on the last two moves: NL (1) If the last move was #wRain, 70-30 split between #wZap and #wGust. NL (2) If the last move was #wGust, 60-40 split between #wZap and #wRain. NL (3) If the last two moves were both #wZap, 60-40 split between #wRain and #wGust. NL (4) Otherwise, 30-40-30 split between #wZap, #wRain, and #wGust.",
+					"hp": "(26 - 28 HP)",
+					"notes": "Innate #uHover 25.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Zap",
 							"effects": [
 								{
-									"name": "X",
+									"name": "3x2",
 									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Gust",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Hover 5",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain",
+							"effects": [
+								{
+									"name": "Party Heal 2",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with 60-40 split between #wZap and #wRain. Afterwards, move is based on the last two moves: NL (1) If the last move was #wRain, 70-30 split between #wZap and #wGust. NL (2) If the last move was #wGust, 60-40 split between #wZap and #wRain. NL (3) If the last two moves were both #wZap, 60-40 split between #wRain and #wGust. NL (4) Otherwise, 30-40-30 split between #wZap, #wRain, and #wGust.",
+					"hp": "(26 - 28 HP)",
+					"notes": "Innate #uHover 25.",
+					"moves": [
+						{
+							"name": "Zap",
+							"effects": [
+								{
+									"name": "3x3",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Gust",
+							"effects": [
+								{
+									"name": "9",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Hover 5",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain",
+							"effects": [
+								{
+									"name": "Party Heal 2",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with 60-40 split between #wZap and #wRain. Afterwards, move is based on the last two moves: NL (1) If the last move was #wRain, 70-30 split between #wZap and #wGust. NL (2) If the last move was #wGust, 60-40 split between #wZap and #wRain. NL (3) If the last two moves were both #wZap, 60-40 split between #wRain and #wGust. NL (4) Otherwise, 30-40-30 split between #wZap, #wRain, and #wGust.",
+					"hp": "(27 - 29 HP)",
+					"notes": "Innate #uHover 25.",
+					"moves": [
+						{
+							"name": "Zap",
+							"effects": [
+								{
+									"name": "3x3",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Gust",
+							"effects": [
+								{
+									"name": "9",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Hover 5",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain",
+							"effects": [
+								{
+									"name": "Party Heal 2",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with 60-40 split between #wZap and #wRain. Afterwards, move is based on the last two moves: NL (1) If the last move was #wRain, 70-30 split between #wZap and #wGust. NL (2) If the last move was #wGust, 60-40 split between #wZap and #wRain. NL (3) If the last two moves were both #wZap, 60-40 split between #wRain and #wGust. NL (4) Otherwise, 30-40-30 split between #wZap, #wRain, and #wGust.",
+					"hp": "(27 - 29 HP)",
+					"notes": "Innate #uHover 35.",
+					"moves": [
+						{
+							"name": "Zap",
+							"effects": [
+								{
+									"name": "3x3",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Gust",
+							"effects": [
+								{
+									"name": "9",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Hover 5",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain",
+							"effects": [
+								{
+									"name": "Party Heal 2",
+									"color": "BLOCK"
 								}
 							]
 						}
@@ -191,16 +330,207 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Uses a move at random.",
+					"hp": "(23 - 25 HP)",
+					"notes": "Innate #uMidas #uAura, #uGolden #uBulwark 50.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Goblet Bash",
 							"effects": [
 								{
-									"name": "X",
+									"name": "5",
 									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Coin Barrage",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Opulent Barrier",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Opulent Overflow",
+							"effects": [
+								{
+									"name": "Party block 3",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Uses a move at random.",
+					"hp": "(23 - 25 HP)",
+					"notes": "Innate #uMidas #uAura, #uGolden #uBulwark 50.",
+					"moves": [
+						{
+							"name": "Goblet Bash",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Coin Barrage",
+							"effects": [
+								{
+									"name": "2x5",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Opulent Barrier",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Opulent Overflow",
+							"effects": [
+								{
+									"name": "Party block 3",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Uses a move at random.",
+					"hp": "(24 - 26 HP)",
+					"notes": "Innate #uMidas #uAura, #uGolden #uBulwark 40.",
+					"moves": [
+						{
+							"name": "Goblet Bash",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Coin Barrage",
+							"effects": [
+								{
+									"name": "2x5",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Opulent Barrier",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Opulent Overflow",
+							"effects": [
+								{
+									"name": "Party block 3",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Uses a move at random.",
+					"hp": "(24 - 26 HP)",
+					"notes": "Innate #uBarricade, #uMidas #uAura, #uGolden #uBulwark 40.",
+					"moves": [
+						{
+							"name": "Goblet Bash",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Coin Barrage",
+							"effects": [
+								{
+									"name": "2x5",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Opulent Barrier",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Opulent Overflow",
+							"effects": [
+								{
+									"name": "Party block 3",
+									"color": "BLOCK"
 								}
 							]
 						}
@@ -214,16 +544,175 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"hp": "(30 - 32 HP)",
+					"notes": "Innate #uCleanse 2.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Shine",
 							"effects": [
 								{
-									"name": "X",
+									"name": "7",
 									"color": "DAMAGE"
+								},
+								{
+									"name": "Intangible 1",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Glow",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Pulse",
+							"effects": [
+								{
+									"name": "4",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Heal 4",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"hp": "(30 - 32 HP)",
+					"notes": "Innate #uCleanse 2.",
+					"moves": [
+						{
+							"name": "Shine",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Intangible 1",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Glow",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Pulse",
+							"effects": [
+								{
+									"name": "5",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Heal 4",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"hp": "(31 - 33 HP)",
+					"notes": "Innate #uCleanse 2.",
+					"moves": [
+						{
+							"name": "Shine",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Intangible 1",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Glow",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Pulse",
+							"effects": [
+								{
+									"name": "5",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Heal 4",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"hp": "(31 - 33 HP)",
+					"notes": "Innate #uCleanse 2.",
+					"moves": [
+						{
+							"name": "Shine",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Intangible 1",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Glow",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Pulse",
+							"effects": [
+								{
+									"name": "5",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Heal 4",
+									"color": "BLOCK"
 								}
 							]
 						}
