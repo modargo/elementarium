@@ -421,16 +421,187 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
+					"hp": "(93 - 95 HP)",
+					"notes": "Innate #uMetallicize 6, #uArtifact 1.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Heartseeker",
 							"effects": [
 								{
-									"name": "X",
+									"name": "18",
 									"color": "DAMAGE"
+								},
+								{
+									"name": "Vulnerable 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shieldbreaker",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Legbuster",
+							"effects": [
+								{
+									"name": "13",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dexterity -1",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 3,
+					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
+					"hp": "(93 - 95 HP)",
+					"notes": "Innate #uMetallicize 6, #uArtifact 1.",
+					"moves": [
+						{
+							"name": "Heartseeker",
+							"effects": [
+								{
+									"name": "20",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Vulnerable 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shieldbreaker",
+							"effects": [
+								{
+									"name": "17",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Legbuster",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dexterity -1",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 8,
+					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
+					"hp": "(97 - 99 HP)",
+					"notes": "Innate #uMetallicize 9, #uArtifact 1.",
+					"moves": [
+						{
+							"name": "Heartseeker",
+							"effects": [
+								{
+									"name": "20",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Vulnerable 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shieldbreaker",
+							"effects": [
+								{
+									"name": "17",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Legbuster",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dexterity -1",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 18,
+					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
+					"hp": "(97 - 99 HP)",
+					"notes": "Innate #uMetallicize 9, #uArtifact 1.",
+					"moves": [
+						{
+							"name": "Heartseeker",
+							"effects": [
+								{
+									"name": "20",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Vulnerable 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shieldbreaker",
+							"effects": [
+								{
+									"name": "17",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Legbuster",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dexterity -2",
+									"color": "DEBUFF"
 								}
 							]
 						}
@@ -444,16 +615,207 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wHammer #wof #wthe #wFirelord, then #wFiery #wWrath or #wSummon #wOrb, then the other. Afterwards, bases its next move on its previous two moves, as follows: NL If the last two moves were both #wFiery #wWrath or #wSummon #wOrb, uses #wRain #wof #wFire. NL If the last two moves were both #wRain #wof #wFire, uses #wFiery #wWrath or #wSummon #wOrb. NL If the last move was #wRain #wof #wFire, uses #wSummon #wOrb or #wRain #wof #wFire. NL Otherwise, uses #wFiery #wWrath or #wRain #wof #wFire. NL NL #wSummon #wOrb can only be used if there is space to summon and summons a second minion starting with the third use (or starting with the first use in the fight with two Orbs of Fire and the Firelord).",
+					"hp": "(103 - 107 HP)",
+					"notes": "Innate #uCleanse 1, #uFlourishing #uFlame. Burn status cards go into the discard pile.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Hammer of the Firelord",
 							"effects": [
 								{
-									"name": "X",
+									"name": "13",
 									"color": "DAMAGE"
+								},
+								{
+									"name": "Burn 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Fiery Wrath",
+							"effects": [
+								{
+									"name": "5x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Cleanse 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain of Fire",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Summon Orb",
+							"effects": [
+								{
+									"name": "Summon Orb of Fire",
+									"color": "SPECIAL"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 3,
+					"desc": "Starts with #wHammer #wof #wthe #wFirelord, then #wFiery #wWrath or #wSummon #wOrb, then the other. Afterwards, bases its next move on its previous two moves, as follows: NL If the last two moves were both #wFiery #wWrath or #wSummon #wOrb, uses #wRain #wof #wFire. NL If the last two moves were both #wRain #wof #wFire, uses #wFiery #wWrath or #wSummon #wOrb. NL If the last move was #wRain #wof #wFire, uses #wSummon #wOrb or #wRain #wof #wFire. NL Otherwise, uses #wFiery #wWrath or #wRain #wof #wFire. NL NL #wSummon #wOrb can only be used if there is space to summon and summons a second minion starting with the third use (or starting with the first use in the fight with two Orbs of Fire and the Firelord).",
+					"hp": "(103 - 107 HP)",
+					"notes": "Innate #uCleanse 1, #uFlourishing #uFlame. Burn status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Hammer of the Firelord",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Burn 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Fiery Wrath",
+							"effects": [
+								{
+									"name": "6x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Cleanse 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain of Fire",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Summon Orb",
+							"effects": [
+								{
+									"name": "Summon Orb of Fire",
+									"color": "SPECIAL"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 8,
+					"desc": "Starts with #wHammer #wof #wthe #wFirelord, then #wFiery #wWrath or #wSummon #wOrb, then the other. Afterwards, bases its next move on its previous two moves, as follows: NL If the last two moves were both #wFiery #wWrath or #wSummon #wOrb, uses #wRain #wof #wFire. NL If the last two moves were both #wRain #wof #wFire, uses #wFiery #wWrath or #wSummon #wOrb. NL If the last move was #wRain #wof #wFire, uses #wSummon #wOrb or #wRain #wof #wFire. NL Otherwise, uses #wFiery #wWrath or #wRain #wof #wFire. NL NL #wSummon #wOrb can only be used if there is space to summon and summons a second minion starting with the third use (or starting with the first use in the fight with two Orbs of Fire and the Firelord).",
+					"hp": "(106 - 109 HP)",
+					"notes": "Innate #uCleanse 1, #uFlourishing #uFlame. Burn status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Hammer of the Firelord",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Burn 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Fiery Wrath",
+							"effects": [
+								{
+									"name": "6x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Cleanse 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain of Fire",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Summon Orb",
+							"effects": [
+								{
+									"name": "Summon Orb of Fire",
+									"color": "SPECIAL"
+								}
+							]
+						}
+					]
+				},,
+				{
+					"min_asc": 18,
+					"desc": "Starts with #wHammer #wof #wthe #wFirelord, then #wFiery #wWrath or #wSummon #wOrb, then the other. Afterwards, bases its next move on its previous two moves, as follows: NL If the last two moves were both #wFiery #wWrath or #wSummon #wOrb, uses #wRain #wof #wFire. NL If the last two moves were both #wRain #wof #wFire, uses #wFiery #wWrath or #wSummon #wOrb. NL If the last move was #wRain #wof #wFire, uses #wSummon #wOrb or #wRain #wof #wFire. NL Otherwise, uses #wFiery #wWrath or #wRain #wof #wFire. NL NL #wSummon #wOrb can only be used if there is space to summon and summons a second minion starting with the third use (or starting with the first use in the fight with two Orbs of Fire and the Firelord).",
+					"hp": "(106 - 109 HP)",
+					"notes": "Innate #uCleanse 2, #uFlourishing #uFlame. Burn status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Hammer of the Firelord",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Burn 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Fiery Wrath",
+							"effects": [
+								{
+									"name": "6x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Cleanse 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Rain of Fire",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Summon Orb",
+							"effects": [
+								{
+									"name": "Summon Orb of Fire",
+									"color": "SPECIAL"
 								}
 							]
 						}
@@ -467,16 +829,239 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Cycles #wGathering #wFlames or #wSpear #wThrust -> the other -> #wRitual #wStrike or #wProtecting #wSlam. After the first use, #wGathering #wFlame gives Party Strength 1 and Heal 3 instead of Ritual and Strength.",
+					"hp": "(90 - 94 HP)",
+					"notes": "Innate #uThorns 1, #uPlated #uArmor 2.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Gathering Flames",
 							"effects": [
 								{
-									"name": "X",
+									"name": "Ritual 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Spear Thrust",
+							"effects": [
+								{
+									"name": "9",
 									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Ritual Strike",
+							"effects": [
+								{
+									"name": "5",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Thorns 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Protecting Slam",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 1",
+									"color": "BUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 3,
+					"desc": "Cycles #wGathering #wFlames or #wSpear #wThrust -> the other -> #wRitual #wStrike or #wProtecting #wSlam. After the first use, #wGathering #wFlame gives Party Strength 1 and Heal 3 instead of Ritual and Strength.",
+					"hp": "(90 - 94 HP)",
+					"notes": "Innate #uThorns 1, #uPlated #uArmor 2.",
+					"moves": [
+						{
+							"name": "Gathering Flames",
+							"effects": [
+								{
+									"name": "Ritual 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Spear Thrust",
+							"effects": [
+								{
+									"name": "11",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Ritual Strike",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Thorns 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Protecting Slam",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 1",
+									"color": "BUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 8,
+					"desc": "Cycles #wGathering #wFlames or #wSpear #wThrust -> the other -> #wRitual #wStrike or #wProtecting #wSlam. After the first use, #wGathering #wFlame gives Party Strength 1 and Heal 3 instead of Ritual and Strength.",
+					"hp": "(92 - 96 HP)",
+					"notes": "Innate #uThorns 1, #uPlated #uArmor 3.",
+					"moves": [
+						{
+							"name": "Gathering Flames",
+							"effects": [
+								{
+									"name": "Ritual 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Block 5",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Spear Thrust",
+							"effects": [
+								{
+									"name": "11",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Ritual Strike",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Thorns 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Protecting Slam",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 1",
+									"color": "BUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 18,
+					"desc": "Cycles #wGathering #wFlames or #wSpear #wThrust -> the other -> #wRitual #wStrike or #wProtecting #wSlam. After the first use, #wGathering #wFlame gives Party Strength 1 and Heal 3 instead of Ritual and Strength.",
+					"hp": "(92 - 96 HP)",
+					"notes": "Innate #uThorns 2, #uPlated #uArmor 3.",
+					"moves": [
+						{
+							"name": "Gathering Flames",
+							"effects": [
+								{
+									"name": "Ritual 2",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Block 5",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Spear Thrust",
+							"effects": [
+								{
+									"name": "11",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Ritual Strike",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Thorns 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Protecting Slam",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 1",
+									"color": "BUFF"
 								}
 							]
 						}
@@ -490,15 +1075,222 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Repeats #wPortal until 5 elementals have been summoned. Afterwards uses #wStrengthening #wRestoration, then #wChaotic #wEnergies, then repeats #wElemental #wBlast. NL NL Elementals are randomly chosen from Orb of Fire, Living Stormcloud, Opulent Offering, and Shimmering Mirage, with at most two of each appearing over the course of the fight.",
+					"hp": "(48 - 49 HP)",
+					"notes": "Innate #uSummoning #uPortal 5. Spawns with 3 elementals.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Portal",
 							"effects": [
 								{
-									"name": "X",
+									"name": "Summon Elementals",
+									"color": "SPECIAL"
+								}
+							]
+						},
+						{
+							"name": "Strengthening Restoration",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Party Heal 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Chaotic Energies",
+							"effects": [
+								{
+									"name": "Strength -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dexterity -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Focus -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Elemental Blast",
+							"effects": [
+								{
+									"name": "16",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 3,
+					"desc": "Repeats #wPortal until 5 elementals have been summoned. Afterwards uses #wStrengthening #wRestoration, then #wChaotic #wEnergies, then repeats #wElemental #wBlast. NL NL Elementals are randomly chosen from Orb of Fire, Living Stormcloud, Opulent Offering, and Shimmering Mirage, with at most two of each appearing over the course of the fight.",
+					"hp": "(48 - 49 HP)",
+					"notes": "Innate #uSummoning #uPortal 5. Spawns with 3 elementals.",
+					"moves": [
+						{
+							"name": "Portal",
+							"effects": [
+								{
+									"name": "Summon Elementals",
+									"color": "SPECIAL"
+								}
+							]
+						},
+						{
+							"name": "Strengthening Restoration",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Party Heal 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Chaotic Energies",
+							"effects": [
+								{
+									"name": "Strength -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dexterity -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Focus -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Elemental Blast",
+							"effects": [
+								{
+									"name": "18",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 8,
+					"desc": "Repeats #wPortal until 5 elementals have been summoned. Afterwards uses #wStrengthening #wRestoration, then #wChaotic #wEnergies, then repeats #wElemental #wBlast. NL NL Elementals are randomly chosen from Orb of Fire, Living Stormcloud, Opulent Offering, and Shimmering Mirage, with at most two of each appearing over the course of the fight.",
+					"hp": "(51 - 52 HP)",
+					"notes": "Innate #uSummoning #uPortal 5. Spawns with 3 elementals.",
+					"moves": [
+						{
+							"name": "Portal",
+							"effects": [
+								{
+									"name": "Summon Elementals",
+									"color": "SPECIAL"
+								}
+							]
+						},
+						{
+							"name": "Strengthening Restoration",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Party Heal 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Chaotic Energies",
+							"effects": [
+								{
+									"name": "Strength -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dexterity -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Focus -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Elemental Blast",
+							"effects": [
+								{
+									"name": "18",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 18,
+					"desc": "Repeats #wPortal until 6 elementals have been summoned. Afterwards uses #wStrengthening #wRestoration, then #wChaotic #wEnergies, then repeats #wElemental #wBlast. NL NL Elementals are randomly chosen from Orb of Fire, Living Stormcloud, Opulent Offering, and Shimmering Mirage, with at most two of each appearing over the course of the fight.",
+					"hp": "(51 - 52 HP)",
+					"notes": "Innate #uSummoning #uPortal 6. Spawns with 3 elementals.",
+					"moves": [
+						{
+							"name": "Portal",
+							"effects": [
+								{
+									"name": "Summon Elementals",
+									"color": "SPECIAL"
+								}
+							]
+						},
+						{
+							"name": "Strengthening Restoration",
+							"effects": [
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								},
+								{
+									"name": "Party Heal 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Chaotic Energies",
+							"effects": [
+								{
+									"name": "Strength -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dexterity -1",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Focus -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Elemental Blast",
+							"effects": [
+								{
+									"name": "18",
 									"color": "DAMAGE"
 								}
 							]
