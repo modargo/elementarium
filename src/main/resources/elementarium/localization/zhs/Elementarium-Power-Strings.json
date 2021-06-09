@@ -1,0 +1,113 @@
+{
+  "Elementarium:Hover": {
+    "NAME": "盘旋",
+    "DESCRIPTIONS": ["减免 #b{0}%  遭受的攻击伤害。"]
+  },
+  "Elementarium:EnergyLimit": {
+    "NAME": "能量限制",
+    "DESCRIPTIONS": ["每回合开始时，最多获得 #b3 能量。"]
+  },
+  "Elementarium:TarBody": {
+    "NAME": "焦油之躯",
+    "DESCRIPTIONS": ["每当此敌人遭受攻击伤害，增加一张 #y焦油 状态到弃牌堆。"]
+  },
+  "Elementarium:MidasAura": {
+    "NAME": "点金术",
+    "DESCRIPTIONS": ["每当你打出1张升级的攻击/技能/能力牌， #y消耗 它并往弃牌堆加入1张镀金打击/镀金防御/镀金精华。"]
+  },
+  "Elementarium:Cleanse": {
+    "NAME": "净化",
+    "DESCRIPTIONS": ["每回合结束时，减少所有减益 #b{0} 层。", "于此轮末移除。"]
+  },
+  "Elementarium:FlourishingFlame": {
+    "NAME": "兴盛之火",
+    "DESCRIPTIONS": ["每当你打出以多个敌人为目标的牌，此敌人获得 #b{0} #y力量 。"]
+  },
+  "Elementarium:SummoningPortal": {
+    "NAME": "召唤之门",
+    "DESCRIPTIONS": ["每回合召唤元素，直到有 #b{0} 个激活的元素。在总共召唤了 #b{1} 个元素之前，不会受伤害并且不会发动攻击。"]
+  },
+  "Elementarium:Sorrow": {
+    "NAME": "悲恸",
+    "DESCRIPTIONS": ["每场战斗限1次。如果它是唯一的 {1} ，于回合末获得 #b{0} #y力量 。"]
+  },
+  "Elementarium:Crumbling": {
+    "NAME": "崩解",
+    "DESCRIPTIONS": [
+      "#b{0} 个回合内死亡。当此名敌人死于 #y崩解 ， {1} 失去 #b{2} #y力量 。",
+      "#b1 回合内死亡。当此名敌人死于 #y崩解 ， {0} 失去 #b{1} #y力量 。"
+    ]
+  },
+  "Elementarium:Delicate": {
+    "NAME": "易碎",
+    "DESCRIPTIONS": ["此敌人于每回合首次受到未被格挡的攻击伤害时，失去 #b{0} #y力量"]
+  },
+  "Elementarium:BurningDisdain": {
+    "NAME": "火瞳里的蔑视",
+    "DESCRIPTIONS": ["在同一回合内打出第三张攻击牌时，此敌人获得 #b{0} #y力量 。此回合已打出的攻击牌数： #b{1}"]
+  },
+  "Elementarium:FreezingContempt": {
+    "NAME": "冰瞳里的轻视",
+    "DESCRIPTIONS": ["在同一回合内打出第三张技能牌时，此敌人获得 #b{0} #y力量。 此回合已打出的技能牌数： #b{1}."]
+  },
+  "Elementarium:BurningClaws": {
+    "NAME": "燃烧之爪",
+    "DESCRIPTIONS": ["每当你受到此敌人的攻击伤害，往弃牌堆加入1张 #y灼烧 。"]
+  },
+  "Elementarium:FreezingClaws": {
+    "NAME": "冻结之爪",
+    "DESCRIPTIONS": ["每当你受到此敌人的攻击伤害，此敌人获得 #b{0} #y金属化"]
+  },
+  "Elementarium:PhoenixRebirth": {
+    "NAME": "涅槃重生",
+    "DESCRIPTIONS": [
+      "当生命低于一半时，不会再受到伤害，并在该回合结束时，移除所有减益和此效果，然后在下一回合使用一个特殊的行动。",
+      "不会再受到伤害，并在该回合结束时，移除所有减益和此效果，然后在下一回合使用一个特殊的行动。"
+    ]
+  },
+  "Elementarium:DelayedVulnerable": {
+    "NAME": "延时的易伤",
+    "DESCRIPTIONS": ["在你的回合开始时，施加 #y易伤 。"]
+  },
+  "Elementarium:DurableMinion": {
+    "NAME": "坚忠的爪牙",
+    "DESCRIPTIONS": ["这名爪牙不会在首领被击败后逃跑。"]
+  },
+  "Elementarium:VoidPressure": {
+    "NAME": "虚空压制",
+    "DESCRIPTIONS": ["#p无法移除。 每当消耗卡牌以及每当打出能力牌时，玩家遭受 #b{0} 伤害。在每个回合结束时，随机消耗1张非状态、非诅咒、非虚无的手牌。"]
+  },
+  "Elementarium:GoldenBulwark": {
+    "NAME": "金色壁垒",
+    "DESCRIPTIONS": ["每场战斗开始，每拥有 #b{0} 金币，获得 #b1 格挡（向上取整）。"]
+  },
+  "Elementarium:FierceWinds": {
+    "NAME": "凛冽之风",
+    "DESCRIPTIONS": ["每当你打出1张攻击牌，受到 #b{0} 伤害。"]
+  },
+  "Elementarium:Draw": {
+    "NAME": "抽取",
+    "DESCRIPTIONS": [
+      "每回合开始，抽牌数 #b",
+      " 增",
+      " 减",
+      " 增",
+      " 减"
+    ]
+  },
+  "Elementarium:WaveformStrength": {
+    "NAME": "波形: 动力",
+    "DESCRIPTIONS": ["每当你打出1张技能或能力牌，此敌人获得等量于牌之耗费的 #y力量 。于下回合转换到 #y波形: 防护 。"]
+  },
+  "Elementarium:WaveformArmor": {
+    "NAME": "波形: 防护",
+    "DESCRIPTIONS": [
+      "每当你打出1张技能或能力牌，此敌人获得两倍于牌之耗费的 #y多层护甲 。于下回合转换到 #y波形: 动力 。",
+      "每当你打出1张技能或能力牌，此敌人获得两倍于牌之耗费的 #y多层护甲 。于下回合转换到 #y波形: 静止 。"
+    ]
+  },
+  "Elementarium:WaveformStill": {
+    "NAME": "波形: 静止",
+    "DESCRIPTIONS": ["无效果。于下回合转换到 #y波形: 动力 。"]
+  }
+}

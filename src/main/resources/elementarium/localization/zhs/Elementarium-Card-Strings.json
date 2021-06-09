@@ -1,0 +1,46 @@
+{
+  "Elementarium:Tar": {
+    "NAME": "焦油",
+    "DESCRIPTION": "虚无 。 NL 每回合结束时，获得1 虚弱 。 NL 消耗 。"
+  },
+  "Elementarium:StickyTar": {
+    "NAME": "粘性焦油",
+    "DESCRIPTION": "无法打出。 NL 每赢得1场精英战后，从牌堆中移除1张粘性焦油。"
+  },
+  "Elementarium:GildedStrike": {
+    "NAME": "镀金打击",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 施加 !M! 易伤 。"
+  },
+  "Elementarium:GildedDefend": {
+    "NAME": "镀金防御",
+    "DESCRIPTION": "获得 !B! 格挡. NL 失去 !M! 敏捷。"
+  },
+  "Elementarium:GildedEssence": {
+    "NAME": "镀金精华",
+    "DESCRIPTION": "获得 !M! elementarium:多层护甲 。"
+  },
+  "Elementarium:GildedForm": {
+    "NAME": "镀金形态",
+    "DESCRIPTION": "虚无 。 NL 获得 !M! elementarium:多层护甲 。 NL 获得20金币。 NL 失去 1 敏捷。"
+  },
+  "Elementarium:FireblessedBlade": {
+    "NAME": "火祝之刃",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 获得 !M! 力量，获得1敏捷和1 专注 。 NL 消耗 。"
+  },
+  "Elementarium:WindblessedBlade": {
+    "NAME": "风祝之刃",
+    "DESCRIPTION": "造成 !D! 伤害3次。 NL 获得 !B! 格挡2次。 NL 施加 !M! 虚弱 。 NL 消耗 。"
+  },
+  "Elementarium:EarthblessedBlade": {
+    "NAME": "地祝之刃",
+    "DESCRIPTION": "对全敌造成 !D! 伤害。 NL 获得 !B! elementarium:多层护甲 。 NL 获得 !M! 荆棘 。 NL 消耗 。"
+  },
+  "Elementarium:IceblessedBlade": {
+    "NAME": "冰祝之刃",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 获得 !M! 人工制品 。 NL 获得 1 elementarium:Buffer. NL 消耗 。"
+  },
+  "Elementarium:VoidblessedBlade": {
+    "NAME": "虚空之刃",
+    "DESCRIPTION": "造成 !D! 伤害 !M! 次。 NL 敌人失去 !M! 力量。 NL 获得 1 elementarium:模糊 。 NL 消耗 。"
+  }
+}

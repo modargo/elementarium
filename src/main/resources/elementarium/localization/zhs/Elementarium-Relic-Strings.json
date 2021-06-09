@@ -1,0 +1,65 @@
+{
+  "Elementarium:RadiantIdol": {
+    "NAME": "焕光雕像",
+    "FLAVOR": "这尊雕像辐射着猛烈的热能。",
+    "DESCRIPTIONS": [
+      "每当你往牌组中添加牌，治疗 #b{0} 生命。"
+    ]
+  },
+  "Elementarium:HuntersSling": {
+    "NAME": "猎人投石索",
+    "FLAVOR": "用兽皮和筋制作的投石索，平衡性良好。",
+    "DESCRIPTIONS": [
+      "每次精英战开始时，获得 #b{0} #y力量 和 #b{1} #y敏捷 。"
+    ]
+  },
+  "Elementarium:HuntersBracer": {
+    "NAME": "猎人护腕",
+    "FLAVOR": "用某种怪物的锋利鳞片制造",
+    "DESCRIPTIONS": [
+      "每次精英战开始时，获得 #b{0} #y荆棘 和 #y金属化 。"
+    ]
+  },
+  "Elementarium:HuntersElixir": {
+    "NAME": "猎人灵药",
+    "FLAVOR": "来头不明的强化剂。",
+    "DESCRIPTIONS": [
+      "每次精英战开始时，获得 #b{0} #y人工制品 和 #b{1} #y再生 。"
+    ]
+  },
+  "Elementarium:GoldenMirage": {
+    "NAME": "黄金幻象",
+    "FLAVOR": "引诱力非凡，但就是碰不着。",
+    "DESCRIPTIONS": [
+      "每场战斗中首次洗牌时，获得 #b1 #y无实体 。"
+    ]
+  },
+  "Elementarium:HatchlingPhoenix": {
+    "NAME": "刚孵化的凤凰",
+    "FLAVOR": "从魔法蛋中破壳而出。",
+    "DESCRIPTIONS": [
+      "每当你添加1张 #b耗费为1 的牌到牌组， #y升级 之。"
+    ]
+  },
+  "Elementarium:GolemsHeart": {
+    "NAME": "魔像核心",
+    "FLAVOR": "依然在十分缓慢地跳动着。",
+    "DESCRIPTIONS": [
+      "每场战斗打出的首张牌会被打出两次。"
+    ]
+  },
+  "Elementarium:FlickeringLantern": {
+    "NAME": "摇曳的灯笼",
+    "FLAVOR": "闪烁着异世的光，不断地熄灭又重燃。",
+    "DESCRIPTIONS": [
+      "每回合开始，获得 [E] ."
+    ]
+  },
+  "Elementarium:ElementariumTrophy": {
+    "NAME": "元素之地纪念章",
+    "FLAVOR": "闪烁着多种混合能量。",
+    "DESCRIPTIONS": [
+      "一个纪念着你在元素之地的胜利的奖章。"
+    ]
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "Elementarium:WarGolem": {
+    "MOVES": [
+      "觅心",
+      "破盾",
+      "腿部破坏"
+    ],
+    "NAME": "战争魔像"
+  },
+  "Elementarium:OrbOfFire": {
+    "MOVES": [
+      "火弹",
+      "闪光",
+      "照射"
+    ],
+    "NAME": "火球"
+  },
+  "Elementarium:LivingStormcloud": {
+    "MOVES": [
+      "震击",
+      "狂风",
+      "降雨"
+    ],
+    "NAME": "活体风暴云"
+  },
+  "Elementarium:VoidCorruption": {
+    "MOVES": [
+      "能量汲取",
+      "腐蚀之触",
+      "活力汲取",
+      "虚空猛击",
+      "虚空齐射"
+    ],
+    "NAME": "虚空腐蚀"
+  },
+  "Elementarium:TarGolem": {
+    "MOVES": [
+      "焦油护盾",
+      "焦油喷射",
+      "粘性焦油"
+    ],
+    "NAME": "焦油魔像"
+  },
+  "Elementarium:MudGolem": {
+    "MOVES": [
+      "泥浆爆发",
+      "泥浆旋风"
+    ],
+    "NAME": "泞泥魔像"
+  },
+  "Elementarium:OpulentOffering": {
+    "MOVES": [
+      "酒杯猛砸",
+      "钱币弹幕",
+      "丰裕屏障",
+      "丰裕外溢"
+    ],
+    "NAME": "丰裕的贡品"
+  },
+  "Elementarium:Firelord": {
+    "MOVES": [
+      "火主之锤",
+      "炽热怒火",
+      "火雨",
+      "召唤球体"
+    ],
+    "NAME": "火焰领主",
+    "DIALOG": ["火焰净化!"]
+  },
+  "Elementarium:FlameHerald": {
+    "MOVES": [
+      "聚集火焰",
+      "长矛戳刺",
+      "仪祭打击",
+      "护卫猛击"
+    ],
+    "NAME": "烈火先驱",
+    "DIALOG": ["火焰，聚集，充盈于我！"]
+  },
+  "Elementarium:ElementalPortal": {
+    "MOVES": [
+      "传送门",
+      "强化复原",
+      "混沌能量",
+      "元素迸发"
+    ],
+    "NAME": "元素之门"
+  },
+  "Elementarium:GoldenEagle": {
+    "MOVES": [],
+    "NAME": "金鹰"
+  },
+  "Elementarium:GoldenLion": {
+    "MOVES": [],
+    "NAME": "金狮"
+  },
+  "Elementarium:GoldenAngel": {
+    "MOVES": [
+      "黄金转化"
+    ],
+    "NAME": "金天使"
+  },
+  "Elementarium:ShimmeringMirage": {
+    "MOVES": [
+      "照耀",
+      "微光",
+      "脉冲"
+    ],
+    "NAME": "闪耀的幻象"
+  },
+  "Elementarium:StoneGolem": {
+    "MOVES": [
+      "岩石撞击",
+      "坚实打击",
+      "践踏碾压"
+    ],
+    "NAME": "岩石魔像"
+  },
+  "Elementarium:GolemEmperor": {
+    "MOVES": [
+      "召唤魔像",
+      "坚实打击",
+      "践踏碾压"
+    ],
+    "NAME": "魔像皇帝"
+  },
+  "Elementarium:RubyGolem": {
+    "MOVES": [
+      "红宝石刀",
+      "棱镜"
+    ],
+    "NAME": "红宝石魔像"
+  },
+  "Elementarium:FirePhoenix": {
+    "MOVES": [
+      "爪击",
+      "扫翼",
+      "炽熔狂暴",
+      "燃烧风暴"
+    ],
+    "NAME": "火凤凰"
+  },
+  "Elementarium:IcePhoenix": {
+    "MOVES": [
+      "爪击",
+      "扫翼",
+      "冰之平静",
+      "冻结风暴"
+    ],
+    "NAME": "冰凤凰"
+  },
+  "Elementarium:GoldenDragon": {
+    "MOVES": [
+      "尾击",
+      "兵刃吐息",
+      "强化咆哮",
+      "爪咬兼施",
+      "黄金转换"
+    ],
+    "NAME": "黄金巨龙"
+  },
+  "Elementarium:VoidBeast": {
+    "MOVES": [
+      "腐化撕咬",
+      "虚空注视",
+      "影之爪"
+    ],
+    "NAME": "虚空野兽"
+  },
+  "Elementarium:Cyclone": {
+    "MOVES": [
+      "席卷",
+      "鼓舞之风",
+      "旋风"
+    ],
+    "NAME": "飓风"
+  },
+  "Elementarium:Hydrostalker": {
+    "MOVES": [
+      "奔涌",
+      "泛滥",
+      "洪流"
+    ],
+    "NAME": "水之潜伏者"
+  }
+}
+

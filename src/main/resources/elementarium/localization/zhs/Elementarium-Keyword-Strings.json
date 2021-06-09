@@ -1,0 +1,17 @@
+[
+  {
+    "PROPER_NAME": "缓冲",
+    "NAMES": ["缓冲"],
+    "DESCRIPTION": "阻止下一次的生命损失。"
+  },
+  {
+    "PROPER_NAME": "多层护甲",
+    "NAMES": ["多层护甲"],
+    "DESCRIPTION": "回合结束时获得格挡。受到未被格挡的攻击伤害时，减少层数。"
+  },
+  {
+    "PROPER_NAME": "模糊",
+    "NAMES": ["模糊"],
+    "DESCRIPTION": "#y格挡 不会在下回合开始时被移除。"
+  }
+]
