@@ -544,7 +544,7 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"desc": "Cycles #wShine -> #wGlow -> #wPulse.",
 					"hp": "(30 - 32 HP)",
 					"notes": "Innate #uCleanse 2.",
 					"moves": [
@@ -587,7 +587,7 @@
 				},
 				{
 					"min_asc": 2,
-					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"desc": "Cycles #wShine -> #wGlow -> #wPulse.",
 					"hp": "(30 - 32 HP)",
 					"notes": "Innate #uCleanse 2.",
 					"moves": [
@@ -630,7 +630,7 @@
 				},
 				{
 					"min_asc": 7,
-					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"desc": "Cycles #wShine -> #wGlow -> #wPulse.",
 					"hp": "(31 - 33 HP)",
 					"notes": "Innate #uCleanse 2.",
 					"moves": [
@@ -673,7 +673,7 @@
 				},
 				{
 					"min_asc": 17,
-					"desc": "Cycles Shine -> Glow -> Pulse.",
+					"desc": "Cycles #wShine -> #wGlow -> #wPulse.",
 					"hp": "(31 - 33 HP)",
 					"notes": "Innate #uCleanse 2.",
 					"moves": [
@@ -726,15 +726,258 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wCorrupting #wTouch or #wVigor #wDrain, then #wEnergy #wDrain. Afterwards cycles #wVoid #wSlam or #wVoid #wVolley -> #wCorrupting #wTouch or #wVigor #wDrain.",
+					"hp": "(97 - 101 HP)",
+					"notes": "Void status cards go into the discard pile.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Energy Drain",
 							"effects": [
 								{
-									"name": "X",
+									"name": "Energy Limit",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Permanent Draw -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Corrupting Touch",
+							"effects": [
+								{
+									"name": "12",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Void 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Vigor Drain",
+							"effects": [
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Strength 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Slam",
+							"effects": [
+								{
+									"name": "18",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Void Volley",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with #wCorrupting #wTouch or #wVigor #wDrain, then #wEnergy #wDrain. Afterwards cycles #wVoid #wSlam or #wVoid #wVolley -> #wCorrupting #wTouch or #wVigor #wDrain.",
+					"hp": "(97 - 101 HP)",
+					"notes": "Void status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Energy Drain",
+							"effects": [
+								{
+									"name": "Energy Limit",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Permanent Draw -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Corrupting Touch",
+							"effects": [
+								{
+									"name": "14",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Void 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Vigor Drain",
+							"effects": [
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Strength 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Slam",
+							"effects": [
+								{
+									"name": "21",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Void Volley",
+							"effects": [
+								{
+									"name": "4x3",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with #wCorrupting #wTouch or #wVigor #wDrain, then #wEnergy #wDrain. Afterwards cycles #wVoid #wSlam or #wVoid #wVolley -> #wCorrupting #wTouch or #wVigor #wDrain.",
+					"hp": "(99 - 103 HP)",
+					"notes": "Void status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Energy Drain",
+							"effects": [
+								{
+									"name": "Energy Limit",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Permanent Draw -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Corrupting Touch",
+							"effects": [
+								{
+									"name": "14",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Void 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Vigor Drain",
+							"effects": [
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Strength 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Slam",
+							"effects": [
+								{
+									"name": "21",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Void Volley",
+							"effects": [
+								{
+									"name": "4x3",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with #wEnergy #wDrain. Afterwards cycles #wVoid #wSlam or #wVoid #wVolley -> #wCorrupting #wTouch or #wVigor #wDrain.",
+					"hp": "(99 - 103 HP)",
+					"notes": "Void status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Energy Drain",
+							"effects": [
+								{
+									"name": "Energy Limit",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Permanent Draw -1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Corrupting Touch",
+							"effects": [
+								{
+									"name": "14",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Void 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Vigor Drain",
+							"effects": [
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Strength 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Slam",
+							"effects": [
+								{
+									"name": "21",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Void Volley",
+							"effects": [
+								{
+									"name": "4x3",
 									"color": "DAMAGE"
 								}
 							]
@@ -749,15 +992,170 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wBlow #wAway, then #wInvigorating #wWinds, then repeats #wTwister.",
+					"hp": "(112 - 118 HP)",
+					"notes": "Innate #uFierce #uWinds 1. Wound status cards go into the discard pile.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Blow Away",
 							"effects": [
 								{
-									"name": "X",
+									"name": "Exhaust all 0 cost cards and add that many Wounds",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Invigorating Winds",
+							"effects": [
+								{
+									"name": "Ritual 2",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 2",
+									"color": "BUFF"
+								},
+								{
+									"name": "Permanent Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Twister",
+							"effects": [
+								{
+									"name": "14",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with #wBlow #wAway, then #wInvigorating #wWinds, then repeats #wTwister.",
+					"hp": "(112 - 118 HP)",
+					"notes": "Innate #uFierce #uWinds 1. Wound status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Blow Away",
+							"effects": [
+								{
+									"name": "Exhaust all 0 cost cards and add that many Wounds",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Invigorating Winds",
+							"effects": [
+								{
+									"name": "Ritual 2",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 2",
+									"color": "BUFF"
+								},
+								{
+									"name": "Permanent Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Twister",
+							"effects": [
+								{
+									"name": "16",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with #wBlow #wAway, then #wInvigorating #wWinds, then repeats #wTwister.",
+					"hp": "(117 - 123 HP)",
+					"notes": "Innate #uFierce #uWinds 1. Wound status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Blow Away",
+							"effects": [
+								{
+									"name": "Exhaust all 0 cost cards and add that many Wounds",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Invigorating Winds",
+							"effects": [
+								{
+									"name": "Ritual 2",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 2",
+									"color": "BUFF"
+								},
+								{
+									"name": "Permanent Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Twister",
+							"effects": [
+								{
+									"name": "16",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with #wBlow #wAway, then #wInvigorating #wWinds, then repeats #wTwister.",
+					"hp": "(117 - 123 HP)",
+					"notes": "Innate #uFierce #uWinds 1. Wound status cards go into the discard pile.",
+					"moves": [
+						{
+							"name": "Blow Away",
+							"effects": [
+								{
+									"name": "Exhaust all 0 cost cards and add that many Wounds",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Invigorating Winds",
+							"effects": [
+								{
+									"name": "Ritual 3",
+									"color": "BUFF"
+								},
+								{
+									"name": "Strength 3",
+									"color": "BUFF"
+								},
+								{
+									"name": "Permanent Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Twister",
+							"effects": [
+								{
+									"name": "16",
 									"color": "DAMAGE"
 								}
 							]
@@ -768,20 +1166,139 @@
 		},
 		{
 			"name": "Mud Golem",
-			"id": "Elementarium:MudGolen",
+			"id": "Elementarium:MudGolem",
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Cycles #wMud #wEruption -> #wMud #wTornado.",
+					"hp": "(41 - 44 HP)",
+					"notes": "Innate #uMalleable 2.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Mud Eruption",
 							"effects": [
 								{
-									"name": "X",
+									"name": "8",
 									"color": "DAMAGE"
+								},
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Mud Tornado",
+							"effects": [
+								{
+									"name": "2x3",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 2",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Cycles #wMud #wEruption -> #wMud #wTornado.",
+					"hp": "(41 - 44 HP)",
+					"notes": "Innate #uMalleable 2.",
+					"moves": [
+						{
+							"name": "Mud Eruption",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Mud Tornado",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 2",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Cycles #wMud #wEruption -> #wMud #wTornado.",
+					"hp": "(43 - 46 HP)",
+					"notes": "Innate #uMalleable 2.",
+					"moves": [
+						{
+							"name": "Mud Eruption",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Mud Tornado",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Cycles #wMud #wEruption -> #wMud #wTornado.",
+					"hp": "(43 - 46 HP)",
+					"notes": "Innate #uMalleable 3.",
+					"moves": [
+						{
+							"name": "Mud Eruption",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Party Strength 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Mud Tornado",
+							"effects": [
+								{
+									"name": "2x4",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
 								}
 							]
 						}
@@ -795,16 +1312,171 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wTar #wShield or #wTar #wSpray, then uses #wSticky #wTar twice, then repeats #wTar #wShield or #wTar #wSpray. The second use of #wSticky #wTar applies Weak 1 instead of adding a curse.",
+					"hp": "(41 - 44 HP)",
+					"notes": "Innate #uTar #uBody. Tar status cards go into the draw pile.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Tar Shield",
 							"effects": [
 								{
-									"name": "X",
+									"name": "3x2",
 									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Tar Spray",
+							"effects": [
+								{
+									"name": "3x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Tar 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Sticky Tar",
+							"effects": [
+								{
+									"name": "Permanently add a Sticky Tar curse to the deck",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with #wTar #wShield or #wTar #wSpray, then uses #wSticky #wTar twice, then repeats #wTar #wShield or #wTar #wSpray. The second use of #wSticky #wTar applies Weak 1 instead of adding a curse.",
+					"hp": "(41 - 44 HP)",
+					"notes": "Innate #uTar #uBody. Tar status cards go into the draw pile.",
+					"moves": [
+						{
+							"name": "Tar Shield",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Tar Spray",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Tar 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Sticky Tar",
+							"effects": [
+								{
+									"name": "Permanently add a Sticky Tar curse to the deck",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with #wTar #wShield or #wTar #wSpray, then uses #wSticky #wTar twice, then repeats #wTar #wShield or #wTar #wSpray. The second use of #wSticky #wTar applies Weak 1 instead of adding a curse.",
+					"hp": "(43 - 46 HP)",
+					"notes": "Innate #uTar #uBody. Tar status cards go into the draw pile.",
+					"moves": [
+						{
+							"name": "Tar Shield",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 5",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Tar Spray",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Tar 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Sticky Tar",
+							"effects": [
+								{
+									"name": "Permanently add a Sticky Tar curse to the deck",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with #wTar #wShield, then uses #wSticky #wTar twice, then repeats #wTar #wShield or #wTar #wSpray. The second use of #wSticky #wTar applies Weak 1 in addition to adding a curse.",
+					"hp": "(43 - 46 HP)",
+					"notes": "Innate #uTar #uBody. Tar status cards go into the draw pile.",
+					"moves": [
+						{
+							"name": "Tar Shield",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 5",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Tar Spray",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Tar 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Sticky Tar",
+							"effects": [
+								{
+									"name": "Permanently add a Sticky Tar curse to the deck",
+									"color": "DEBUFF"
 								}
 							]
 						}
@@ -818,16 +1490,151 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with 70-30 split between #wRuby #wKnives and #wPrism, then another 70-30 split if the first move wasn't #wPrism, then #wPrism if neither of the first two moves was #wPrism. Once #wPrism has been used, cycles #wPrism -> #wRuby #wKnives -> #wRuby #wKnives.",
+					"hp": "(81 - 85 HP)",
+					"notes": "Innate #uDelicate 3.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Ruby Knives",
 							"effects": [
 								{
-									"name": "X",
+									"name": "8x3",
 									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 6",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Prism",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with 70-30 split between #wRuby #wKnives and #wPrism, then another 70-30 split if the first move wasn't #wPrism, then #wPrism if neither of the first two moves was #wPrism. Once #wPrism has been used, cycles #wPrism -> #wRuby #wKnives -> #wRuby #wKnives.",
+					"hp": "(81 - 85 HP)",
+					"notes": "Innate #uDelicate 3.",
+					"moves": [
+						{
+							"name": "Ruby Knives",
+							"effects": [
+								{
+									"name": "9x3",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 6",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Prism",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with 70-30 split between #wRuby #wKnives and #wPrism, then another 70-30 split if the first move wasn't #wPrism, then #wPrism if neither of the first two moves was #wPrism. Once #wPrism has been used, cycles #wPrism -> #wRuby #wKnives -> #wRuby #wKnives.",
+					"hp": "(84 - 88 HP)",
+					"notes": "Innate #uDelicate 3.",
+					"moves": [
+						{
+							"name": "Ruby Knives",
+							"effects": [
+								{
+									"name": "9x3",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 9",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Prism",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with 70-30 split between #wRuby #wKnives and #wPrism, then another 70-30 split if the first move wasn't #wPrism, then #wPrism if neither of the first two moves was #wPrism. Once #wPrism has been used, cycles #wPrism -> #wRuby #wKnives -> #wRuby #wKnives.",
+					"hp": "(84 - 88 HP)",
+					"notes": "Innate #uDelicate 2.",
+					"moves": [
+						{
+							"name": "Ruby Knives",
+							"effects": [
+								{
+									"name": "9x3",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Block 9",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Prism",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
 								}
 							]
 						}
@@ -837,19 +1644,190 @@
 		},
 		{
 			"name": "Void Beast",
-			"id": "Elementarium:Void Beast",
+			"id": "Elementarium:VoidBeast",
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wCorrupting #wBite, then #wVoid #wGaze, then #wShadow #wClaw. Afterwards 60-40 split between #wCorrupting #wBite and #wShadow #wClaw, but can't use either move three times in a row.",
+					"hp": "(110 - 116 HP)",
+					"notes": "Starts with #uVoid #uPressure 2 applied to the player. Dazed status cards from #wCorrupting #wBite go on top of the draw pile. Dazed status cards from #wVoid #wGaze go into the discard pile.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Corrupting Bite",
 							"effects": [
 								{
-									"name": "X",
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dazed 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Gaze",
+							"effects": [
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dazed 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shadow Claw",
+							"effects": [
+								{
+									"name": "6x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with #wCorrupting #wBite, then #wVoid #wGaze, then #wShadow #wClaw. Afterwards 60-40 split between #wCorrupting #wBite and #wShadow #wClaw, but can't use either move three times in a row.",
+					"hp": "(110 - 116 HP)",
+					"notes": "Starts with #uVoid #uPressure 2 applied to the player. Dazed status cards from #wCorrupting #wBite go on top of the draw pile. Dazed status cards from #wVoid #wGaze go into the discard pile.",
+					"moves": [
+						{
+							"name": "Corrupting Bite",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dazed 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Gaze",
+							"effects": [
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dazed 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shadow Claw",
+							"effects": [
+								{
+									"name": "7x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with #wCorrupting #wBite, then #wVoid #wGaze, then #wShadow #wClaw. Afterwards 60-40 split between #wCorrupting #wBite and #wShadow #wClaw, but can't use either move three times in a row.",
+					"hp": "(116 - 122 HP)",
+					"notes": "Starts with #uVoid #uPressure 2 applied to the player. Dazed status cards from #wCorrupting #wBite go on top of the draw pile. Dazed status cards from #wVoid #wGaze go into the discard pile.",
+					"moves": [
+						{
+							"name": "Corrupting Bite",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dazed 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Gaze",
+							"effects": [
+								{
+									"name": "Frail 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dazed 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shadow Claw",
+							"effects": [
+								{
+									"name": "7x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with #wCorrupting #wBite, then #wVoid #wGaze, then #wShadow #wClaw. Afterwards 60-40 split between #wCorrupting #wBite and #wShadow #wClaw, but can't use either move three times in a row.",
+					"hp": "(116 - 122 HP)",
+					"notes": "Starts with #uVoid #uPressure 3 applied to the player. Dazed status cards from #wCorrupting #wBite go on top of the draw pile. Dazed status cards from #wVoid #wGaze go into the discard pile.",
+					"moves": [
+						{
+							"name": "Corrupting Bite",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Dazed 2",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Player Draw 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Void Gaze",
+							"effects": [
+								{
+									"name": "Frail 3",
+									"color": "DEBUFF"
+								},
+								{
+									"name": "Dazed 3",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Shadow Claw",
+							"effects": [
+								{
+									"name": "7x2",
 									"color": "DAMAGE"
 								}
 							]
@@ -864,15 +1842,154 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wGush, then #wSurge, then a 50-50 split between #wGush and #wSurge, then #wFlood. Afterwards has a 50-50 split between #wGush and #wSurge, with #wFlood used every fourth move, but can't use either #wGush and #wSurge three times in a row.",
+					"hp": "(147 - 155 HP)",
+					"notes": "Rotates between #uWaveform: #uStrength, #uWaveform: #uArmor, and #uWaveform: #uStill.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Gush",
 							"effects": [
 								{
-									"name": "X",
+									"name": "13",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Surge",
+							"effects": [
+								{
+									"name": "9",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Artifact 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Flood",
+							"effects": [
+								{
+									"name": "2x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with #wGush, then #wSurge, then a 50-50 split between #wGush and #wSurge, then #wFlood. Afterwards has a 50-50 split between #wGush and #wSurge, with #wFlood used every fourth move, but can't use either #wGush and #wSurge three times in a row.",
+					"hp": "(147 - 155 HP)",
+					"notes": "Rotates between #uWaveform: #uStrength, #uWaveform: #uArmor, and #uWaveform: #uStill.",
+					"moves": [
+						{
+							"name": "Gush",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Surge",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Artifact 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Flood",
+							"effects": [
+								{
+									"name": "3x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with #wGush, then #wSurge, then a 50-50 split between #wGush and #wSurge, then #wFlood. Afterwards has a 50-50 split between #wGush and #wSurge, with #wFlood used every fourth move, but can't use either #wGush and #wSurge three times in a row.",
+					"hp": "(152 - 160 HP)",
+					"notes": "Rotates between #uWaveform: #uStrength, #uWaveform: #uArmor, and #uWaveform: #uStill.",
+					"moves": [
+						{
+							"name": "Gush",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Surge",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Artifact 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Flood",
+							"effects": [
+								{
+									"name": "3x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with #wGush, then #wSurge, then a 50-50 split between #wGush and #wSurge, then #wFlood. Afterwards has a 50-50 split between #wGush and #wSurge, with #wFlood used every fourth move, but can't use either #wGush and #wSurge three times in a row.",
+					"hp": "(152 - 160 HP)",
+					"notes": "Rotates between #uWaveform: #uStrength and #uWaveform: #uArmor.",
+					"moves": [
+						{
+							"name": "Gush",
+							"effects": [
+								{
+									"name": "15",
+									"color": "DAMAGE"
+								}
+							]
+						},
+						{
+							"name": "Surge",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Artifact 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Flood",
+							"effects": [
+								{
+									"name": "3x2",
 									"color": "DAMAGE"
 								}
 							]
@@ -887,15 +2004,170 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wSolid #wStrike or #wStomp #wand #wSlam. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
+					"hp": "(49 - 52 HP)",
+					"notes": "Innate #uPlated #uArmor 4, #uSorrow 5.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Stone Bash",
 							"effects": [
 								{
-									"name": "X",
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Solid Strike",
+							"effects": [
+								{
+									"name": "6",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Stomp and Slam",
+							"effects": [
+								{
+									"name": "4x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with #wSolid #wStrike or #wStomp #wand #wSlam. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
+					"hp": "(49 - 52 HP)",
+					"notes": "Innate #uPlated #uArmor 4, #uSorrow 5.",
+					"moves": [
+						{
+							"name": "Stone Bash",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Solid Strike",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 1",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Stomp and Slam",
+							"effects": [
+								{
+									"name": "5x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with #wSolid #wStrike or #wStomp #wand #wSlam. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
+					"hp": "(51 - 54 HP)",
+					"notes": "Innate #uPlated #uArmor 5, #uSorrow 5.",
+					"moves": [
+						{
+							"name": "Stone Bash",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Solid Strike",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Stomp and Slam",
+							"effects": [
+								{
+									"name": "5x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with #wStone #wBash. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
+					"hp": "(51 - 54 HP)",
+					"notes": "Innate #uPlated #uArmor 5, #uSorrow 8.",
+					"moves": [
+						{
+							"name": "Stone Bash",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Frail 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Solid Strike",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Plated Armor 2",
+									"color": "BUFF"
+								}
+							]
+						},
+						{
+							"name": "Stomp and Slam",
+							"effects": [
+								{
+									"name": "5x2",
 									"color": "DAMAGE"
 								}
 							]
@@ -1257,7 +2529,7 @@
 							]
 						}
 					]
-				},,
+				},
 				{
 					"min_asc": 18,
 					"desc": "Starts with #wHammer #wof #wthe #wFirelord, then #wFiery #wWrath or #wSummon #wOrb, then the other. Afterwards, bases its next move on its previous two moves, as follows: NL If the last two moves were both #wFiery #wWrath or #wSummon #wOrb, uses #wRain #wof #wFire. NL If the last two moves were both #wRain #wof #wFire, uses #wFiery #wWrath or #wSummon #wOrb. NL If the last move was #wRain #wof #wFire, uses #wSummon #wOrb or #wRain #wof #wFire. NL Otherwise, uses #wFiery #wWrath or #wRain #wof #wFire. NL NL #wSummon #wOrb can only be used if there is space to summon and summons a second minion starting with the third use (or starting with the first use in the fight with two Orbs of Fire and the Firelord).",
@@ -2714,15 +3986,49 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Repeats #wBeak.",
+					"hp": "(30 HP)",
+					"notes": "Innate #uBarricade.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Beak",
 							"effects": [
 								{
-									"name": "X",
+									"name": "5x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Repeats #wBeak.",
+					"hp": "(30 HP)",
+					"notes": "Innate #uBarricade.",
+					"moves": [
+						{
+							"name": "Beak",
+							"effects": [
+								{
+									"name": "6x2",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Repeats #wBeak.",
+					"hp": "(34 HP)",
+					"notes": "Innate #uBarricade.",
+					"moves": [
+						{
+							"name": "Beak",
+							"effects": [
+								{
+									"name": "6x2",
 									"color": "DAMAGE"
 								}
 							]
@@ -2737,15 +4043,88 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Cycles #wGolden #wClaw -> #wGolden #wClaw -> #wBite.",
+					"hp": "(37 HP)",
+					"notes": "Innate #uBarricade.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Golden Claw",
 							"effects": [
 								{
-									"name": "X",
+									"name": "3",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Party Block 2",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Bite",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Cycles #wGolden #wClaw -> #wGolden #wClaw -> #wBite.",
+					"hp": "(37 HP)",
+					"notes": "Innate #uBarricade.",
+					"moves": [
+						{
+							"name": "Golden Claw",
+							"effects": [
+								{
+									"name": "5",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Party Block 2",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Bite",
+							"effects": [
+								{
+									"name": "12",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Cycles #wGolden #wClaw -> #wGolden #wClaw -> #wBite.",
+					"hp": "(41 HP)",
+					"notes": "Innate #uBarricade.",
+					"moves": [
+						{
+							"name": "Golden Claw",
+							"effects": [
+								{
+									"name": "5",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Party Block 3",
+									"color": "BLOCK"
+								}
+							]
+						},
+						{
+							"name": "Bite",
+							"effects": [
+								{
+									"name": "12",
 									"color": "DAMAGE"
 								}
 							]
@@ -2760,15 +4139,154 @@
 			"ai": [
 				{
 					"min_asc": 0,
-					"desc": "TODO.",
-					"hp": "(X - Y HP)",
-					"notes": "TODO.",
+					"desc": "Starts with #wTurn #wto #wGold. Afterwards cycles #wGolden #wJudgement -> #wSmash.",
+					"hp": "(40 HP)",
+					"notes": "Innate #uBarricade.",
 					"moves": [
 						{
-							"name": "TODO",
+							"name": "Turn to Gold",
 							"effects": [
 								{
-									"name": "X",
+									"name": "Wraith Form 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Golden Judgement",
+							"effects": [
+								{
+									"name": "7",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Smash",
+							"effects": [
+								{
+									"name": "10",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 2,
+					"desc": "Starts with #wTurn #wto #wGold. Afterwards cycles #wGolden #wJudgement -> #wSmash.",
+					"hp": "(40 HP)",
+					"notes": "Innate #uBarricade.",
+					"moves": [
+						{
+							"name": "Turn to Gold",
+							"effects": [
+								{
+									"name": "Wraith Form 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Golden Judgement",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Smash",
+							"effects": [
+								{
+									"name": "12",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 7,
+					"desc": "Starts with #wTurn #wto #wGold. Afterwards cycles #wGolden #wJudgement -> #wSmash.",
+					"hp": "(44 HP)",
+					"notes": "Innate #uBarricade.",
+					"moves": [
+						{
+							"name": "Turn to Gold",
+							"effects": [
+								{
+									"name": "Wraith Form 1",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Golden Judgement",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Smash",
+							"effects": [
+								{
+									"name": "12",
+									"color": "DAMAGE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"min_asc": 17,
+					"desc": "Starts with #wTurn #wto #wGold. Afterwards cycles #wGolden #wJudgement -> #wSmash.",
+					"hp": "(44 HP)",
+					"notes": "Innate #uBarricade.",
+					"moves": [
+						{
+							"name": "Turn to Gold",
+							"effects": [
+								{
+									"name": "Wraith Form 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Golden Judgement",
+							"effects": [
+								{
+									"name": "8",
+									"color": "DAMAGE"
+								},
+								{
+									"name": "Weak 2",
+									"color": "DEBUFF"
+								}
+							]
+						},
+						{
+							"name": "Smash",
+							"effects": [
+								{
+									"name": "12",
 									"color": "DAMAGE"
 								}
 							]
