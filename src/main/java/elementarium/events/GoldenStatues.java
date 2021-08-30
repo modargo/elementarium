@@ -46,7 +46,7 @@ public class GoldenStatues extends MaskedBandits {
             this.roomEventText.addDialogOption(MessageFormat.format(OPTIONS[0], this.cardCost.name, this.cardGain.name), this.cardGain);
         }
         else {
-            this.roomEventText.addDialogOption(MessageFormat.format(OPTIONS[0], this.cardGain.name), this.cardGain);
+            this.roomEventText.addDialogOption(MessageFormat.format(OPTIONS[1], this.cardGain.name), this.cardGain);
         }
         this.roomEventText.addDialogOption(OPTIONS[2]);
         this.hasDialog = true;
