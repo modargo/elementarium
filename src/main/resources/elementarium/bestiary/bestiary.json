@@ -2183,7 +2183,7 @@
 				{
 					"min_asc": 0,
 					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
-					"hp": "(93 - 95 HP)",
+					"hp": "(102 - 104 HP)",
 					"notes": "Innate #uMetallicize 6, #uArtifact 1.",
 					"moves": [
 						{
@@ -2230,7 +2230,7 @@
 				{
 					"min_asc": 3,
 					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
-					"hp": "(93 - 95 HP)",
+					"hp": "(102 - 104 HP)",
 					"notes": "Innate #uMetallicize 6, #uArtifact 1.",
 					"moves": [
 						{
@@ -2277,7 +2277,7 @@
 				{
 					"min_asc": 8,
 					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
-					"hp": "(97 - 99 HP)",
+					"hp": "(106 - 108 HP)",
 					"notes": "Innate #uMetallicize 9, #uArtifact 1.",
 					"moves": [
 						{
@@ -2324,7 +2324,7 @@
 				{
 					"min_asc": 18,
 					"desc": "Cycles #wHeartseeker -> #wShieldbreaker or #wLegbuster -> the other.",
-					"hp": "(97 - 99 HP)",
+					"hp": "(106 - 108 HP)",
 					"notes": "Innate #uMetallicize 9, #uArtifact 1.",
 					"moves": [
 						{
