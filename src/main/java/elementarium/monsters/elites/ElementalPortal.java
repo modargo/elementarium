@@ -26,6 +26,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class ElementalPortal extends CustomMonster
 {
@@ -158,6 +159,8 @@ public class ElementalPortal extends CustomMonster
     }
 
     private ArrayList<String> getElementalsToSummon() {
+        Random rng = new Random(Settings.seed + AbstractDungeon.floorNum);
+
         ArrayList<String> elementals = new ArrayList<>();
         elementals.add(OrbOfFire.ID);
         elementals.add(LivingStormcloud.ID);
@@ -169,14 +172,14 @@ public class ElementalPortal extends CustomMonster
         potentialElementals.add(LivingStormcloud.ID);
         potentialElementals.add(OpulentOffering.ID);
         potentialElementals.add(ShimmeringMirage.ID);
-        Collections.shuffle(potentialElementals, AbstractDungeon.monsterRng.random);
+        Collections.shuffle(potentialElementals, rng);
 
         int elementalsNeeded = this.elementalCount - elementals.size();
         for (int i = 0; i < elementalsNeeded; i++) {
             elementals.add(potentialElementals.get(i));
         }
 
-        Collections.shuffle(elementals, AbstractDungeon.monsterRng.random);
+        Collections.shuffle(elementals, rng);
         logger.info("ElementalPortal will summon: " + String.join(", ", elementals));
         return elementals;
     }
