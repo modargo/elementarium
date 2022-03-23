@@ -10,7 +10,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="Maven: com.megacrit.cardcrawl:slaythespire:016">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/desktop-1.0.jar!/" />
@@ -19,7 +19,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="Maven: basemod:basemod:2.10.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/BaseMod.jar!/" />
@@ -28,7 +28,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="Maven: com.evacipated.cardcrawl:ModTheSpire:2.6.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/ModTheSpire.jar!/" />
@@ -37,7 +37,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="Maven: com.evacipated.cardcrawl.mod:ActLikeIt:0.9.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/actlikeit.jar!/" />
