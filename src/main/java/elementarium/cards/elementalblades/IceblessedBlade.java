@@ -23,13 +23,14 @@ public class IceblessedBlade extends CustomCard {
     private static final int COST = 1;
     private static final int BASE_DAMAGE = 8;
     private static final int UPGRADE_DAMAGE = 3;
-    private static final int BASE_BENEFITS = 1;
-    private static final int UPGRADE_BENEFITS = 1;
+    private static final int ARTIFACT = 1;
+    private static final int UPGRADE_ARTIFACT = 1;
+    private static final int BUFFER = 1;
 
     public IceblessedBlade() {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.baseDamage = BASE_DAMAGE;
-        this.baseMagicNumber = BASE_BENEFITS;
+        this.baseMagicNumber = ARTIFACT;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
         this.tags.add(CustomTags.ELEMENTAL_BLADE);
@@ -37,15 +38,15 @@ public class IceblessedBlade extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new BufferPower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber)));
+        this.addToBot(new ApplyPowerAction(p, p, new BufferPower(p, BUFFER)));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_DAMAGE);
-            this.upgradeMagicNumber(UPGRADE_BENEFITS);
+            this.upgradeMagicNumber(UPGRADE_ARTIFACT);
         }
     }
 
