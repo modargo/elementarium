@@ -42,10 +42,10 @@ public class WarGolem extends CustomMonster
     private static final int A18_FOCUS_AMOUNT = 1;
     private static final int METALLICIZE = 6;
     private static final int A8_METALLICIZE = 9;
-    private static final int HP_MIN = 102;
-    private static final int HP_MAX = 104;
-    private static final int A8_HP_MIN = 106;
-    private static final int A8_HP_MAX = 108;
+    private static final int HP_MIN = 110;
+    private static final int HP_MAX = 112;
+    private static final int A8_HP_MIN = 114;
+    private static final int A8_HP_MAX = 116;
     private int vulnerableDamage;
     private int frailDamage;
     private int dexDamage;
