@@ -255,6 +255,9 @@ public class Elementarium implements
     {
         String ret = "localization/";
         switch (language) {
+            case KOR:
+                ret += "kor";
+                break;
             case ZHS:
                 ret += "zhs";
                 break;

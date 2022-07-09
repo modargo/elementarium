@@ -1,0 +1,187 @@
+{
+  "Elementarium:WarGolem": {
+    "MOVES": [
+      "심장 적출",
+      "방패 격파",
+      "다리 파괴"
+    ],
+    "NAME": "전쟁 골렘"
+  },
+  "Elementarium:OrbOfFire": {
+    "MOVES": [
+      "파이어볼트",
+      "불씨",
+      "방사선"
+    ],
+    "NAME": "화염의 오브"
+  },
+  "Elementarium:LivingStormcloud": {
+    "MOVES": [
+      "파지직",
+      "돌풍",
+      "강우"
+    ],
+    "NAME": "살아있는 번개구름"
+  },
+  "Elementarium:VoidCorruption": {
+    "MOVES": [
+      "에너지 흡수",
+      "부정의 손길",
+      "활력 흡수",
+      "공허 박치기",
+      "공허 토스"
+    ],
+    "NAME": "공허로 타락한 자"
+  },
+  "Elementarium:TarGolem": {
+    "MOVES": [
+      "타르 방패",
+      "타르 스프레이",
+      "끈적거리는 타르"
+    ],
+    "NAME": "타르 골렘"
+  },
+  "Elementarium:MudGolem": {
+    "MOVES": [
+      "진흙 분화",
+      "진흙 폭풍"
+    ],
+    "NAME": "진흙 골렘"
+  },
+  "Elementarium:OpulentOffering": {
+    "MOVES": [
+      "유리잔 강타",
+      "동전 탄막",
+      "호화의 장벽",
+      "과열된 호화로움"
+    ],
+    "NAME": "호화로운 제물"
+  },
+  "Elementarium:Firelord": {
+    "MOVES": [
+      "불의 군주의 망치",
+      "맹렬한 분노",
+      "불의 비",
+      "오브 소환"
+    ],
+    "NAME": "불의 군주",
+    "DIALOG": ["불의 세례를 받아라!"]
+  },
+  "Elementarium:FlameHerald": {
+    "MOVES": [
+      "불씨 모으기",
+      "거친 찌르기",
+      "의식 타격",
+      "방어형 공격"
+    ],
+    "NAME": "불의 전령관",
+    "DIALOG": ["모여라, 불태워라, 나에게 힘을 실어라!"]
+  },
+  "Elementarium:ElementalPortal": {
+    "MOVES": [
+      "포탈",
+      "복원력 강화",
+      "카오틱 에너지",
+      "정령 폭발"
+    ],
+    "NAME": "정령들의 포탈"
+  },
+  "Elementarium:GoldenEagle": {
+    "MOVES": [],
+    "NAME": "황금 독수리"
+  },
+  "Elementarium:GoldenLion": {
+    "MOVES": [],
+    "NAME": "황금 사자"
+  },
+  "Elementarium:GoldenAngel": {
+    "MOVES": [
+      "금으로 변환시키기"
+    ],
+    "NAME": "황금 천사"
+  },
+  "Elementarium:ShimmeringMirage": {
+    "MOVES": [
+      "반짝임",
+      "빛",
+      "고동"
+    ],
+    "NAME": "반짝이는 신기루"
+  },
+  "Elementarium:StoneGolem": {
+    "MOVES": [
+      "돌주먹",
+      "견고한 일격",
+      "짓밟고 짓누르기"
+    ],
+    "NAME": "돌 골렘"
+  },
+  "Elementarium:GolemEmperor": {
+    "MOVES": [
+      "골렘 호출",
+      "견고한 일격",
+      "짓밟고 짓누르기"
+    ],
+    "NAME": "골렘 황제"
+  },
+  "Elementarium:RubyGolem": {
+    "MOVES": [
+      "루비 칼날",
+      "분광선"
+    ],
+    "NAME": "루비 골렘"
+  },
+  "Elementarium:FirePhoenix": {
+    "MOVES": [
+      "발톱 긁기",
+      "날개치기",
+      "녹아내리는 광란",
+      "불타오르는 폭풍"
+    ],
+    "NAME": "화염 불사조"
+  },
+  "Elementarium:IcePhoenix": {
+    "MOVES": [
+      "발톱 긁기",
+      "날개치기",
+      "냉정한 평온",
+      "얼어붙는 폭풍"
+    ],
+    "NAME": "얼음 불사조"
+  },
+  "Elementarium:GoldenDragon": {
+    "MOVES": [
+      "꼬리 내리치기",
+      "브레스 뿜기",
+      "엄청난 포효",
+      "물고 할퀴기",
+      "골드 변화"
+    ],
+    "NAME": "골든 드래곤"
+  },
+  "Elementarium:VoidBeast": {
+    "MOVES": [
+      "부패의 입질",
+      "공허의 눈빛",
+      "그림자 발톱"
+    ],
+    "NAME": "공허 야수"
+  },
+  "Elementarium:Cyclone": {
+    "MOVES": [
+      "날려버리기",
+      "활기의 바람",
+      "회오리바람"
+    ],
+    "NAME": "폭풍"
+  },
+  "Elementarium:Hydrostalker": {
+    "MOVES": [
+      "솟구치기",
+      "홍수",
+      "물먹이기"
+    ],
+    "NAME": "물의 선견자"
+  }
+}
+

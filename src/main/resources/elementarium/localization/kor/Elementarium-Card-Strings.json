@@ -1,0 +1,46 @@
+{
+  "Elementarium:Tar": {
+    "NAME": "타르",
+    "DESCRIPTION": "휘발성. NL 턴 종료시, 약화를 1 받습니다. NL 소멸."
+  },
+  "Elementarium:StickyTar": {
+    "NAME": "끈적이 타르",
+    "DESCRIPTION": "사용불가. NL 엘리트 전투에서 승리하면 덱에서 끈적이 타르 1장이 제거됩니다."
+  },
+  "Elementarium:GildedStrike": {
+    "NAME": "도금 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다."
+  },
+  "Elementarium:GildedDefend": {
+    "NAME": "도금 수비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 민첩을 !M! 잃습니다."
+  },
+  "Elementarium:GildedEssence": {
+    "NAME": "도금 정수",
+    "DESCRIPTION": "elementarium:판금\u00a0갑옷 을 !M! 얻습니다."
+  },
+  "Elementarium:GildedForm": {
+    "NAME": "도금의 형상",
+    "DESCRIPTION": "휘발성. NL elementarium:판금\u00a0갑옷 을 !M! 얻습니다. NL 골드를 20 얻습니다. NL 민첩을 1 잃습니다."
+  },
+  "Elementarium:FireblessedBlade": {
+    "NAME": "화염 축복의 검",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !M! 얻고, 민첩과 밀집을 1 얻습니다. NL 소멸."
+  },
+  "Elementarium:WindblessedBlade": {
+    "NAME": "바람 축복의 검",
+    "DESCRIPTION": "!D! 피해를 3번 줍니다. NL  !B! 방어도를 2 번 얻습니다. NL 약화를 !M! 부여합니다. NL 소멸."
+  },
+  "Elementarium:EarthblessedBlade": {
+    "NAME": "대지 축복의 검",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL elementarium:판금\u00a0갑옷 을 !B! 얻습니다. NL 가시를 !M! 얻습니다. NL 소멸."
+  },
+  "Elementarium:IceblessedBlade": {
+    "NAME": "냉기 축복의 검",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 인공물을 !M! 얻습니다. NL elementarium:버퍼 를 얻습니다. NL 소멸."
+  },
+  "Elementarium:VoidblessedBlade": {
+    "NAME": "공허 축복의 검",
+    "DESCRIPTION": "!D! 피해를 !M! 번 줍니다. NL 대상 적의 힘을 !M! 감소시킵니다. NL elementarium:흐릿함 을 1 얻습니다. NL 소멸."
+  }
+}
