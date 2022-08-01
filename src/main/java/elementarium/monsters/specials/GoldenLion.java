@@ -26,12 +26,12 @@ public class GoldenLion extends CustomMonster
     private static final String IMG = Elementarium.monsterImage(ID);
     private static final byte ATTACK_AND_BLOCK = 1;
     private static final byte ATTACK = 2;
-    private static final int ATTACK_AND_BLOCK_DAMAGE = 3;
-    private static final int A2_ATTACK_AND_BLOCK_DAMAGE = 5;
+    private static final int ATTACK_AND_BLOCK_DAMAGE = 5;
+    private static final int A2_ATTACK_AND_BLOCK_DAMAGE = 6;
     private static final int ATTACK_AND_BLOCK_BLOCK = 2;
     private static final int A17_ATTACK_AND_BLOCK_BLOCK = 3;
-    private static final int ATTACK_DAMAGE = 10;
-    private static final int A2_ATTACK_DAMAGE = 12;
+    private static final int ATTACK_DAMAGE = 11;
+    private static final int A2_ATTACK_DAMAGE = 13;
     private static final int HP = 37;
     private static final int A7_HP = 41;
 
