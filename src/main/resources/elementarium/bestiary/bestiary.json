@@ -2005,7 +2005,7 @@
 				{
 					"min_asc": 0,
 					"desc": "Starts with #wSolid #wStrike or #wStomp #wand #wSlam. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
-					"hp": "(49 - 52 HP)",
+					"hp": "(53 - 56 HP)",
 					"notes": "Innate #uPlated #uArmor 4, #uSorrow 5.",
 					"moves": [
 						{
@@ -2048,7 +2048,7 @@
 				{
 					"min_asc": 2,
 					"desc": "Starts with #wSolid #wStrike or #wStomp #wand #wSlam. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
-					"hp": "(49 - 52 HP)",
+					"hp": "(53 - 56 HP)",
 					"notes": "Innate #uPlated #uArmor 4, #uSorrow 5.",
 					"moves": [
 						{
@@ -2091,7 +2091,7 @@
 				{
 					"min_asc": 7,
 					"desc": "Starts with #wSolid #wStrike or #wStomp #wand #wSlam. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
-					"hp": "(51 - 54 HP)",
+					"hp": "(55 - 58 HP)",
 					"notes": "Innate #uPlated #uArmor 5, #uSorrow 5.",
 					"moves": [
 						{
@@ -2134,7 +2134,7 @@
 				{
 					"min_asc": 17,
 					"desc": "Starts with #wStone #wBash. Afterwards has a 40-40-20 split between wSolid #wStrike, #wStomp #wand #wSlam, and #wStone #wBash, but can't use wSolid #wStrike or #wStomp #wand #wSlam three times in a row or #wStone #wBash twice in a row.",
-					"hp": "(51 - 54 HP)",
+					"hp": "(55 - 58 HP)",
 					"notes": "Innate #uPlated #uArmor 5, #uSorrow 8.",
 					"moves": [
 						{

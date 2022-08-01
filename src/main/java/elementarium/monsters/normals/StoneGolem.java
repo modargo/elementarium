@@ -43,10 +43,10 @@ public class StoneGolem extends CustomMonster
     private static final int A7_STARTING_PLATED_ARMOR = 5;
     private static final int SORROW_STRENGTH = 5;
     private static final int A17_SORROW_STRENGTH = 8;
-    private static final int HP_MIN = 49;
-    private static final int HP_MAX = 52;
-    private static final int A7_HP_MIN = 51;
-    private static final int A7_HP_MAX = 54;
+    private static final int HP_MIN = 53;
+    private static final int HP_MAX = 56;
+    private static final int A7_HP_MIN = 55;
+    private static final int A7_HP_MAX = 58;
     private int stoneBashDamage;
     private int stoneBashDebuffDuration;
     private int solidStrikeDamage;
