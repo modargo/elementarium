@@ -747,7 +747,7 @@
 							"name": "Corrupting Touch",
 							"effects": [
 								{
-									"name": "12",
+									"name": "13",
 									"color": "DAMAGE"
 								},
 								{
@@ -773,7 +773,7 @@
 							"name": "Void Slam",
 							"effects": [
 								{
-									"name": "18",
+									"name": "19",
 									"color": "DAMAGE"
 								}
 							]
@@ -812,7 +812,7 @@
 							"name": "Corrupting Touch",
 							"effects": [
 								{
-									"name": "14",
+									"name": "15",
 									"color": "DAMAGE"
 								},
 								{
@@ -838,7 +838,7 @@
 							"name": "Void Slam",
 							"effects": [
 								{
-									"name": "21",
+									"name": "22",
 									"color": "DAMAGE"
 								}
 							]
@@ -877,7 +877,7 @@
 							"name": "Corrupting Touch",
 							"effects": [
 								{
-									"name": "14",
+									"name": "15",
 									"color": "DAMAGE"
 								},
 								{
@@ -903,7 +903,7 @@
 							"name": "Void Slam",
 							"effects": [
 								{
-									"name": "21",
+									"name": "22",
 									"color": "DAMAGE"
 								}
 							]
@@ -942,7 +942,7 @@
 							"name": "Corrupting Touch",
 							"effects": [
 								{
-									"name": "14",
+									"name": "15",
 									"color": "DAMAGE"
 								},
 								{
@@ -968,7 +968,7 @@
 							"name": "Void Slam",
 							"effects": [
 								{
-									"name": "21",
+									"name": "22",
 									"color": "DAMAGE"
 								}
 							]
