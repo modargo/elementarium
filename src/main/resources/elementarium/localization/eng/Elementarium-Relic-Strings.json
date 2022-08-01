@@ -3,7 +3,8 @@
     "NAME": "Radiant Idol",
     "FLAVOR": "The idol now radiates intense heat.",
     "DESCRIPTIONS": [
-      "Whenever you add a card to your deck, heal #b{0} HP."
+      "Whenever you add a card to your deck, heal #b{0} HP.",
+      "HP healed: #b{0}."
     ]
   },
   "Elementarium:HuntersSling": {
