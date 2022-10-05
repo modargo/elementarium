@@ -132,7 +132,11 @@ public class Cyclone extends CustomMonster
         for (CardToExhaust cte : cards) {
             this.addToBot(new ExhaustSpecificCardAction(cte.card, cte.group));
         }
-        this.addToBot(new MakeTempCardInDiscardAction(new Wound(), cards.size()));
+        int wounds = cards.size();
+        while (wounds > 0) {
+            this.addToBot(new MakeTempCardInDiscardAction(new Wound(), Math.min(wounds, 5)));
+            wounds -= 5;
+        }
     }
 
     private void addCardsToExhaust(ArrayList<CardToExhaust> cards, CardGroup group, int cost) {
