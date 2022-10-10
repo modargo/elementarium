@@ -8,7 +8,7 @@
       "You toss in some of your own gold! The #yonrushing #ymass brushes by you #gwithout #gharm, and you feel you #gunderstand it a bit more now."
     ],
     "OPTIONS": [
-      "[Strike the gold] #gRemove #gall Strikes. #gGain #g5 Gilded Strikes. #rLose #r{0} #rHP.",
+      "[Strike the gold] #gRemove #gall Strikes. #gGain #g{0} Gilded Strikes. #rLose #r{1} #rHP.",
       "[Defend yourself] #gGain #ga Gilded Defend. #gGain #g{0} Gold.",
       "[Toss in your own gold] #gGain #ga Gilded Essence. #rLose #r{0} Gold.",
       "[Locked] Requires: Gold.",

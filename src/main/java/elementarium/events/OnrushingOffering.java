@@ -32,7 +32,7 @@ public class OnrushingOffering extends AbstractImageEvent {
     private static final int A15_GOLD_GAIN_AMOUNT = 40;
     private static final int GOLD_LOSS_AMOUNT = 10;
     private static final int A15_GOLD_LOSS_AMOUNT = 20;
-    private static final int GILDED_STRIKE_COUNT = 5;
+    private static final int GILDED_STRIKE_COUNT = 4;
 
     private int healthLoss;
     private int goldGain;
@@ -52,7 +52,7 @@ public class OnrushingOffering extends AbstractImageEvent {
             goldLoss = GOLD_LOSS_AMOUNT;
         }
 
-        imageEventText.setDialogOption(MessageFormat.format(OPTIONS[0], this.healthLoss), new GildedStrike());
+        imageEventText.setDialogOption(MessageFormat.format(OPTIONS[0], GILDED_STRIKE_COUNT, this.healthLoss), new GildedStrike());
         imageEventText.setDialogOption(MessageFormat.format(OPTIONS[1], this.goldGain), new GildedDefend());
         if (AbstractDungeon.player.gold >= this.goldLoss) {
             imageEventText.setDialogOption(MessageFormat.format(OPTIONS[2], this.goldLoss), new GildedEssence());
