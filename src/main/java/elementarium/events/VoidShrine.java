@@ -23,7 +23,7 @@ public class VoidShrine extends AbstractImageEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     public static final String IMG = Elementarium.eventImage(ID);
 
-    private AbstractCard curse;
+    private final AbstractCard curse;
 
     private int screenNum = 0;
 

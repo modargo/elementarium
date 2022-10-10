@@ -34,9 +34,9 @@ public class OnrushingOffering extends AbstractImageEvent {
     private static final int A15_GOLD_LOSS_AMOUNT = 20;
     private static final int GILDED_STRIKE_COUNT = 4;
 
-    private int healthLoss;
-    private int goldGain;
-    private int goldLoss;
+    private final int healthLoss;
+    private final int goldGain;
+    private final int goldLoss;
 
     private int screenNum = 0;
 

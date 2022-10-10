@@ -16,11 +16,11 @@ import elementarium.monsters.MonsterUtils;
 import elementarium.powers.CrumblingPower;
 
 public class SummonGolemAction extends AbstractGameAction {
-    private AbstractMonster m;
-    private int strength;
-    private int crumbling;
-    private AbstractCreature crumblingTarget;
-    private int crumblingStrengthLoss;
+    private final AbstractMonster m;
+    private final int strength;
+    private final int crumbling;
+    private final AbstractCreature crumblingTarget;
+    private final int crumblingStrengthLoss;
 
     public SummonGolemAction(String golemID, float x, float y, int strength, float hpMultiplier, int crumbling, AbstractCreature crumblingTarget, int crumblingStrengthLoss, boolean firstTurn) {
         this.actionType = ActionType.SPECIAL;

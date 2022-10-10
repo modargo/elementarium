@@ -36,10 +36,10 @@ public class ShatteredPortal extends AbstractImageEvent {
     private static final int MAX_HEALTH_LOSS_MINIMUM = 5;
     private static final int A15_MAX_HEALTH_LOSS_MINIMUM = 7;
 
-    private int goldCost;
+    private final int goldCost;
     private int healthCost;
-    private int maxHealthCost;
-    private AbstractCard cardCost;
+    private final int maxHealthCost;
+    private final AbstractCard cardCost;
 
     private int screenNum = 0;
     private int choice = -1;

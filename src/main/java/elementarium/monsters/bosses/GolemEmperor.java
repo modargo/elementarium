@@ -118,7 +118,7 @@ public class GolemEmperor extends CustomMonster {
         }
         switch (this.nextMove) {
             case CALL_GOLEM_MOVE:
-                this.summonNextGolemGroup(false);
+                this.summonNextGolemGroup();
                 if (this.callGolemCounter > 1) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.callGolemStrength), this.callGolemStrength));
                 }
@@ -139,11 +139,11 @@ public class GolemEmperor extends CustomMonster {
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
-    private void summonNextGolemGroup(boolean firstTurn) {
+    private void summonNextGolemGroup() {
         List<List<GolemInfo>> golemGroups = AbstractDungeon.ascensionLevel >= 19 ? A19_GOLEM_GROUPS : GOLEM_GROUPS;
         List<GolemInfo> golemGroup = golemGroups.get(Math.min(this.callGolemCounter, golemGroups.size() - 1));
         for (GolemInfo s : golemGroup) {
-            this.addToBot(new SummonGolemAction(s.golemID, s.xPosition, 0.0F, s.strength, SUMMONED_GOLEM_HP_MULTIPLIER, CRUMBLING_AMOUNT, this, CRUMBLING_STRENGTH_LOSS, firstTurn));
+            this.addToBot(new SummonGolemAction(s.golemID, s.xPosition, 0.0F, s.strength, SUMMONED_GOLEM_HP_MULTIPLIER, CRUMBLING_AMOUNT, this, CRUMBLING_STRENGTH_LOSS, false));
         }
 
         this.callGolemCounter++;
@@ -188,9 +188,9 @@ public class GolemEmperor extends CustomMonster {
             this.strength = strength;
         }
 
-        public String golemID;
-        public float xPosition;
-        public int strength;
+        public final String golemID;
+        public final float xPosition;
+        public final int strength;
     }
 
     static {

@@ -38,7 +38,7 @@ public class OtherworldlyPassage extends Colosseum {
 
     private int screenNum = 0;
     private String actID;
-    private int maxHpLoss;
+    private final int maxHpLoss;
 
     public OtherworldlyPassage() {
         super();

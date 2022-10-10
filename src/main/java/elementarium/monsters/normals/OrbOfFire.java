@@ -107,16 +107,22 @@ public class OrbOfFire extends CustomMonster
                 Collections.shuffle(debuffs, AbstractDungeon.aiRng.random);
 
                 for (int i = 0; i < debuffCount; i++) {
-                    if (debuffs.get(i).equals(FrailPower.POWER_ID)) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, IRRADIATE_DEBUFF_AMOUNT, true), IRRADIATE_DEBUFF_AMOUNT));
-                    } else if (debuffs.get(i).equals(WeakPower.POWER_ID)) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, IRRADIATE_DEBUFF_AMOUNT, true), IRRADIATE_DEBUFF_AMOUNT));
-                    } else if (debuffs.get(i).equals(StrengthPower.POWER_ID)) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new StrengthPower(AbstractDungeon.player, -IRRADIATE_STAT_AMOUNT), -IRRADIATE_STAT_AMOUNT));
-                    } else if (debuffs.get(i).equals(DexterityPower.POWER_ID)) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DexterityPower(AbstractDungeon.player, -IRRADIATE_STAT_AMOUNT), -IRRADIATE_STAT_AMOUNT));
-                    } else if (debuffs.get(i).equals(FocusPower.POWER_ID)) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FocusPower(AbstractDungeon.player, -IRRADIATE_STAT_AMOUNT), -IRRADIATE_STAT_AMOUNT));
+                    switch (debuffs.get(i)) {
+                        case FrailPower.POWER_ID:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, IRRADIATE_DEBUFF_AMOUNT, true), IRRADIATE_DEBUFF_AMOUNT));
+                            break;
+                        case WeakPower.POWER_ID:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, IRRADIATE_DEBUFF_AMOUNT, true), IRRADIATE_DEBUFF_AMOUNT));
+                            break;
+                        case StrengthPower.POWER_ID:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new StrengthPower(AbstractDungeon.player, -IRRADIATE_STAT_AMOUNT), -IRRADIATE_STAT_AMOUNT));
+                            break;
+                        case DexterityPower.POWER_ID:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DexterityPower(AbstractDungeon.player, -IRRADIATE_STAT_AMOUNT), -IRRADIATE_STAT_AMOUNT));
+                            break;
+                        case FocusPower.POWER_ID:
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FocusPower(AbstractDungeon.player, -IRRADIATE_STAT_AMOUNT), -IRRADIATE_STAT_AMOUNT));
+                            break;
                     }
                 }
                 break;

@@ -29,7 +29,7 @@ public class RadiantAltar extends AbstractImageEvent {
     private static final float A15_HEALTH_LOSS_PERCENTAGE = 0.35F;
     private static final int MAX_HEALTH_GAIN = 5;
 
-    private int healthLoss;
+    private final int healthLoss;
 
     private int screenNum = 0;
 

@@ -26,7 +26,7 @@ public class LostScrolls extends AbstractImageEvent {
     private static final int CARDS = 6;
     private static final int A15_CARDS = 5;
 
-    private int cards;
+    private final int cards;
 
     private int screenNum = 0;
     private boolean pickCard = false;

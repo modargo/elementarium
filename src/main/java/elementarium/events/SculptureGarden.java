@@ -25,7 +25,7 @@ public class SculptureGarden extends AbstractImageEvent {
     private static final int MAX_HEALTH = 8;
     private static final int A15_MAX_HEALTH = 6;
 
-    private int maxHealth;
+    private final int maxHealth;
 
     private int screenNum = 0;
 
@@ -58,7 +58,7 @@ public class SculptureGarden extends AbstractImageEvent {
                     case 0: // Graft
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         AbstractDungeon.player.increaseMaxHp(this.maxHealth, false);
-                        this.logMetricMaxHPGain(ID, "Graft", this.maxHealth);
+                        logMetricMaxHPGain(ID, "Graft", this.maxHealth);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();

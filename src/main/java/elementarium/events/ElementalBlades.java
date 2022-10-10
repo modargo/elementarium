@@ -24,7 +24,7 @@ public class ElementalBlades extends AbstractImageEvent {
     private static final float MAX_HEALTH_LOSS_PERCENTAGE = 0.40F;
     private static final float A15_MAX_HEALTH_LOSS_PERCENTAGE = 0.50F;
 
-    private int maxHealthLoss;
+    private final int maxHealthLoss;
 
     private int screenNum = 0;
 

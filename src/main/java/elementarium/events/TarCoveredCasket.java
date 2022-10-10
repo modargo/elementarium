@@ -25,7 +25,7 @@ public class TarCoveredCasket extends AbstractImageEvent {
     private static final int CURSE_COUNT = 1;
     private static final int A15_CURSE_COUNT = 2;
 
-    private int curseCount;
+    private final int curseCount;
 
     private int screenNum = 0;
 

@@ -16,10 +16,10 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class CreateGameOverStatsPatch {
-    private static String EliteScoreStringKey = "City Elites Killed";
-    private static String EliteName = CardCrawlGame.languagePack.getScoreString(EliteScoreStringKey).NAME;
-    private static int ActNum = 2;
-    private static String ActID = TheCity.ID;
+    private static final String EliteScoreStringKey = "City Elites Killed";
+    private static final String EliteName = CardCrawlGame.languagePack.getScoreString(EliteScoreStringKey).NAME;
+    private static final int ActNum = 2;
+    private static final String ActID = TheCity.ID;
 
     public static void RemoveScoreEntries(ArrayList<GameOverStat> stats) {
         int elitesSlain = CardCrawlGame.elites2Slain;
@@ -38,8 +38,8 @@ public class CreateGameOverStatsPatch {
     )
     public static class VictoryScreenPatch {
         @SpirePostfixPatch
-        public static void VictoryScreenPatch(VictoryScreen __instance) {
-            ArrayList<GameOverStat> stats = (ArrayList<GameOverStat>) ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
+        public static void victoryScreenPatch(VictoryScreen __instance) {
+            ArrayList<GameOverStat> stats = ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
             RemoveScoreEntries(stats);
         }
     }
@@ -50,8 +50,8 @@ public class CreateGameOverStatsPatch {
     )
     public static class DeathScreenPatch {
         @SpirePostfixPatch
-        public static void DeathScreenPatch(DeathScreen __instance) {
-            ArrayList<GameOverStat> stats = (ArrayList<GameOverStat>) ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
+        public static void deathScreenPatch(DeathScreen __instance) {
+            ArrayList<GameOverStat> stats = ReflectionHacks.getPrivate(__instance, GameOverScreen.class, "stats");
             RemoveScoreEntries(stats);
         }
     }

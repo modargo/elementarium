@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.helpers.EventHelper;
         paramtypez = String.class
 )
 public class GetEventNamePatch {
-    private static String ModPrefix = "Elementarium:";
+    private static final String ModPrefix = "Elementarium:";
 
     @SpirePrefixPatch
     public static SpireReturn<String> GetEventName(String eventID) {

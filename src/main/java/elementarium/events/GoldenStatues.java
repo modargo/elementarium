@@ -29,7 +29,7 @@ public class GoldenStatues extends MaskedBandits {
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     private int screen = 0;
-    private AbstractCard cardCost;
+    private final AbstractCard cardCost;
     private AbstractCard cardGain;
 
     public GoldenStatues() {

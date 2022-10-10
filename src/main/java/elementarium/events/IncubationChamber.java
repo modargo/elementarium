@@ -33,9 +33,9 @@ public class IncubationChamber extends AbstractImageEvent {
     private static final int NUM_COLORLESS_CARDS = 1;
     private static final int NUM_OTHER_COLOR_CARDS = 1;
 
-    private int numPotions;
+    private final int numPotions;
     private AbstractRelic egg;
-    private AbstractRelic hatched;
+    private final AbstractRelic hatched;
 
     private int screenNum = 0;
 

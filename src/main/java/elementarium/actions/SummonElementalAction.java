@@ -16,9 +16,9 @@ import elementarium.monsters.MonsterUtils;
 import elementarium.powers.DurableMinionPower;
 
 public class SummonElementalAction extends AbstractGameAction {
-    private AbstractMonster m;
-    private int strength;
-    private int block;
+    private final AbstractMonster m;
+    private final int strength;
+    private final int block;
 
     public SummonElementalAction(String elementalID, float x, float y, int strength, int block) {
         this(elementalID, x, y, null, -1, strength, block, false);

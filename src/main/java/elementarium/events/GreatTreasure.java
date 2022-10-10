@@ -28,10 +28,10 @@ public class GreatTreasure extends AbstractImageEvent {
     private static final int A15_DAMAGE_EXCHANGE = 12;
     private static final float SACRIFICE_MAX_HEALTH_LOSS_PERCENTAGE = 0.50F;
 
-    private int damageExchange;
-    private int sacrificeMaxHealthLoss;
-    private AbstractRelic offering;
-    private AbstractRelic relic;
+    private final int damageExchange;
+    private final int sacrificeMaxHealthLoss;
+    private final AbstractRelic offering;
+    private final AbstractRelic relic;
 
     private int screenNum = 0;
 

@@ -23,8 +23,8 @@ public class AbandonedFactory extends AbstractImageEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     public static final String IMG = Elementarium.eventImage(ID);
 
-    private AbstractRelic relic;
-    private AbstractCard curse;
+    private final AbstractRelic relic;
+    private final AbstractCard curse;
     private int screenNum = 0;
 
     public AbandonedFactory() {

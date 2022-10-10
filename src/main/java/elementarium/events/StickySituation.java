@@ -26,8 +26,8 @@ public class StickySituation extends AbstractImageEvent {
     private static final int GOLD_AMOUNT = 50;
     private static final int A15_GOLD_AMOUNT = 40;
 
-    private int healAmount;
-    private int goldAmount;
+    private final int healAmount;
+    private final int goldAmount;
 
     private int screenNum = 0;
 

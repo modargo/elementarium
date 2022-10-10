@@ -55,7 +55,7 @@ public class ElementalPortal extends CustomMonster
     private int elementalBlastDamage;
     private int elementalCount;
     private ArrayList<String> elementalIDs;
-    private AbstractMonster[] activeElementals = new AbstractMonster[3];
+    private final AbstractMonster[] activeElementals = new AbstractMonster[3];
 
     public ElementalPortal() {
         this(0.0f, 0.0f);
@@ -100,11 +100,7 @@ public class ElementalPortal extends CustomMonster
     public void takeTurn() {
         switch (this.nextMove) {
             case PORTAL_MOVE:
-                boolean summoned = this.summonElementalsUntilFull(false);
-                if (!summoned) {
-                    // We could do something here, but if you're having trouble killing even one elemental, do you really need this elite to be harder?
-                    // Even on A18+, that would be too cruel
-                }
+                this.summonElementalsUntilFull(false);
                 break;
             case STRENGTHENING_RESTORATION_BUFF:
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
@@ -210,7 +206,7 @@ public class ElementalPortal extends CustomMonster
         }
     }
 
-    private boolean summonElementalsUntilFull(boolean firstTurn) {
+    private void summonElementalsUntilFull(boolean firstTurn) {
         logger.info("Summoning elementals until the field is full");
         int otherLivingMonsters = (int)AbstractDungeon.getMonsters().monsters.stream().filter(m -> m != null && m != this && !m.isDying).count();
         int spotsToFill = MAX_ELEMENTALS_ON_FIELD - otherLivingMonsters;
@@ -223,8 +219,6 @@ public class ElementalPortal extends CustomMonster
             float xPosition = this.slotToXPosition(slot);
             this.summonNextElemental(xPosition, slot, firstTurn);
         }
-
-        return numberToSummon != 0;
     }
 
     static {

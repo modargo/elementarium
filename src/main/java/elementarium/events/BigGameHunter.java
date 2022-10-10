@@ -29,7 +29,7 @@ public class BigGameHunter extends AbstractImageEvent {
     private static final int GOLD_TO_HEALTH_PERCENT_RATIO = 5;
 
     private int goldCost;
-    private int maxHealthLoss;
+    private final int maxHealthLoss;
 
     private int screenNum = 0;
 

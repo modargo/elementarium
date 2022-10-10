@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashMap;
 
 public class TextureLoader {
-    private static HashMap<String, Texture> textures = new HashMap<>();
+    private static final HashMap<String, Texture> textures = new HashMap<>();
     public static final Logger logger = LogManager.getLogger(TextureLoader.class.getName());
 
     /**

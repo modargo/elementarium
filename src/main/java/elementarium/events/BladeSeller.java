@@ -29,8 +29,8 @@ public class BladeSeller extends AbstractImageEvent {
     private static final int GOLD = 80;
     private static final int A15_GOLD = 70;
 
-    private int curseChance;
-    private int gold;
+    private final int curseChance;
+    private final int gold;
     private AbstractCard card;
     private AbstractCard curse;
     private boolean hasBlades = false;
