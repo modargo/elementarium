@@ -16,10 +16,10 @@ import elementarium.cards.CardUtil;
 import elementarium.cards.CustomTags;
 import elementarium.cards.gilded.GildedDefend;
 import elementarium.relics.GoldenMirage;
+import elementarium.util.CollectionsUtil;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 
 // We extend the MaskedBandits event because ProceedButton.java specifically checks if an event is an instance of this type
 // (or a few other types) in the logic for what happens when you click proceed. This is easier than a patch.
@@ -111,7 +111,7 @@ public class GoldenStatues extends MaskedBandits {
         if (list.isEmpty()) {
             return null;
         } else {
-            Collections.shuffle(list, AbstractDungeon.miscRng.random);
+            CollectionsUtil.shuffle(list, AbstractDungeon.miscRng);
             return list.get(0);
         }
     }

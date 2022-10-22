@@ -41,13 +41,13 @@ import elementarium.monsters.specials.GoldenEagle;
 import elementarium.monsters.specials.GoldenLion;
 import elementarium.relics.*;
 import elementarium.subscribers.RemoveStickyTarPostEliteBattleSubscriber;
+import elementarium.util.CollectionsUtil;
 import elementarium.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Collections;
 
 import static com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import static com.megacrit.cardcrawl.core.Settings.language;
@@ -180,7 +180,7 @@ public class Elementarium implements
         monstersList.add(LivingStormcloud.ID);
         monstersList.add(OpulentOffering.ID);
         monstersList.add(ShimmeringMirage.ID);
-        Collections.shuffle(monstersList, AbstractDungeon.monsterRng.random);
+        CollectionsUtil.shuffle(monstersList, AbstractDungeon.monsterRng);
 
         float[] groupToUse;
         AbstractMonster[] monsters = new AbstractMonster[groupSize];

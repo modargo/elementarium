@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import elementarium.Elementarium;
+import elementarium.util.CollectionsUtil;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class ShatteredPortal extends AbstractImageEvent {
     public static final String ID = "Elementarium:ShatteredPortal";
@@ -74,7 +74,7 @@ public class ShatteredPortal extends AbstractImageEvent {
         if (list.isEmpty()) {
             return null;
         } else {
-            Collections.shuffle(list, AbstractDungeon.miscRng.random);
+            CollectionsUtil.shuffle(list, AbstractDungeon.miscRng);
             return list.get(0);
         }
     }

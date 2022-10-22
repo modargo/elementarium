@@ -18,9 +18,9 @@ import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.LightFlareParticleEffect;
 import elementarium.Elementarium;
+import elementarium.util.CollectionsUtil;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class OrbOfFire extends CustomMonster
 {
@@ -104,7 +104,7 @@ public class OrbOfFire extends CustomMonster
                 if (!AbstractDungeon.player.orbs.isEmpty()) {
                     debuffs.add(FocusPower.POWER_ID);
                 }
-                Collections.shuffle(debuffs, AbstractDungeon.aiRng.random);
+                CollectionsUtil.shuffle(debuffs, AbstractDungeon.aiRng);
 
                 for (int i = 0; i < debuffCount; i++) {
                     switch (debuffs.get(i)) {
