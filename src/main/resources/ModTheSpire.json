@@ -4,7 +4,7 @@
   "author_list": ["modargo"],
   "description": "An alternate act 2 themed around elementals and golems. Once the center of a thriving civilization, the Elementarium is now a ruined and desolate land.",
   "version": "1.9.2",
-  "sts_version": "10-04-2022",
+  "sts_version": "12-01-2022",
   "mts_version": "3.15.0",
   "dependencies": ["basemod", "actlikeit"]
 }
