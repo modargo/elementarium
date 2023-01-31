@@ -51,7 +51,7 @@ public class IncubationChamber extends AbstractImageEvent {
         }
 
         for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r.relicId.toLowerCase(Locale.ENGLISH).contains("egg")) {
+            if (r.relicId.toLowerCase(Locale.ROOT).contains("egg") && r.tier != AbstractRelic.RelicTier.BOSS && r.tier != AbstractRelic.RelicTier.STARTER) {
                 this.egg = r;
                 break;
             }
